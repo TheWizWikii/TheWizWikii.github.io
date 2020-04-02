@@ -13,7 +13,7 @@ siguientes firmwares: 4.82 - 4.83 - 4.84 - 4.85 - 4.86 HFW
 
 ### Como usarlo:
 
-Simplemente en el navegador de internet de la consola dirigete a esta ULR: cyb3r187.github.io/instaler
+Simplemente en el navegador de internet de la consola dirigete a esta ULR: http://cyb3r187.github.io/instaler y sigue instrucciones en pantalla
 
 ---
 
