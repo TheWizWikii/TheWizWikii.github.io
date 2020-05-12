@@ -1,9 +1,9 @@
-# PS3 HEN en Español
+# PS3 HEN 3.0.1
 ---
 
 ### Que és:
 
-Versión Traducida del HEN Original de http://ps3xploit.com/.
+Un Host alternativo del HEN Original de http://ps3xploit.com/.
 
 ### En qué consolas y firmwares funciona:
 
@@ -12,7 +12,7 @@ siguientes firmwares: 4.84 - 4.85 - 4.86
 
 ### Como usarlo:
 
-Lo unico que hay que hacer es ir a esta dirección: http://TheWizWikii.github.io/installer o http://CYB3R187.github.io/installer/manual desde el navegador de internet de la consola.
+Lo unico que hay que hacer es ir a esta dirección: http://TheWizWikii.github.io/installer o http://TheWizWikii.github.io/installer/manual desde el navegador de internet de la consola.
 
 ---
 
