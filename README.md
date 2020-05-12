@@ -12,7 +12,7 @@ siguientes firmwares: 4.84 - 4.85 - 4.86
 
 ### Como usarlo:
 
-Lo unico que hay que hacer es ir a esta dirección: http://CYB3R187.github.io/installer o http://CYB3R187.github.io/installer/manual desde el navegador de internet de la consola.
+Lo unico que hay que hacer es ir a esta dirección: http://TheWizWikii.github.io/installer o http://CYB3R187.github.io/installer/manual desde el navegador de internet de la consola.
 
 ---
 
