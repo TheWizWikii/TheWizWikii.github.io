@@ -13,9 +13,12 @@ siguientes firmwares: 4.84 - 4.85 - 4.86
 ### Como usarlo:
 
 Lo unico que hay que hacer es ir a una de estas direcciónes desde el navegador de internet de la cosnola.
+- Hen Automático en Español http://TheWizWikii.github.io
 - HEN en Español http://TheWizWikii.github.io/hen/  
 - HEN en Inglés http://TheWizWikii.github.io/installer/ 
-- Instalador Automático (No funciona de momento no usarlo) http://TheWizWikii.github.io/installer/manual/
+
+Para ver otros HOST y si estan ONLINE o OFFLINE
+https://www.itstime2play.com/threads/todos-los-sitios-host-para-instalar-hen-desde-la-consola.111/
 
 ---
 
