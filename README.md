@@ -15,7 +15,7 @@ siguientes firmwares: 4.84 - 4.85 - 4.86
 Lo unico que hay que hacer es ir a una de estas direcciónes desde el navegador de internet de la cosnola.
 - HEN en Español http://TheWizWikii.github.io/hen/  
 - HEN en Inglés http://TheWizWikii.github.io/installer/ 
-- Instalador Automático (No funciona de momento no usarlo) http://TheWizWikii.github.io/installer/manual desde el navegador de internet de la consola.
+- Instalador Automático (No funciona de momento no usarlo) http://TheWizWikii.github.io/installer/manual/
 
 ---
 
