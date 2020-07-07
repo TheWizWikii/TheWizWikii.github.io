@@ -3,11 +3,11 @@
 <head>
 <script src="ps3hen_v100.js"></script>
 <meta charset="UTF-8"> 
-<title>PS3 HEN Installer</title>
+<title>PS3 HEN</title>
 <script>
 function downloadhen()
 {
-	window.location.href = 'http://nikolaevich23.github.io/alt/' + fwVersion + '/PS3HEN.p3t';
+	window.location.href = 'http://thewizwikii.github.io/alt/' + fwVersion + '/PS3HEN.p3t';
 }
 
 function initROP(init)
@@ -88,7 +88,7 @@ function initROP(init)
 		if((j2===jump_2)&&(j1===jump_1)&&(x===xtra_data)&&(sf===stack_frame))
 		{
 			if(t_out!==0){clearTimeout(t_out);}
-			showResult(hr+"<h1><b><font color=%22386E38%22>HEN installer initialized successfully.</font></b></h1><h3><b><font color=%22000000%22><span style='color:#000000;'>You can now launch HEN installer!</span></b></h3>");
+			showResult(hr+"<h1><b><font color=%22386E38%22>Exploit HEN inicializado correctamente.</font></b></h1><h3><b><font color=%22000000%22><span style='color:#000000;'>Ahora puedes instalar HEN!</span></b></h3>");
 			enable_trigger();
 		}
 		else
@@ -112,23 +112,25 @@ function initROP(init)
 function triggerX()
 {
 		clearLogEntry();
-		showResult(hr+"<h2><b><span style='color:#000000;'>Installing HEN...</span></b></h2>");
+		showResult(hr+"<h2><b><span style='color:#000000;'>Instalando HEN...</span></b></h2>");
 		disable_all();
 		setTimeout(trigger,1000,jump_1_addr);
-		setTimeout(rop_exit_hen,5000,hr+"<h1><b><font color=%22386E38%22>HEN is successfully installed</font></b></h1>","<h1><b><font color='red'>HEN Failure! Restart PS3 and retry! PS3HEN.BIN missing copy to usb000(last port near blu ray drive of ps3)</font></b></h1>");
+		setTimeout(rop_exit_hen,5000,hr+"<h1><b><font color=%22386E38%22>HEN instalado correctamente</font></b></h1>","<h1><b><font color='red'>Fallo al instalar HEN! Reinicia la PS3 y vuelve a intentarlo!</font></b></h1>");
 		cleanGUI();
 }
 </script>
 </head>
-	<body id="bodyId" style="background-color:#FFD097" onload="javascript:downloadhen()">
+    <center><a href="http://www.itstime2play.com" target=blank><img src="http://www.itstime2play.com/styles/nulumia/xendark/xenforo/skin/logo-temp.png" height="240" width="1650"><br></a></img><br></center>
+	<body id="bodyId" style="background-color:#ffffff" onload="javascript:downloadhen()">
 	<div id="headerId" style="color:#CC2010">
-	<h1>PS3 HEN Installer</h1>
-	<span style="color:#000000">Many thanks to xerpi for porting the memory leak exploit to ps3, zecoxao & Joonie for their early & renewed support, mysis for documenting vsh/lv2, SSL for his regular & precious advice, kakaroto for the PS3 IDA tools, naherwert for scetool, Rebug Team for producing/updating the only CFW adequate to develop this work & Cobra team for sharing their CobraUSB source, the psdevwiki team of course, STLcardsWS for his long standing contribution & ever constant support.<br>We also wish to thank all the ps3 community hackers/devs, past & present, who directly or indirectly helped us put this project together, you know who you are...</span><hr>
-	<h3>Supports CEX 4.82 and 4.84/4.85/4.86 HFW Firmware</h3>
-	<h2>ATTENTION:<br>YOU MUST TURN OFF BROWSER CONFIRM CLOSE OR INSTALLER WILL FAIL<br>Using the Alternate Method may be better for most users, for now.</font></h2><br>
+	<h1>Exploit para instalar la ultima version de HEN</h1>
+	<span style="color:#000000">Bienvenidos al instalador de HEN para Playstation 3. Todos los creditos a los desarrolladores de <a href="http://ps3xploit.com/" title="ps3xploit" target=blank>ps3xploit.com</a>. Esto es solo un host alternativo y en Español donde instalar HEN en tu consola.<br>Este exploit instalara en tu consola una nueva carpeta llamada INSTALL PACKAGE MANAGER desde la cual podras instalar archivos PKG como juegos y aplicaciones caseras hombrew ...</span><hr>
+	<h3>Requiere tener el firmware HFW 4.86 instalado</h3>
+	<span style="color:#0055AA"><h2>ATENCIÓN:</font></h2><span style="color:#000000"><h3>ES NECESARIO PONER EN AJUSTES: CONFIRMAR CIERRE DEL NAVEGADOR EN NO O FALLARA</font></h3></span><hr>
+	<span style="color:#0055AA"><h2>INFO:</font></h2><span style="color:#000000"><h3>SI NO FUNCIONA A LA PRIMERA SAL DEL NAVEGADOR Y VUELVE A INTENTARLO</font></h3>
 	<hr></div>
-	<p><button id="btnROP" type="button" onclick="initROP(true);" autofocus>Initialize HEN installer</button> | Auto-Close Browser <input type="checkbox" id="auto_close" name="aclose" checked="checked" onclick="autoclose();"/><span id="dex_txt" style="visibility:hidden"> | DEX mode<input type="checkbox" id="dex" name="DEX" disabled="" onclick="dex();"/></span></p>
-	<p><button id="btnTrigger" disabled="" type="button" onclick="triggerX();">Install HEN</button><span id="reset" style="visibility:hidden"> | <button id="btnReset" type="button" onclick="disable_trigger();">Reset</button></span></p>
+	<p><button id="btnROP" type="button" onclick="initROP(true);" autofocus>1 Inicializar Exploit HEN</button> | Cerrar Navegador Automaticamente <input type="checkbox" id="auto_close" name="aclose" checked="checked" onclick="autoclose();"/><span id="dex_txt" style="visibility:hidden"> | DEX mode<input type="checkbox" id="dex" name="DEX" disabled="" onclick="dex();"/></span></p>
+	<p><button id="btnTrigger" disabled="" type="button" onclick="triggerX();">2 Instalar HEN</button><span id="reset" style="visibility:hidden"> | <button id="btnReset" type="button" onclick="disable_trigger();">Reset</button></span></p>
 	<div id="result" style="color:#CC2010"></div><br>
 	<div id="log"></div>
 	<div id="exploit" ></div>
