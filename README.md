@@ -27,6 +27,7 @@ https://www.itstime2play.com/threads/todos-los-sitios-host-para-instalar-hen-des
 - **#PS3XploitTeam** (esc0rtd3w - Habib - bguerville)
 - **#lmn7** (Exploits Offline)
 - **#Joonie** (HFW 4.84.2 and contributions)
+- **#nikolaevich23** (Repo RU cloned)
 - **#PSX-PLACE** (long contribution in PS3 Scene)
 - **#y a toda la comunidad de PS3**
 
