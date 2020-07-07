@@ -3,7 +3,7 @@
 
 ### Que és:
 
-Un Host alternativo del HEN Original de http://ps3xploit.com/.
+Un Host alternativo para poder instalar el HEN Original de http://ps3xploit.com/.
 
 ### En qué consolas y firmwares funciona:
 
