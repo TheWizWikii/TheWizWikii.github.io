@@ -126,7 +126,7 @@ var xtra_data,
 	filesystem='CELL_FS_FAT',
 	mount_path='/dev_rewrite',
 	fail_msg_frag="<h1><span style='color:red'>Fallo al iniciar el exploit!</h1></span>",
-	progress_msg_frag1="<h1>Iniciando Exploit... ",
+	progress_msg_frag1="<h1>Iniciando el hackeo de tu consola... ",
 	progress_msg_frag2='%</h1>',
 	write_file = "/dev_rewrite/vsh/resource/explore/xmb/category_network.xml",
 	baseURL = window.location.href.replace(/[^/]*$/, ''),
@@ -510,7 +510,7 @@ function initROP(init)
 		if((j2===jump_2)&&(j1===jump_1)&&(x===xtra_data)&&(sf===stack_frame))
 		{
 			if(t_out!==0){clearTimeout(t_out);}
-			showResult('<h1>Preparando...');
+			showResult('<h1>Preparando todo...');
 			triggerX();
 		}
 		else
