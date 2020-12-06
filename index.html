@@ -72,8 +72,8 @@ var xtra_data,
  flash_partition='xxxxCELL_FS_IOS:BUILTIN_FLSH1',
  filesystem='CELL_FS_FAT',
  mount_path='/dev_rewrite',
- fail_msg_frag="<h1><span style='color:red'>Exploit initialization failed!</h1></span>",
- progress_msg_frag1="<h1>Initializing... ",
+ fail_msg_frag="<h1><span style='color:red'>Algo salio mal vuelve a intentarlo!</h1></span>",
+ progress_msg_frag1="<h1>Iniciando... ",
  progress_msg_frag2='%</h1>',
  toc_addr=7296344;
 
@@ -204,8 +204,8 @@ var xtra_data,
  flash_partition='xxxxCELL_FS_IOS:BUILTIN_FLSH1',
  filesystem='CELL_FS_FAT',
  mount_path='/dev_rewrite',
- fail_msg_frag="<h1><span style='color:red'>Exploit initialization failed!</h1></span>",
- progress_msg_frag1="<h1>Initializing... ",
+ fail_msg_frag="<h1><span style='color:red'>Algo salio mal vuelve a intentarlo!</h1></span>",
+ progress_msg_frag1="<h1>Iniciando... ",
  progress_msg_frag2='%</h1>',
  write_file = "/dev_rewrite/vsh/resource/explore/xmb/category_network.xml",
  baseURL = window.location.href.replace(/[^/]*$/, ''),
@@ -393,7 +393,7 @@ function checkMemory(address, size, len)
 function trigger(exploit_addr){
  if(document.getElementById('trigger')){document.getElementById("trigger").innerHTML = -parseFloat("NAN(ffffe" + exploit_addr.toString(16) + ")");}
  if (document.getElementById('trigger').innerHTML.indexOf("NaN") != -1) {
-  document.write("<html><h1><span style='color:red'>You must install Hybrid Firmware (HFW) before installing HEN!</h1></span></html>");
+  document.write("<html><h1><span style='color:red'>Debe instalar el firmware hibrido (HFW) antes de instalar HEN!</h1></span></html>");
   return;
  }
 }
@@ -605,7 +605,7 @@ function initROP(init)
 function triggerX()
 {
  setTimeout(trigger,100,jump_1_addr);
- setTimeout(showResult,2000,"<h1>How to install HEN</h1><h2>1. Close browser<br>2. Open Remote Play and quit immediately<br>3. Use new icon to download and install HEN</span><br>4. Reboot after installation</h2>");
+ setTimeout(showResult,2000,"<h1>How to install HEN</h1><h2>1. Cierra el navegador<br>2. Abre uso a distancia y sal enseguida<br>3. Usa el nuevo icono para instalar HEN</span><br>4. Reinicia la consola despues de la instalacion</h2>");
  t_out=0;
  total_loops=0;
 }
