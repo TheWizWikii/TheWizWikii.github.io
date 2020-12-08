@@ -13,9 +13,9 @@ Esta versión de HEN és compatible con todoas las consolas PS3 (Todos los model
 
 Hay 3 opciones y lo unico que hay que hacer es ir a una de estas direcciónes desde el navegador de internet de la cosnola.
 
-- Hen Automático en Español http://TheWizWikii.github.io/auto/
-- Instalador HEN en Español http://TheWizWikii.github.io/installer/ 
-- Hen Alternate en Español http://TheWizWikii.github.io/alternate/
+- Hen Automático en Español http://thewizwikii.github.io/auto/
+- Instalador HEN en Español http://thewizwikii.github.io/installer/ 
+- Hen Alternate en Español http://thewizwikii.github.io/alternate/
 
 ---
 
