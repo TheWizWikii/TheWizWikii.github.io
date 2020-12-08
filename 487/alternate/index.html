@@ -73,7 +73,7 @@ var xtra_data,
  filesystem='CELL_FS_FAT',
  mount_path='/dev_rewrite',
  fail_msg_frag="<h1><span style='color:red'>Exploit initialization failed!</h1></span>",
- progress_msg_frag1="<h1>Iniciando... ",
+ progress_msg_frag1="<h1>Initializing... ",
  progress_msg_frag2='%</h1>',
  toc_addr=7296344;
 
@@ -204,12 +204,12 @@ var xtra_data,
  flash_partition='xxxxCELL_FS_IOS:BUILTIN_FLSH1',
  filesystem='CELL_FS_FAT',
  mount_path='/dev_rewrite',
- fail_msg_frag="<h1><span style='color:red'>Algo salio mal vuelve a intentarlo!</h1></span>",
- progress_msg_frag1="<h1>Iniciando... ",
+ fail_msg_frag="<h1><span style='color:red'>Exploit initialization failed!</h1></span>",
+ progress_msg_frag1="<h1>Initializing... ",
  progress_msg_frag2='%</h1>',
  write_file = "/dev_rewrite/vsh/resource/explore/xmb/category_network.xml",
  baseURL = window.location.href.replace(/[^/]*$/, ''),
- write_file_contents='<?xml version="1.0" encoding="UTF-8"?><XMBML version="1.0"><View id="root"><Attributes><Table key="hen"><Pair key="focus_priority"><String>-1</String></Pair></Table></Attributes><Items><Query class="type:x-xmb/folder-pixmap" key="hen" attr="hen" src="#hen_link"/><Query class="type:x-xmb/folder-pixmap" key="seg_premo" src="sel://localhost/nopremo?category_network.xml#seg_premo"/><Query class="type:x-xmb/folder-pixmap" key="seg_browser" src="#seg_browser"/></Items></View><View id="seg_premo"><Items><Item class="type:x-xmb/xmlpremo" key="PRemo" /></Items></View><View id="seg_browser"><Attributes><Table key="browser"><Pair key="icon_rsc"><String>tex_browser</String></Pair><Pair key="icon_notation"><String>WNT_XmbItemBrowser</String></Pair><Pair key="title_rsc"><String>msg_browser</String></Pair></Table></Attributes><Items><Item class="type:x-xmb/xmlwebbrowser" key="browser" attr="browser" /></Items></View><View id="hen_link"><Attributes><Table key="ps3hen_main"><Pair key="icon_rsc"><String>item_tex_Players</String></Pair><Pair key="title"><String>ALL_HEN_TODOS_OS HEN</String></Pair><Pair key="info"><String>Zmod_Store</String></Pair></Table></Attributes><Items><Query class="type:x-xmb/folder-pixmap" key="ps3hen_main" attr="ps3hen_main" src="#ps3hen_pkg" /></Items></View><View id="ps3hen_pkg"><Attributes><Table key="ps3hen_link"><Pair key="info"><String>net_package_install</String></Pair><Pair key="pkg_src"><String>https://github.com/TheWizWikii/TheWizWikii.github.io/raw/master/HEN_3.0.2.pkg</String></Pair><Pair key="pkg_src_qa" ><String>https://github.com/TheWizWikii/TheWizWikii.github.io/raw/master/HEN_3.0.2.pkg</String></Pair><Pair key="content_name"><String>msg_install</String></Pair><Pair key="content_id"><String>CUSTOM-INSTALLER_00-0000000000000000</String></Pair><Pair key="prod_pict_path"><String>'+baseURL+'hendl.png</String></Pair></Table></Attributes><Items><Item class="type:x-xmb/xmlnpsignup" key="ps3hen_link" attr="ps3hen_link" /></Items></View></XMBML><!-- o --> '; 
+ write_file_contents='<?xml version="1.0" encoding="UTF-8"?><XMBML version="1.0"><View id="root"><Attributes><Table key="hen"><Pair key="focus_priority"><String>-1</String></Pair></Table></Attributes><Items><Query class="type:x-xmb/folder-pixmap" key="hen" attr="hen" src="#hen_link"/><Query class="type:x-xmb/folder-pixmap" key="seg_premo" src="sel://localhost/nopremo?category_network.xml#seg_premo"/><Query class="type:x-xmb/folder-pixmap" key="seg_browser" src="#seg_browser"/></Items></View><View id="seg_premo"><Items><Item class="type:x-xmb/xmlpremo" key="PRemo" /></Items></View><View id="seg_browser"><Attributes><Table key="browser"><Pair key="icon_rsc"><String>tex_browser</String></Pair><Pair key="icon_notation"><String>WNT_XmbItemBrowser</String></Pair><Pair key="title_rsc"><String>msg_browser</String></Pair></Table></Attributes><Items><Item class="type:x-xmb/xmlwebbrowser" key="browser" attr="browser" /></Items></View><View id="hen_link"><Attributes><Table key="ps3hen_main"><Pair key="icon_rsc"><String>item_tex_Players</String></Pair><Pair key="title"><String>Instalar HEN</String></Pair><Pair key="info"><String>ultima version</String></Pair></Table></Attributes><Items><Query class="type:x-xmb/folder-pixmap" key="ps3hen_main" attr="ps3hen_main" src="#ps3hen_pkg" /></Items></View><View id="ps3hen_pkg"><Attributes><Table key="ps3hen_link"><Pair key="info"><String>net_package_install</String></Pair><Pair key="pkg_src"><String>https://archive.org/download/hen-3.0.2_202012/HEN_3.0.2.pkg</String></Pair><Pair key="pkg_src_qa" ><String>https://archive.org/download/hen-3.0.2_202012/HEN_3.0.2.pkg</String></Pair><Pair key="content_name"><String>msg_install</String></Pair><Pair key="content_id"><String>CUSTOM-INSTALLER_00-0000000000000000</String></Pair><Pair key="prod_pict_path"><String>'+baseURL+'hendl.png</String></Pair></Table></Attributes><Items><Item class="type:x-xmb/xmlnpsignup" key="ps3hen_link" attr="ps3hen_link" /></Items></View></XMBML><!-- o --> '; 
 document.write('<html><title>PS3Xploit - HEN Installer</title><div id="result"></div><div id="exploit"></div><div id="trigger"></div></html>');
 function memcpy(dest,src,len)
 {
@@ -589,7 +589,7 @@ function initROP(init)
   if((j2===jump_2)&&(j1===jump_1)&&(x===xtra_data)&&(sf===stack_frame))
   {
    if(t_out!==0){clearTimeout(t_out);}
-   showResult('<h1>Preparando...');
+   showResult('<h1>Preparing...');
    triggerX();
   }
   else
@@ -605,7 +605,7 @@ function initROP(init)
 function triggerX()
 {
  setTimeout(trigger,100,jump_1_addr);
- setTimeout(showResult,2000,"<h1>Como instalar HEN</h1><h2>Como instalar HEN</h1><h2>1. Cierra el navegador<br>2. Abre uso a distancia y sal enseguida<br>3. Usa el nuevo icono para instalar HEN</span><br>4. Reinicia la consola despues de la instalacion</h2>");
+ setTimeout(showResult,2000,"<h1>How to install HEN</h1><h2>1. Close browser<br>2. Open Remote Play and quit immediately<br>3. Use new icon to download and install HEN</span><br>4. Reboot after installation</h2>");
  t_out=0;
  total_loops=0;
 }
