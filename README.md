@@ -28,6 +28,7 @@ Hay 2 opciones y lo unico que hay que hacer es ir a una de estas direcciónes de
 - **#PS3XploitTeam** (esc0rtd3w - Habib - bguerville)
 - **#lmn7** (Exploits Offline)
 - **#Joonie** (HFW 4.87.1 and contributions)
+- **#zecoxao** (HFW 4.88.1 and contributions)
 - **#PSX-PLACE** (long contribution in PS3 Scene)
 - **#y a toda la comunidad de PS3**
 
