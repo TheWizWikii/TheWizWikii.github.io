@@ -11,9 +11,9 @@ Esta versión de HEN és compatible con todoas las consolas PS3 (Todos los model
 
 ### Como usarlo:
 
-Hay 2 opciones y lo unico que hay que hacer es ir a una de estas direcciónes desde el navegador de internet de la cosnola.
 
 ![Version](https://img.shields.io/badge/Version-4.87-brightgreen.svg) 
+Hay 2 opciones y lo unico que hay que hacer es ir a una de estas direcciónes desde el navegador de internet de la cosnola.
 - Hen Automático en Español http://thewizwikii.github.io/487/auto/
 - Hen Alternate en Español http://thewizwikii.github.io/487/alternate/
 
