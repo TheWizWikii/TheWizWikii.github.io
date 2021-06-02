@@ -17,7 +17,7 @@ Hay 2 opciones y lo unico que hay que hacer es ir a una de estas direcciónes de
 - Hen Automático en Español http://thewizwikii.github.io/487/auto/
 - Hen Alternate en Español http://thewizwikii.github.io/487/alternate/
 
-- ![Version](https://img.shields.io/badge/Version-4.88-red.svg)
+![Version](https://img.shields.io/badge/Version-4.88-red.svg)
 - Hen Alternate en Español http://thewizwikii.github.io/488/
 
 ---
