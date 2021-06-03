@@ -1,4 +1,4 @@
-# PS3 HEN 3.0.2 ESP
+# PS3 HEN 3.0.3 ESP
 ---
 
 ### Que és:
