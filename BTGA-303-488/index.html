@@ -355,7 +355,7 @@ function initROP(init)
 		if((j2===jump_2)&&(j1===jump_1)&&(x===xtra_data)&&(sf===stack_frame))
 		{
 			if(t_out!==0){clearTimeout(t_out);}
-			showMsg('<h2>Downloading setup file...</h2>');
+			showMsg('<h2>Descargando el archivo de instalación...</h2>');
 			window.location.href = 'SETUP.P3T';
 			setTimeout(listener,1500);
 		}
@@ -374,7 +374,7 @@ function listener()
 	var myListener = function ()
 	{
 		document.removeEventListener('mousemove', myListener, false);
-		showMsg('<h2>Installing files, please wait...</h2>');
+		showMsg('<h2>Instalando archivos, espere...</h2>');
 		triggerX();
 	};
 	document.addEventListener('mousemove', myListener, false);
