@@ -21,6 +21,11 @@ Hay 2 opciones y lo unico que hay que hacer es ir a una de estas direcciónes de
 ![Version](https://img.shields.io/badge/Version-4.88-red.svg)
 - Hen Alternate en Español http://thewizwikii.github.io/488/
 
+### Bluethoot / USB Game Audio 
+![Version](https://img.shields.io/badge/Version-4.88-red.svg)
+- http://thewizwikii.github.io/BTGA-303-488/
+
+
 ---
 
 ### Credits:
@@ -29,6 +34,7 @@ Hay 2 opciones y lo unico que hay que hacer es ir a una de estas direcciónes de
 - **#lmn7** (Exploits Offline)
 - **#Joonie** (HFW 4.87.1 and contributions)
 - **#zecoxao** (HFW 4.88.1 and contributions)
+- **#Coro** (Bluetooth/USB Game Audio updates)
 - **#PSX-PLACE** (long contribution in PS3 Scene)
 - **#y a toda la comunidad de PS3**
 
