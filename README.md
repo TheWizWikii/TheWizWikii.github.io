@@ -20,6 +20,7 @@ Hay 2 opciones y lo unico que hay que hacer es ir a una de estas direcciónes de
 
 ![Version](https://img.shields.io/badge/Version-4.88-red.svg)
 - Hen Alternate en Español http://thewizwikii.github.io/488/
+- Hen Automático en Español http://thewizwikii.github.io/488/auto/
 
 ---
 
