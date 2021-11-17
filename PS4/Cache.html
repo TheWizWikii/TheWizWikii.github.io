@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html manifest="./offline.manifest">
+<head>
+  <script>
+    function DLProgress(e){Percent=(Math.round(e.loaded / e.total * 100));document.title="Installing offline cache: " + Percent + "%";}
+    function DisplayCacheProgress(){setTimeout(function(){;document.title="Cache Sucess !";},1000);setTimeout(function(){window.location.href = document.referrer;},3000);}window.applicationCache.addEventListener("progress",DLProgress,false);window.applicationCache.oncached=function(e){DisplayCacheProgress();};window.applicationCache.onupdateready=function(e){DisplayCacheProgress();};
+</script>
+
+<meta charset="utf-8">
+<title>*</title>
+<link rel="stylesheet" href="./css/index.css">
+
+<script>
+var data = JSON.parse('{"Choose Firmware": ["1.01", "1.76", "4.05", "4.55", "5.05", "6.72", "7.02", "7.50"], "1.01": ["Playground", "[Back]"], "1.76": ["Playground", "[Back]"], "4.05": ["Enable Updates", "[Back]"], "4.55": ["Enable-Updates", "[Back]"], "5.05": ["App2USB", "Backup", "Disable-Updates", "Dumper", "Enable-Updates", "FTP", "HEN", "Linux-Loader", "Mira+HEN", "Original", "reactPSPlus", "[Back]"], "6.72": ["Jailbreak", "JailbreakOld", "[Back]"], "7.02": ["Mira", "HEN", "FTP", "Dumper", "App2USB", "Disable-Updates", "Enable-Updates", "History-Blocker", "Kernel-Clock", "BinLoader", "Backup", "Restore", "Enable-Browser", "todex", "CE-30391-6_Fix", "[Back]"], "Host_Version": "0.4.5"}');
+var exploitBase = "/exploits/";
+
+var firmwares = getFirmwares();
+
+window.onload = function() {
+  if(window.location.hash) {
+    firmwareSelected();
+  } else {
+    resetPage();
+  }
+}
+</script>
+</head>
+<body onhashchange="firmwareSelected()">
+<div id="wrapper">
+<div id="contentWrapper">
+<div id="contentHeader">
+<div><h1 id="title">Please wait cache finish !</h1></div>
+<div><a href="./FirmwareExploit.html" class="FE"></a></div>
+</div>
+<div id="content">
+<div id="contentBody">
+<h2 id="header">*</h2>
+<div id="buttons"></div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+</body>
+</html>

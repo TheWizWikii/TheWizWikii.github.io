@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html manifest="./cache.manifest">
+<head>
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+<meta http-equiv="Pragma" content="no-cache"/>
+<meta http-equiv="Expires" content="0"/>
+
+<meta charset="utf-8">
+
+<div ><img id="Background" src="./Ressources/Background.jpg"></div>
+<div ><h1 class="linear-wipe" id="title">*</h1></div>
+<a href="Cache.html">
+  <button id="Cache">Click here to cache</button>
+</a>
+
+
+
+<link rel="stylesheet" href="./css/index.css">
+<script src="./js/script.js"></script>
+<script src="./js/index.js"></script>
+
+
+
+<script>
+var data = JSON.parse('{"Choose Firmware": ["5.05", "6.72", "7.02", "7.5x"], "5.05": ["App2USB", "Backup", "Disable-Updates", "Dumper", "Enable-Updates", "FTP", "HEN", "GoldHEN", "Orbis-Toolbox", "Linux-Loader", "Mira+HEN", "Original", "reactPSPlus", "OrbisAFR", "[Back]"], "6.72": ["Mira", "MiranoHB", "HEN", "GoldHEN",  "Orbis-Toolbox", "BinLoader", "FTP", "ToDex", "PS4Debug", "WebRTE", "LinuxLoader-1GBVRAM", "LinuxLoader-4GBVRAM", "App2USB", "AppDumper", "Backup", "Restore", "HistoryBlocker", "DisableUpdate", "EnableUpdate", "Web-Activator", "[Back]"], "7.02": ["Mira", "HEN", "GoldHEN", "Orbis-Tolbox", "FTP", "App-Dumper", "Module-Dumper", "App2USB", "Disable-Updates", "Enable-Updates", "History-Blocker", "BinLoader", "LinuxLoader-1GBVRAM", "LinuxLoader-4GBVRAM", "BinLoader-ChendoChap", "Backup", "Restore", "todex",  "PS4Debug", "R.I.F-Renamer", "Web-Activator", "[Back]"], "7.5x": ["BinLoader", "Netcat", "Mira", "GoldHEN_1.1", "GoldHEN_1.0", "Orbis-Toolbox", "WebRTE", "FTP", "App2USB", "AppDumper", "LinuxLoader-1GB", "LinuxLoader-4GB", "ModuleDumper", "DisableUpdates", "EnableUpdates", "ToDex", "RestoreDB", "BackupDB", "HistoryBlocker", "RifRenamer", "DisableASLR", "ExitIDU", "PS4Debug", "Web-Activator", "[Back]"], "Host_Version": "0.5.2"}');
+var exploitBase = "/exploits/";
+
+var firmwares = getFirmwares();
+
+window.onload = function() {
+  if(window.location.hash) {
+    firmwareSelected();
+  } else {
+    resetPage();
+  }
+}
+</script>
+</head>
+<body onhashchange="firmwareSelected()">
+<div id="wrapper">
+<div id="contentWrapper">
+<div id="contentHeader">
+</div>
+<div id="content">
+<div id="contentBody">
+<h2 id="header">*</h2>
+<div id="buttons"></div>
+<div id="NazkyPP"><a href="https://twitter.com/NazkyYT" target="_blank"><img src="./Ressources/PokerFace.png" alt="@NazkyYT" width="150" height="100"></a></div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+</body>
+</html>

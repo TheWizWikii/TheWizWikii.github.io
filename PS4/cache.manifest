@@ -1,0 +1,20 @@
+CACHE MANIFEST 
+# v4
+# 29/08/2021-12:37
+
+
+CACHE:
+
+index.html
+js/script.js
+css/index.css
+Ressources/Background.jpg
+Ressources/PokerFace.png
+offline.manifest
+cache.manifest
+
+FALLBACK:
+index.html
+
+NETWORK: 
+*
