@@ -7,6 +7,7 @@ Un Host alternativo para poder instalar y usar exploits en PS3 y PS4.
 
 ### PS4 Jailbreak 9.00
 lo unico que hay que hacer es ir a una de estas direcciónes desde el navegador de internet de la cosnola.
+
 http://thewizwikii.github.io/487/auto/
 
 ---
