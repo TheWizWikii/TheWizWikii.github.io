@@ -1,9 +1,15 @@
-# PS3 HEN 3.0.3 ESP
+# Exploits PS3 & PS4
 ---
 
 ### Que és:
 
-Un Host alternativo para poder instalar el HEN Original de http://ps3xploit.com/.
+Un Host alternativo para poder instalar y usar exploits en PS3 y PS4.
+
+### PS4 Jailbreak 9.00
+lo unico que hay que hacer es ir a una de estas direcciónes desde el navegador de internet de la cosnola.
+http://thewizwikii.github.io/487/auto/
+
+---
 
 ### En qué consolas y firmwares funciona:
 
