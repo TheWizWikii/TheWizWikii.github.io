@@ -32,6 +32,8 @@ Hay 2 opciones y lo unico que hay que hacer es ir a una de estas direcciónes de
 
 ### Bluethoot / USB Game Audio (PS3 HEN) ![Version](https://img.shields.io/badge/Version-4.88-red.svg)
 
+Esto habilita que puedas emparejar / conectar dispositivos por Bluetooth y USB como audifonos y Micrófonos
+
 - http://thewizwikii.github.io/BTGA-303-488/
 
 
