@@ -53,6 +53,8 @@
         }
     </style>
     <script>
+	if (window.applicationCache.status=='0'){window.location.replace("cache.html");}
+	
         function allset() {
             document.getElementById("loader").style.display = "none";
             document.getElementById("allset").style.display = "block";
@@ -62,7 +64,7 @@
             document.getElementById("loader").style.display = "none";
             document.getElementById("awaiting").style.display = "block";
         }
-    </script>
+</script>
     <script src="payload.js"></script>
     <script src="int64.js"></script>
     <script src="rop.js"></script>
