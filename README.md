@@ -41,16 +41,17 @@ Esto habilita que puedas emparejar / conectar dispositivos por Bluetooth y USB c
 
 ### Credits:
 
-- **#Chendochap**
-- **#Specter**
-- **#Znullptr**
-- **#sleirsgoevy**
+- **#Chendochap** (PS4 JB)
+- **#Specter** (PS4 JB)
+- **#Znullptr** (PS4 JB)
+- **#sleirsgoevy** (PS4 JB)
+- **#TheFlow** (PS4 JB)
 - **#PS3XploitTeam** (esc0rtd3w - Habib - bguerville)
-- **#lmn7** (Exploits Offline)
+- **#lmn7** (PS3 Exploits Offline)
 - **#Joonie** (HFW 4.87.1 and contributions)
 - **#zecoxao** (HFW 4.88.1 and contributions)
 - **#Coro** (Bluetooth/USB Game Audio updates)
 - **#PSX-PLACE** (long contribution in PS3 Scene)
-- **#y a toda la comunidad de PS3**
+- **#y a toda la comunidad de PS3 y PS4**
 
 ---
