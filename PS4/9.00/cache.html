@@ -1,0 +1,12 @@
+<html manifest="cache.manifest">
+<head>
+<title>PS4 Jailbreak for 9.00 FW + GoldHen 2.0b by GamerHack</title>
+<link rel="stylesheet" href="style.css">
+<script>
+history.replaceState(null,null,'index.html');var histlength=history.length;history.go(-histlength);
+function DLProgress(e){Percent=(Math.round(e.loaded / e.total * 100));document.getElementById="display:none";window.msgs.innerHTML="Installing Offline Cache: " + Percent + "%";}
+function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML="Cache Installed Successfully ✔";},1000);setTimeout(function(){window.msgs.innerHTML="Now Turn Off The Internet ...";},3000);}window.applicationCache.addEventListener("progress",DLProgress,false);window.applicationCache.oncached=function(e){DisplayCacheProgress();};window.applicationCache.onupdateready=function(e){DisplayCacheProgress();};
+</script>
+</head>
+<div id=msgs class=info></div>
+</html>
