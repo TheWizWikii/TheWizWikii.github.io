@@ -15,11 +15,19 @@
             document.getElementById("awaiting").style.display = "block";
         }
 </script>
+<script>
+    function initSnowflakes() {
+        snowflakes.init({background: 'rgba(' + Math.round(Math.random()*255) + ',' + Math.round(Math.random()*255) + ',' + Math.round(Math.random()*255) + ', 0.8)'});
+    }
+    setInterval(initSnowflakes, 2000);
+    initSnowflakes();
+</script>
     <script src="payload.js"></script>
     <script src="int64.js"></script>
     <script src="rop.js"></script>
     <script src="kexploit.js"></script>
     <script src="webkit.js"></script>
+    <script src="snowflakes.js"></script>
 </head>
 </html>
 <body onload="setTimeout(poc, 1500);">
