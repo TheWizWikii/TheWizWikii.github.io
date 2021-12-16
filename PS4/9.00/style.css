@@ -1,9 +1,8 @@
 html, body {
-//*background-color: #242629;*//
+background-color: #242629;
 background-image: url('background.jpg');
 background-size: 100%;
 background-repeat: no-repeat;
-background-color: #24272b;
 color: white;
 text-align: center;
 margin: 0px;
