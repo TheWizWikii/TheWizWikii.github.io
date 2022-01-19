@@ -1,0 +1,54 @@
+html, body {
+background-color: #242629;
+background-image: url('background.jpg');
+background-size: 100%;
+background-repeat: no-repeat;
+color: white;
+text-align: center;
+margin: 0px;
+overflow: hidden;
+}
+
+.loader {
+position: absolute;
+left: 50%;
+top: 50%;
+margin: -75px 0 0 -75px;
+
+border: 10px solid #1f1e1e;
+border-radius: 50%;
+border-top: 10px solid #044595;
+border-left: 10px solid #044595;
+width: 120px;
+height: 120px;
+animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+0% {
+transform: rotate(0deg);
+}
+
+100% {
+transform: rotate(360deg);
+}
+}
+
+.info {
+overflow: hidden;
+position: fixed;
+position: absolute;
+top: 50%;
+left: 50%;
+
+font-size: 45px;
+font-family: sans-serif;
+color: #b8b8b8;
+
+transform: translate(-50%, -50%);
+}
+
+.j {
+font-size: 15px;
+color: #2F3335;
+}
