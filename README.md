@@ -7,6 +7,8 @@ Un Host alternativo para poder instalar, probar y ejecutar exploits en el navega
 
 ### PS5 Webkit (userland) ![Version](https://img.shields.io/badge/Version-4.03-brightgreen.svg)
 
+Lo unico que hay que hacer es ir a esta dirección desde el navegador de internet de la cosnola usando la guia de usuario con las DNS de Al-Azif, las cuales permiten acceder al navegador de internet facilmente pulasando dos veces L2. DNS Primaria: 165.227.83.145 / DNS Secundaria: 192.241.221.79
+
 - http://thewizwikii.github.io/PS5/4.03/
 
 ---
@@ -52,6 +54,7 @@ Esto habilita que puedas emparejar / conectar dispositivos por Bluetooth y USB c
 - **#Znullptr** (PS4/PS5 JB)
 - **#sleirsgoevy** (PS4 JB)
 - **#TheFlow** (PS4 JB)
+- **#Al-Azif** (DNS)
 - **#PS3XploitTeam** (esc0rtd3w - Habib - bguerville)
 - **#lmn7** (PS3 Exploits Offline)
 - **#Joonie** (HFW 4.87.1 and contributions)
