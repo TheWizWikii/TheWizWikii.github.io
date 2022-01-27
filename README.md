@@ -9,6 +9,8 @@ Un Host alternativo para poder instalar y ejecutar exploits en el navegador de i
 
 - http://thewizwikii.github.io/PS5/4.03/
 
+---
+
 ### PS4 Jailbreak + Goldhen ![Version](https://img.shields.io/badge/Version-9.00-brightgreen.svg)
 
 Lo unico que hay que hacer es ir a esta dirección desde el navegador de internet de la cosnola.
@@ -28,7 +30,7 @@ Hay 2 opciones y lo unico que hay que hacer es ir a una de estas direcciónes de
 - Hen Alternate en Español http://thewizwikii.github.io/487/alternate/
 
 
-### PS3 HEN ![Version](https://img.shields.io/badge/Version-4.88-red.svg)
+### PS3 HEN ![Version](https://img.shields.io/badge/Version-4.88-brightgreen.svg)
 - Hen Alternate en Español http://thewizwikii.github.io/488/
 - Hen Automático en Español http://thewizwikii.github.io/488/auto/
 
