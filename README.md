@@ -5,11 +5,11 @@
 
 Un Host alternativo para poder instalar y ejecutar exploits en el navegador de internet de PS3, PS4 y PS5.
 
-### PS5 Webkit (userland) ![Version](https://img.shields.io/badge/Version-4.03-red.svg)
+### PS5 Webkit (userland) ![Version](https://img.shields.io/badge/Version-4.03-brightgreen.svg)
 
 - http://thewizwikii.github.io/PS5/4.03/
 
-### PS4 Jailbreak + Goldhen ![Version](https://img.shields.io/badge/Version-9.00-red.svg)
+### PS4 Jailbreak + Goldhen ![Version](https://img.shields.io/badge/Version-9.00-brightgreen.svg)
 
 Lo unico que hay que hacer es ir a esta dirección desde el navegador de internet de la cosnola.
 
@@ -34,7 +34,7 @@ Hay 2 opciones y lo unico que hay que hacer es ir a una de estas direcciónes de
 
 ---
 
-### Bluethoot / USB Game Audio (PS3 HEN) ![Version](https://img.shields.io/badge/Version-4.88-red.svg)
+### Bluethoot / USB Game Audio (PS3 HEN) ![Version](https://img.shields.io/badge/Version-4.88-brightgreen.svg)
 
 Esto habilita que puedas emparejar / conectar dispositivos por Bluetooth y USB como audifonos y Micrófonos
 
