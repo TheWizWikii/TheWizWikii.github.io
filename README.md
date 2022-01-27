@@ -41,9 +41,9 @@ Esto habilita que puedas emparejar / conectar dispositivos por Bluetooth y USB c
 
 ### Credits:
 
-- **#Chendochap** (PS4 JB)
-- **#Specter** (PS4 JB)
-- **#Znullptr** (PS4 JB)
+- **#Chendochap** (PS4/PS5 JB)
+- **#Specter** (PS4/PS5 JB)
+- **#Znullptr** (PS4/PS5 JB)
 - **#sleirsgoevy** (PS4 JB)
 - **#TheFlow** (PS4 JB)
 - **#PS3XploitTeam** (esc0rtd3w - Habib - bguerville)
