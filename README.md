@@ -1,9 +1,9 @@
-# Exploits PS3 & PS4
+# Exploits, Webkit, Jailbreak para PS3, PS4 & PS5
 ---
 
 ### ¿Que és esto?
 
-Un Host alternativo para poder instalar y ejecutar exploits en el navegador de internet de PS3, PS4 y PS5.
+Un Host alternativo para poder instalar, probar y ejecutar exploits en el navegador de internet de PS3, PS4 y PS5.
 
 ### PS5 Webkit (userland) ![Version](https://img.shields.io/badge/Version-4.03-brightgreen.svg)
 
