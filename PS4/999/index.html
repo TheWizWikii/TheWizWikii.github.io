@@ -1,4 +1,4 @@
-<html manifest="cache.manifest" >
+<html>
 <head>
     <title>TheWizWiki Jailbreak + GoldHEN v2.1</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -63,6 +63,8 @@ setTimeout(function(){msgs.innerHTML="Cache Installed Successfully";},2000);
 setTimeout(function(){location.reload();},3000);
 </script>
     <script>
+        if (window.applicationCache.status=='0'){window.location.replace("cache.html");}
+	
         function allset() {
             document.getElementById("loader").style.display = "none";
             document.getElementById("allset").style.display = "block";
