@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Exo:400,700');
+/*@import url('https://fonts.googleapis.com/css?family=Exo:400,700');
 
 *{
     margin: 0px;
@@ -124,7 +124,7 @@
     height: 150px;
     animation-delay: 0s;
     animation-duration: 11s;
-}
+}*/
 
 
 
@@ -146,14 +146,16 @@
 
 
 html, body {
-/*background-color: #242629;
-background-image: url('background.jpg');
+background: #4e54c8;  
+background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);
+/*background-color: #242629;*/
+/*background-image: url('background.jpg');*/
 background-size: 100%;
 background-repeat: no-repeat;
-color: white;
-text-align: center;
-margin: 0px;
-overflow: hidden;*/
+/*color: white;*/
+/*text-align: center;*/
+/*margin: 0px;*/
+/*overflow: hidden;*/
 }
 
 .loader {
