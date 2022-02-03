@@ -3,9 +3,11 @@
 <title>TheWizWiki Jailbreak 9.00 + GoldHEN</title>
 <link rel="stylesheet" href="style.css">
 <script>
-history.replaceState(null,null,'index.html');var histlength=history.length;history.go(-histlength);
-function DLProgress(e){Percent=(Math.round(e.loaded / e.total * 100));document.getElementById="display:none";window.msgs.innerHTML="Instalando Offline Cache: " + Percent + "%";}
-function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML="Cache Instalado Correctamente ✔";},1000);setTimeout(function(){window.msgs.innerHTML="Apaga el Internet de tu PS4 si Quieres, Cierra y Vuelve a Entrar ...";},3000);}window.applicationCache.addEventListener("progress",DLProgress,false);window.applicationCache.oncached=function(e){DisplayCacheProgress();};window.applicationCache.onupdateready=function(e){DisplayCacheProgress();};
+      window.applicationCache.ondownloading=function(){document.getElementById("progress").innerHTML="Instalando Offline Cache!";};
+			window.applicationCache.onprogress=function(a){document.getElementById("progress").innerHTML=(Math.round(100*(a.loaded/a.total)))+"%";};
+			window.applicationCache.oncached=function(){document.getElementById("progress").innerHTML="Cache Instalado Correctamente ✔";setTimeout(function(){document.getElementById("progress").innerHTML="Apaga el Internet de tu PS4 si Quieres, Cierra y Vuelve a Entrar."; }, 1500);};
+			window.applicationCache.onnoupdate=function(){poc();};
+	    window.applicationCache.onerror=function(){poc();};
 </script>
 </head>
 <div id=msgs class=info></div>
