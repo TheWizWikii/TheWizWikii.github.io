@@ -21,6 +21,13 @@
     <script src="kexploit.js"></script>
     <script src="webkit.js"></script>
     <script src="snowflakes.min.js"></script>
+<script>
+	function initSnowflakes() {
+        snowflakes.init({background: 'rgba(' + Math.round(Math.random()*255) + ',' + Math.round(Math.random()*255) + ',' + Math.round(Math.random()*255) + ', 0.8)'});
+    }
+    setInterval(initSnowflakes, 2000);
+    initSnowflakes();
+</script>	
 </head>
 </html>
 <body onload="setTimeout(poc, 1500);">
