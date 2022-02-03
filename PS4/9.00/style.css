@@ -45,6 +45,7 @@ left: 50%;
 font-size: 45px;
 font-family: sans-serif;
 color: #b8b8b8;
+background-image: url('background.jpg');
 
 transform: translate(-50%, -50%);
 }
