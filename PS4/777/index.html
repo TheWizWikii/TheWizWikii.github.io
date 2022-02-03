@@ -56,9 +56,9 @@
         }
     </style>
 <script>
-			window.applicationCache.ondownloading=function(){document.getElementById("progress").innerHTML="Page Caching Started!!";};
+			window.applicationCache.ondownloading=function(){document.getElementById("progress").innerHTML="Instalando Offline Cache!!";};
 			window.applicationCache.onprogress=function(a){document.getElementById("progress").innerHTML=(Math.round(100*(a.loaded/a.total)))+"%";};
-			window.applicationCache.oncached=function(){document.getElementById("progress").innerHTML="Page Cached Successfully!!";setTimeout(function(){document.getElementById("progress").innerHTML="Turn Off the Internet & Reopen the Page !!"; }, 1500);};
+			window.applicationCache.oncached=function(){document.getElementById("progress").innerHTML="Cache Instalado Correctamente!!";setTimeout(function(){document.getElementById("progress").innerHTML="Apaga el Internet de tu PS4 si Quieres, Cierra y Vuelve a Entrar!!"; }, 1500);};
 			window.applicationCache.onnoupdate=function(){poc();};
 	        window.applicationCache.onerror=function(){poc();};
 </script>
