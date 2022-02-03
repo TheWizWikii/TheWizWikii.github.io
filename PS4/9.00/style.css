@@ -11,7 +11,7 @@ overflow: hidden;
 
 .loader {
 position: absolute;
-left: 50%;
+left: 30%;
 top: 50%;
 margin: -75px 0 0 -75px;
 
@@ -19,9 +19,8 @@ border: 10px solid #1f1e1e;
 border-radius: 50%;
 border-top: 10px solid #eff70a;
 border-left: 10px solid #eff70a;
-box-shadow: 10px 0px #eff70a;
-width: 120px;
-height: 120px;
+width: 220px;
+height: 220px;
 animation: spin 1s linear infinite;
 }
 
