@@ -3,11 +3,8 @@
 <title>TheWizWiki Jailbreak 9.00 + GoldHEN v2.1</title>
 <link rel="stylesheet" href="style.css">
 <script>
-window.applicationCache.ondownloading=function(){document.getElementById("progress").innerHTML="Instalando Offline Cache!";};
-window.applicationCache.onprogress=function(a){document.getElementById("progress").innerHTML=(Math.round(100*(a.loaded/a.total)))+"%";};
-window.applicationCache.oncached=function(){document.getElementById("progress").innerHTML="Cache Instalado Correctamente ✔";setTimeout(function(){document.getElementById("progress").innerHTML="Apaga el Internet de tu PS4 si Quieres, Cierra y Vuelve a Entrar."; }, 3000);};
-window.applicationCache.onnoupdate=function(){poc();};
-window.applicationCache.onerror=function(){poc();};
+function DLProgress(e){Percent=(Math.round(e.loaded / e.total * 100));window.msgs.innerHTML="Installing Offline Cache: " + Percent + "%";}
+function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML="Cache Installed Successfully ✔";},1000);setTimeout(function(){window.msgs.innerHTML="Now Close And Re-Open Your Browser ...";},3000);}window.applicationCache.addEventListener("progress",DLProgress,false);window.applicationCache.oncached=function(e){DisplayCacheProgress();};window.applicationCache.onupdateready=function(e){DisplayCacheProgress();};
 </script>
 </head>
 <div id=msgs class=info></div>
