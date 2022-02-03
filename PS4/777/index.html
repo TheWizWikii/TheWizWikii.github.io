@@ -56,10 +56,8 @@
         }
     </style>
 <script>
-			window.applicationCache.onprogress=function(a){document.getElementById("progress").innerHTML=(Math.round(e.loaded / e.total * 100));document.getElementById="display:none";window.msgs.innerHTML="Instalando Offline Cache: " + Percent + "%";}
-			window.applicationCache.oncached=function(){document.getElementById("progress").innerHTML="Cache Instalado Correctamente ✔";},1000);setTimeout(function(){window.msgs.innerHTML="Apaga el Internet de tu PS4 si Quieres, Cierra y Vuelve a Entrar ...";},3000);}window.applicationCache.addEventListener("progress",DLProgress,false);window.applicationCache.oncached=function(e){DisplayCacheProgress();};window.applicationCache.onupdateready=function(e){DisplayCacheProgress();};
-			window.applicationCache.onnoupdate=function(){poc();};
-	        window.applicationCache.onerror=function(){poc();};
+function DLProgress(e){Percent=(Math.round(e.loaded / e.total * 100));document.getElementById="display:none";window.msgs.innerHTML="Instalando Offline Cache: " + Percent + "%";}
+function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML="Cache Instalado Correctamente ✔";},1000);setTimeout(function(){window.msgs.innerHTML="Apaga el Internet de tu PS4 si Quieres, Cierra y Vuelve a Entrar ...";},3000);}window.applicationCache.addEventListener("progress",DLProgress,false);window.applicationCache.oncached=function(e){DisplayCacheProgress();};window.applicationCache.onupdateready=function(e){DisplayCacheProgress();};
 </script>
     <script>
         function allset() {
