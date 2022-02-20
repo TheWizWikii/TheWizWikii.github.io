@@ -36,6 +36,10 @@ Hay 2 opciones y lo unico que hay que hacer es ir a una de estas direcciónes de
 - Hen Alternate en Español http://thewizwikii.github.io/488/
 - Hen Automático en Español http://thewizwikii.github.io/488/auto/
 
+Buscas una guia de configuración definitiva para tu PS3 todo 
+
+https://youtu.be/2eZOVRY5ZMc
+
 ---
 
 ### Bluethoot / USB Game Audio (PS3 HEN) ![Version](https://img.shields.io/badge/Version-4.88-brightgreen.svg)
