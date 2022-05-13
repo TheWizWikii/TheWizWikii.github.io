@@ -393,5 +393,5 @@ function HFWmsg()
 	showMsg("<h2><span style='color:red'>Asegurate de tener instalado el Firmware (HFW) 4.89 en tu consola antes de usar esto!</h2></span>");
 	throw new Error('');
 }
-if(fwv=="4.88"){initROP(true)}else{HFWmsg()}
+if(fwv=="4.88" || fwv==="4.89"){initROP(true)}else{HFWmsg()}
 </script>
