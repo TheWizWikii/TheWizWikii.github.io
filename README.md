@@ -25,14 +25,14 @@ Lo unico que hay que hacer es ir a esta dirección desde el navegador de interne
 
 Esta versión de HEN és compatible con todoas las consolas PS3 (Todos los modelos) ya sea FAT/SLIM/SUPER SLIM en el firmwares híbrido HFW 4.87 y 4.88
 
-### PS3 HEN ![Version](https://img.shields.io/badge/Version-4.87-brightgreen.svg) 
+### PS3 HEN ![Version](https://img.shields.io/badge/Version-4.87-red.svg) 
 
 Hay 2 opciones y lo unico que hay que hacer es ir a una de estas direcciónes desde el navegador de internet de la cosnola.
 - Hen Automático en Español http://thewizwikii.github.io/487/auto/
 - Hen Alternate en Español http://thewizwikii.github.io/487/alternate/
 
 
-### PS3 HEN ![Version](https://img.shields.io/badge/Version-4.88-brightgreen.svg)
+### PS3 HEN ![Version](https://img.shields.io/badge/Version-4.88-red.svg)
 - Hen Alternate en Español http://thewizwikii.github.io/488/
 - Hen Automático en Español http://thewizwikii.github.io/488/auto/
 
