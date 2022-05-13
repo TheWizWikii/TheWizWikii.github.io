@@ -5,7 +5,7 @@
 
 Un Host alternativo para poder instalar, probar y ejecutar exploits en el navegador de internet de PS3, PS4 y PS5.
 
-### PS5 Webkit (userland) ![Version](https://img.shields.io/badge/Version-4.03-brightgreen.svg)
+### PS5 Webkit (userland) ![Version](https://img.shields.io/badge/Version-4.03-brightred.svg)
 
 Lo unico que hay que hacer es ir a esta dirección desde el navegador de internet de la cosnola usando la guia de usuario con las DNS de Al-Azif, las cuales permiten acceder al navegador de internet facilmente pulasando dos veces L2. DNS Primaria: 165.227.83.145 / DNS Secundaria: 192.241.221.79
 
