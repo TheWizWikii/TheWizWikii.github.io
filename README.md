@@ -23,7 +23,7 @@ Lo unico que hay que hacer es ir a esta dirección desde el navegador de interne
 
 ### En qué consolas y firmwares funciona:
 
-Esta versión de HEN és compatible con todoas las consolas PS3 (Todos los modelos) ya sea FAT/SLIM/SUPER SLIM en el firmwares híbrido HFW 4.87 y 4.88
+Esta versión de HEN és compatible con todoas las consolas PS3 (Todos los modelos) ya sea FAT/SLIM/SUPER SLIM en el firmwares híbrido HFW 4.87, 4.88 y 4.89
 
 ### PS3 HEN ![Version](https://img.shields.io/badge/Version-4.87-red.svg) 
 
