@@ -37,8 +37,7 @@ Hay 2 opciones y lo unico que hay que hacer es ir a una de estas direcciónes de
 - Hen Automático en Español http://thewizwikii.github.io/488/auto/
 
 ### PS3 HEN ![Version](https://img.shields.io/badge/Version-4.89-brightgreen.svg)
-- Hen Alternate en Español http://thewizwikii.github.io/489/
-- Hen Automático en Español http://thewizwikii.github.io/489/auto/
+- Hen Menu en Español http://thewizwikii.github.io/489/menu
 
 Buscas una guia de configuración definitiva para tu PS3 todo 
 
