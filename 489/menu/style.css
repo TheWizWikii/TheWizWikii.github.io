@@ -1,0 +1,46 @@
+
+
+/* BASIC RESET */
+ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,body,html,p,blockquote,fieldset,input{margin:0; padding:0;}
+
+/* HTML ELEMENTS */
+<body background="background.jpg">
+h1 { font: bold 65px/60px Helvetica, Electrolize, Sans-serif; text-align: center; color: #eee; text-shadow: 0px 2px 6px #333; }
+h1 small{ font-size: 20px; text-transform:uppercase; letter-spacing: 14px; display: block; color: #000; }
+h2 a { display: block; text-decoration: none; margin: 0 0 30px 0; font: italic 45px Georgia, Times, Serif;  text-align: center; color: #bfe1f1; text-shadow: 0px 2px 6px #333; }
+h2 a:hover { color: #90bcd0; }
+
+/* COMMON CLASSES */
+.break { clear:both; }
+
+/* WRAPPER */
+#wrapper { width:960px; margin:40px auto; }
+
+/* CONTENT */
+#content { }
+#content .info { padding:20px; }
+
+/* MOVIE POSTERS */
+/*#movieposters { list-style:none; margin:100px 0; height:550px; }*/
+#movieposters li { display:inline; float:left;
+	/*-webkit-perspective: 100; -webkit-transform-style: preserve-3d;*/
+	-webkit-transition-property: perspective; -webkit-transition-duration: 0.5s; padding-bottom:14%; }
+/*#movieposters li:hover { -webkit-perspective: 5000; }*/
+	
+#movieposters li img { border:5px solid #57FFEC; -webkit-transform: rotateY(30deg);
+	-moz-box-shadow:0 3px 10px #888; -webkit-box-shadow:0 0px 25px white;
+	-webkit-transition-property: transform; -webkit-transition-duration: 0.9s; }
+/*#movieposters li:hover img { -webkit-transform: rotateY(0deg); }*/
+
+.movieinfo { border:5px solid #57FFEC; padding:20px; width:200px; height:180px; background-color:rgba(0,0,0,0.8); margin:-195px 0 0 55px; position:absolute;
+	-moz-box-shadow:0 10px 20px white; -webkit-box-shadow:0 10px 20px white;
+	-webkit-transform: translateZ(30px) rotateY(30deg);
+	-webkit-transition-property: transform, box-shadow, margin; -webkit-transition-duration: 0.5s; }
+	
+#movieposters li:hover .movieinfo { -webkit-transform: rotateY(0deg); -webkit-box-shadow:0 5px 10px #888; margin:-175px 0 0 30px; }
+	
+.movieinfo h3 { color:#57FFEC; font-variant: small-caps; font-family:Georgia,serif,Times; text-align:center; padding-bottom:15px; }
+.movieinfo p { padding-bottom:15px; }
+.movieinfo a { background-color:rgba(87,255,236,0.2);border:1px solid #57FFEC; padding:5px 10px; color:#eee; text-decoration:none; display:block; width:80px; text-align:center; margin:0 auto;
+	-moz-border-radius:5px; -webkit-border-radius:5px; }
+.movieinfo a:hover, .movieinfo a:focus { background-color:white; color:#57FFEC; }
