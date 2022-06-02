@@ -1,10 +1,10 @@
 body
 {
-    color:crimson;
-    background-color:gray;
-	background-image: url('background.jpg');
-	background-size: 100%;
-	background-repeat: no-repeat;
+    /*color:crimson;
+    background-color:gray;*/
+    background-image: url('background.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
 }
 
 p {
