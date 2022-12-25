@@ -61,6 +61,7 @@ Esto habilita que puedas emparejar / conectar dispositivos por Bluetooth y USB c
 - **#Znullptr** (PS4/PS5 JB)
 - **#sleirsgoevy** (PS4 JB)
 - **#TheFlow** (PS4 JB)
+- **#Leeful** (cache host files I used)
 - **#Al-Azif** (DNS)
 - **#PS3XploitTeam** (esc0rtd3w - Habib - bguerville)
 - **#lmn7** (PS3 Exploits Offline)
