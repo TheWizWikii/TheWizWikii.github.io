@@ -1,0 +1,27 @@
+{
+    "name": "ESP32_Server_900u",
+    "builds": [
+        {
+            "chipFamily": "ESP32-S2",
+            "new_install_prompt_erase": true,
+            "parts": [
+                {
+                    "path": "ESP32_Server_900u.ino.bootloader.bin",
+                    "offset": 4096
+                },
+                {
+                    "path": "boot_app0.bin",
+                    "offset": 57344
+                },
+                {
+                    "path": "ESP32_Server_900u.ino.partitions.bin",
+                    "offset": 32768
+                },
+                {
+                    "path": "ESP32_Server_900u.ino.bin",
+                    "offset": 65536
+                }
+            ]
+        }
+    ]
+}

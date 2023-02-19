@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+
+<body>
+    <h1>ESP32 Server 9.00u</h1>
+
+    <p>Una versión del código del Servidor ESP32 9.00u del 24 de Febrero. No tengo ninguna afiliación con el proyecto y no lo desarrollé en absoluto.
+
+    </p>
+
+    <br>
+
+    <p>Nota: actualmente no flashea los .bin, estos se pueden añadir desde la interfaz web admin.html
+
+    </p>
+
+
+
+    <div id="main" style="display: none;">
+
+        <br>
+        <script
+            type="module"
+            src="https://unpkg.com/esp-web-tools@7.1.0/dist/web/install-button.js?module"></script>
+        <esp-web-install-button id="installButton" manifest="bins/manifest.json"></esp-web-install-button>
+        <br>
+        <span>NOTA: Asegúrese de cerrar todo lo que utilice el puerto COM de su dispositivo (por ejemplo, el monitor serie).</span>
+    </div>
+    <div id="notSupported" style="display: none;">
+        Si su navegador no es compatible con Web Serial API. Pruebe Chrome
+    </div>
+    
+
+    <script>
+        if(navigator.serial){
+            document.getElementById("notSupported").style.display = 'none';
+            document.getElementById("main").style.display = 'block';
+        } else {
+            document.getElementById("notSupported").style.display = 'block';
+            document.getElementById("main").style.display = 'none';
+        }
+    </script>
+
+</body>
+
+</html>
