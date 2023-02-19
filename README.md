@@ -9,7 +9,7 @@ Un Host alternativo para poder instalar, probar y ejecutar exploits en el navega
 
 Lo unico que hay que hacer es ir a esta dirección desde el navegador de internet de la cosnola usando la guia de usuario con las DNS de Al-Azif, las cuales permiten acceder al navegador de internet facilmente pulasando dos veces L2. DNS Primaria: 165.227.83.145 / DNS Secundaria: 192.241.221.79
 
-- http://thewizwikii.github.io/PS5/4.03/
+- https://thewizwikii.github.io/PS5/4.03/
 
 ---
 
@@ -17,7 +17,11 @@ Lo unico que hay que hacer es ir a esta dirección desde el navegador de interne
 
 Lo unico que hay que hacer es ir a esta dirección desde el navegador de internet de la cosnola.
 
-- http://thewizwikii.github.io/PS4/9.00/
+- https://thewizwikii.github.io/PS4/9.00/
+
+Link para flashear placas ESP32 S2 Mini
+
+- https://thewizwikii.github.io/PS4/webflash/index.html
 
 ---
 
@@ -61,6 +65,8 @@ Esto habilita que puedas emparejar / conectar dispositivos por Bluetooth y USB c
 - **#Znullptr** (PS4/PS5 JB)
 - **#sleirsgoevy** (PS4 JB)
 - **#TheFlow** (PS4 JB)
+- **#Stooged** (PS4 ESP32 Server)
+- **#Brian Lough** (PS4 ESP32-S2 setup interface Github)
 - **#Leeful** (cache host files I used (PS4))
 - **#Al-Azif** (DNS)
 - **#PS3XploitTeam** (esc0rtd3w - Habib - bguerville)
