@@ -9,7 +9,7 @@ table, th, td {
   <h2>Thanks to: PS3Xploit Team, Evilnat, kostirez1, littlebalup, Joonie</h2>
   <hr>
     <div id="dropdown">
-    <h3>Select USB Flash Dumping Device</h3>
+    <h3>Selecciona el dispositivo USB para el proceso de Flasheo</h3>
     <select id="usbList" onchange="updateDumpPath()">
     <option>/dev_usb000/</option>
     <option>/dev_usb001/</option>
@@ -112,8 +112,8 @@ var ftype = "NOR",
     dump_file = "PS3FlashDump490OFW.bin",
     fulldumppath = "/dev_usb000/PS3FlashDump490OFW.bin",
     base_file = "xxxx/dev_hdd0/theme/flash490.P3T",
-    fail_msg_frag = "<h3><span style='color:red'>Memory search failed! Restart the browser and try again.</h3></span>",
-    progress_msg_frag1 = "<h3>Finding variable offsets... ",
+    fail_msg_frag = "<h3><span style='color:red'>Algo fallo. Reinicia el navegador e intentelo de nuevo.</h3></span>",
+    progress_msg_frag1 = "<h3>Revisando tu consola espera... ",
     progress_msg_frag2 = '%</h3>',
     toc_addr = 0x6F5558,
     gadget_mod1_addr = 0x60EFD0,
@@ -799,7 +799,7 @@ function initROP(init)
         if((j2===jump_2)&&(j1===jump_1)&&(x===xtra_data)&&(sf===stack_frame)&&(j2_2===jump_2_2)&&(j1_2===jump_1_2)&&(sf2===stack_frame2)&&(j2_3===jump_2_3)&&(j1_3===jump_1_3)&&(sf3===stack_frame3)&&(j2_4===jump_2_4)&&(j1_4===jump_1_4)&&(sf4===stack_frame4))
         {
             if(t_out!==0){clearTimeout(t_out);}
-            showResult("<h3><span style='color:green'>Successfully found all variable offsets!</span></h3>");
+            showResult("<h3><span style='color:green'>La revisión finalizo con exito!</span></h3>");
             var elem = document.getElementById("nand");
             elem.parentNode.removeChild(elem);
             document.getElementById("init").value = "Run checks";
@@ -820,7 +820,7 @@ function triggerX()
 {
     document.getElementById("init").disabled = true;
     setTimeout(trigger,50,jump_1_addr);
-    showResult("<h3>Checking minimum firmware version...</h3>");
+    showResult("<h3>Verificando el firmware que vino tu consola de fabrica...</h3>");
     setTimeout(minVer,3000);
     t_out=0;
     total_loops=0;
@@ -829,12 +829,12 @@ function checkVsh()
 {
     if(vshchk.hashCode() != '2072119193')
     {
-        showResult("<h3><span style='color:red'>You cannot use this tool because you have already installed CFW!</span></h3>");
+        showResult("<h3><span style='color:red'>No puedes utilizar esta herramienta porque ya tienes CFW!</span></h3>");
     }
     else
     {
         document.getElementById('result').focus();
-        showResult('<h3>Downloading patch file...</h3>');
+        showResult('<h3>Descargando el archivo para flashear...</h3>');
         window.location.href = 'flash490.P3T';
         setTimeout(listener,1500);
     }
@@ -845,11 +845,11 @@ function minVer()
     minver=s2hex(minver).toString().slice(3, 8).replace("00",".");
     if(parseFloat(minver.toString())>3.56)
     {
-        showResult("<h3><span style='color:red'>You cannot use this tool because your console is incompatible with CFW!</h3></span>");
+        showResult("<h3><span style='color:red'>No puedes usar esta herramienta porque tu consola no es compatible con CFW!</h3></span>");
     }
     else
     {
-        showResult("<h3>Checking VSH...</h3>");
+        showResult("<h3>Verificando VSH...</h3>");
         vshchk=checkMemory(0x8A500000,0x302000,0x302000);
         setTimeout(checkVsh,10000);
     }
@@ -863,12 +863,12 @@ function checkHash()
 {
     if(chk.hashCode() != '691961656')
     {
-        showResult("<h3><span style='color:red'>Patch operation aborted due to patch file hash mismatch!</span></h3>");
+        showResult("<h3><span style='color:red'>Operacion abortada debido a una falta de coincidencia en el hash del archivo de flasheo.!</span></h3>");
         //alert(chk.hashCode());
     }
     else
     {
-        showResult('<h3><span style="color:green">All checks passed! You can now begin the flash dumping operation.</span></h3>');
+        showResult('<h3><span style="color:green">Se han superado todas las comprobaciones. Puedes hacer un volcado de la memoria flash por seguridad.</span></h3>');
         document.getElementById("init").value = "Dump "+ftype+" flash memory";
         document.getElementById("init").onclick = function (){dumpFlash();};
         document.getElementById("init").disabled = false;
@@ -877,7 +877,7 @@ function checkHash()
 function dumpFlash()
 {
     document.getElementById("init").disabled = true;
-    showResult('<h3>Dumping '+ftype+' flash memory to '+dump_path+dump_file+'...<br>This may take a few minutes.</h3>');
+    showResult('<h3>Dumping '+ftype+' flash memory to '+dump_path+dump_file+'...<br>Puede tardar unos minutos.</h3>');
     setTimeout(trigger,50,jump_1_addr_3);
     if (ftype == "NAND")
     {
@@ -887,7 +887,7 @@ function dumpFlash()
 }
 function enablePatcher()
 {
-    showResult('<h3><span style="color:green">Dump operation successful!</span><br><span style="color:red">Please ensure your flash dump was written to your USB drive and verify its integrity before proceeding to patch.</span></h3>');
+    showResult('<h3><span style="color:green">Operacion de volcado correcta!</span><br><span style="color:red">Por favor, comprueba que tu volcado de la flash se guardo en el USB antes de proceder a flashear.</span></h3>');
     document.getElementById("init").value = "Patch "+ftype+" flash memory";
     document.getElementById("init").onclick = function (){writePatch();};
     document.getElementById("init").disabled = false;
@@ -898,13 +898,13 @@ function writePatch()
     var sfc=checkMemory(stack_frame2_addr-0x4,0x20000,stack_frame2.length);
     if (sfc===stack_frame2)
     {
-       showResult('<h3>Patching '+ftype+' flash memory...<br>This may take a few minutes. <span style="color:red">Do not power off your console.</span></h3>');
+       showResult('<h3>Patching '+ftype+' flash memory...<br>Puede tardar unos minutos. <span style="color:red">No apagues la consola.</span></h3>');
        setTimeout(trigger,50,jump_1_addr_2);
-       setTimeout(showResult,1000,"<h3><span style='color:green'>Patch operation successful!</span><br>You can now reboot your PS3 and install a custom firmware of your choice.</h3>");
+       setTimeout(showResult,1000,"<h3><span style='color:green'>Tu consola se ha flasheado con exito!</span><br>Ahora puedes reiniciar tu PS3 e instalar un CFW 4.90 de tu elección.</h3>");
     }
     else
     {
-       showResult('<h3><span style="color:red">An unexpected error occurred.</span><br>Restart the browser and try again.</h3>');
+       showResult('<h3><span style="color:red">Se ha producido un error inesperado.</span><br>Reinicia el navegador y vuelve a intentarlo.</h3>');
     }
 }
 function listener()
@@ -913,14 +913,14 @@ function listener()
     {
         document.removeEventListener('mousemove', myListener, false);
         setTimeout(trigger,50,jump_1_addr);
-        showResult('<h3>Checking patch file...</h3>');
+        showResult('<h3>Comprobando el archivo de flasheo...</h3>');
         setTimeout(checkPatch,3000);
     };
     document.addEventListener('mousemove', myListener, false);
 }
 function HFWmsg()
 {
-    showResult("<h3><span style='color:red'>You must install Hybrid Firmware (HFW) 4.90 before using this tool!</h3></span>");
+    showResult("<h3><span style='color:red'>Debes tener instalado el firmware (HFW) 4.90 antes de usar esta herramienta!</h3></span>");
     throw new Error();
 }
 </script>
