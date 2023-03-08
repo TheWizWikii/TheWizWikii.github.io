@@ -877,7 +877,7 @@ function checkHash()
 function dumpFlash()
 {
     document.getElementById("init").disabled = true;
-    showResult('<h3>Dumping '+ftype+' flash memory to '+dump_path+dump_file+'...<br>Puede tardar unos minutos.</h3>');
+    showResult('<h3>Dumpeando '+ftype+' la memoria flash en '+dump_path+dump_file+'...<br>Puede tardar unos minutos.</h3>');
     setTimeout(trigger,50,jump_1_addr_3);
     if (ftype == "NAND")
     {
@@ -898,7 +898,7 @@ function writePatch()
     var sfc=checkMemory(stack_frame2_addr-0x4,0x20000,stack_frame2.length);
     if (sfc===stack_frame2)
     {
-       showResult('<h3>Patching '+ftype+' flash memory...<br>Puede tardar unos minutos. <span style="color:red">No apagues la consola.</span></h3>');
+       showResult('<h3>Flasheando la memoria '+ftype+'...<br>Puede tardar unos minutos. <span style="color:red">No apagues la consola.</span></h3>');
        setTimeout(trigger,50,jump_1_addr_2);
        setTimeout(showResult,1000,"<h3><span style='color:green'>Tu consola se ha flasheado con exito!</span><br>Ahora puedes reiniciar tu PS3 e instalar un CFW 4.90 de tu elección.</h3>");
     }
