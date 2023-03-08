@@ -25,9 +25,11 @@ Link para flashear placas ESP32 S2 Mini
 
 ---
 
+# PS3 HEN & CFW Flasher
+
 ### En qué consolas y firmwares funciona:
 
-Esta versión de HEN és compatible con todoas las consolas PS3 (Todos los modelos) ya sea FAT/SLIM/SUPER SLIM en el firmwares híbrido HFW 4.87, 4.88 y 4.89
+Esta versión de HEN és compatible con todoas las consolas PS3 (Todos los modelos) ya sea FAT/SLIM/SUPER SLIM en el firmwares híbrido HFW 4.90. CFW Flasher es solo para modelos compatibles con CFW y se puede usar en 4.90 desde OFW.
 
 
 ### PS3 HEN ![Version](https://img.shields.io/badge/Version-4.89-red.svg)
