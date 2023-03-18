@@ -1,0 +1,70 @@
+<html>
+<body>
+<script>
+function wk_keep_alive()
+{
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', document.location.href, false);
+    xhr.send('');
+}
+
+function print(){}
+
+function getHashParams()
+{
+    var ans = {};
+    var p = document.location.hash.substr(1).split("&");
+    for(var i = 0; i < p.length; i++)
+    {
+        var kv = p[i].split('=');
+        var k = kv.shift();
+        ans[k] = decodeURIComponent(kv.join('='));
+    }
+    return ans;
+}
+
+function done()
+{
+    history.pushState({}, '', '.');
+    if(main_ret == 0 || main_ret == 179)
+    {
+        setTimeout(function() { read_ptr_at(0); }, 1);
+    }
+    else
+        alert("Jailbreak is not activated.");
+}
+
+function runScript(what)
+{
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', what, false);
+    xhr.send('');
+    eval.call(window, xhr.responseText);
+}
+
+function afterKernel()
+{
+    runScript('common/relocator.js');
+    done();
+}
+
+var params = getHashParams();
+</script>
+<script src="payloads/netcat-900.js"></script>
+<script src="webkit-9.00/exploit.js"></script>
+<script src="webkit-9.00/malloc.js"></script>
+<script src="webkit-9.00/rop/rop.js"></script>
+<script src="common/syscalls.js"></script>
+<script src="common/syscalls2.js"></script>
+<script>
+if('p0' in params)
+    runScript(params.p0);
+if('p1' in params)
+    runScript(params.p1);
+</script>
+<script src="kexploit/int64.js"></script>
+<script src="kexploit/rop.js"></script>
+<script src="kexploit/kexploit.js"></script>
+<script src="payloads/kexploit-launcher-900.js"></script>
+</body>
+</html>

