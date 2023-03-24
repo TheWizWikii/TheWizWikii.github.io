@@ -1,7 +1,7 @@
 CACHE MANIFEST
-# TheWizWiki
+# TheWizWiki 
+# 04/09/2022-15:02:00.21
 
-CACHE:
 cache.manifest
 assets/favicon.ico
 assets/style.css
@@ -43,5 +43,3 @@ webkit-9.00/exploit.js
 webkit-9.00/malloc.js
 webkit-9.00/rop/rop.js
 
-NETWORK:
-*
