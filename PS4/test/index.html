@@ -12,7 +12,7 @@
 	<script>
 		window.applicationCache.ondownloading = function()
 		{
-			alert("Caching started! Press OK and check progress on the bottom of the page.")
+			alert("Se ha iniciado el almacenamiento en caché. Pulse OK y espera a que termine.")
 		};
 		window.applicationCache.onprogress = function(a)
 		{
@@ -22,7 +22,7 @@
 		};
 		window.applicationCache.oncached = window.applicationCache.onupdateready = function()
 		{
-			alert("Page cached successfully. Press OK.")
+			alert("Página almacenada en caché correctamente. Pulsa OK.")
 			document.getElementById("progresscon").style.display="none";
 		};
 	</script>
@@ -31,7 +31,7 @@
 		<div class="tab">
 			<button class="tablinks" onclick="opentab(event, 'Jailbreak')">Jailbreak</button>
 			<button class="tablinks" onclick="opentab(event, 'Linux')">Linux</button>
-			<button class="tablinks" onclick="opentab(event, 'Other')">Other Payloads</button>
+			<button class="tablinks" onclick="opentab(event, 'Other')">Otros Payloads</button>
 		</div>
 		<div id="Jailbreak" class="tabcontent link">
 			<a href="jb.html#p0=payloads/mira-900.js&p1=payloads/goldhen-v2.3.js">GoldHen 2.3</a>
@@ -56,13 +56,13 @@
 			<br />
 			<a href="jb.html#p0=payloads/mira-900.js&p1=payloads/whos-that-southbridge.js">WhosThatSouthbridge</a>
 			<div class="rel">
-				<h2>Links</h2>
+				<!--<h2>Links</h2>
 				<ul>
 					<li>Make your own PS4 Linux Distro - <a href="https://ps4linux.com/s/make-own" target="_blank">https://ps4linux.com/s/make-own</a></li>
 					<li>PS4 Linux AIO Documentation - <a href="https://ps4linux.com/s/aio-doc" target="_blank">https://ps4linux.com/s/aio-doc</a></li>
 					<li>PS4 Linux Downloads - <a href="https://ps4linux.com/s/dl" target="_blank">https://ps4linux.com/s/dl</a></li>
 					<li>Make Money on PS4 Linux- <a href="https://ps4linux.com/s/make-money" target="_blank">https://ps4linux.com/s/make-money</a></li>
-				<ul>
+				<ul>-->
 			</div>
 		</div>
 		<div id="Other" class="tabcontent link">
