@@ -1,0 +1,11 @@
+$$var retbuf = malloc(8);
+
+pop rax
+dq 179
+pop rcx
+$retbuf
+mov [rcx], rax
+
+$pivot_addr
+$$pivot(ropchain);
+$$print(read_mem(retbuf, 8));

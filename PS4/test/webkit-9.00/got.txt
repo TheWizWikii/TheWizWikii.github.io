@@ -1,0 +1,11 @@
+got+786	?? (not libkernel)
+got+705	libkernel
+got+97	?? (>15MB)
+got+797	?? (1.29MB)
+got+582	libc
+//to dump webkit using dump_module.py, pass -1 as got offset
+
+// note: these addresses only contain **some** pointer into the target
+// e.g. libkernel spans about 0x10000 bytes below the pointer
+// to specify an offset to dump_module, invoke it like this:
+//   dump_module.py got_idx,offset
