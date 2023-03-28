@@ -1,0 +1,288 @@
+$$var progbuf = malloc(1048576);
+$$var membuf = malloc(1048576);
+$$var inputbuf = malloc(1024);
+$$var outputbuf = malloc(1024);
+$$function run_bf(program, input)
+$${
+$$  var prog = [];
+$$  for(var i = 0; i < program.length; i++)
+$$    prog.push(program.charCodeAt(i));
+$$  prog.push(0);
+$$  write_mem(progbuf, prog);
+$$  write_mem(inputbuf, input);
+
+entry:
+pop rcx
+dp rdi_bak
+mov [rcx], rdi
+
+loop:
+# read next char
+pop rax
+ip:
+$progbuf # ip
+mov al, [rax]
+movzx eax, al
+
+# load caret pointer into some unused register
+pop r8
+caret_ptr:
+$membuf # caret pointer
+
+# index into jump table
+shl rax, 3
+pop rsi
+dp jump_table
+add rax, rsi
+
+# jump
+mov rax, [rax]
+pop rsi
+dp the_rsp
+mov [rsi], rax
+pop rsp
+the_rsp:
+dq 0
+
+# the jump table itself
+jump_table:
+dp exit # assume the program is C string
+db bytes(42*8) # move to offset 43
+dp plus # '+' == 43
+dp comma # ',' == 44
+dp minus # '-' == 45
+dp dot # '.' == 46
+db bytes(13*8) # move to offset 60
+dp move_left # '<' == 60
+dq 0
+dp move_right # '>' == 62
+db bytes(28*8) # move to offset 91
+dp slide_right # '[' == 91
+dq 0
+dp slide_left # ']' == 93
+
+plus:
+mov rax, r8
+mov al, [rax]
+inc eax
+xchg eax, ecx
+mov rax, r8
+mov [rax], cl
+pop rsp
+dp continue_loop
+
+minus:
+mov rax, r8
+mov al, [rax]
+dec eax
+xchg eax, ecx
+mov rax, r8
+mov [rax], cl
+pop rsp
+dp continue_loop
+
+move_left:
+mov rax, r8
+pop rsi
+dq -1
+add rax, rsi
+pop rsi
+dp caret_ptr
+mov [rsi], rax
+pop rsp
+dp continue_loop
+
+move_right:
+mov rax, r8
+pop rsi
+dq 1
+add rax, rsi
+pop rsi
+dp caret_ptr
+mov [rsi], rax
+pop rsp
+dp continue_loop
+
+dot:
+mov rax, r8
+mov al, [rax]
+pop rsi
+output_ptr:
+$outputbuf
+mov [rsi], al
+pop rdi
+dp output_ptr+0x80
+inc qword [rdi - 0x80]
+pop rsp
+dp continue_loop
+
+comma:
+pop rax
+input_ptr:
+$inputbuf
+mov al, [rax]
+xchg eax, ecx
+mov rax, r8
+mov [rax], cl
+pop rdi
+dp input_ptr+0x80
+inc qword [rdi - 0x80]
+pop rsp
+dp continue_loop
+
+slide_right:
+# run slide_do with step=1, xor=1
+pop rsi
+dp slide_xor
+pop rax
+dq 1
+mov [rsi], rax
+pop rsi
+dp slide_step
+pop rax
+dq -1 # inverted
+mov [rsi], rax
+pop rsp
+dp slide_do
+
+slide_left:
+# run slide_do with step=-1, xor=0
+pop rsi
+dp slide_xor
+pop rax
+dq 0
+mov [rsi], rax
+pop rsi
+dp slide_step
+pop rax
+dq 1 # inverted
+mov [rsi], rax
+# fallthrough
+
+slide_do:
+# load byte & check if zero
+mov rax, r8
+mov al, [rax]
+test al, al ; setne al
+movzx eax, al
+# now rax=1 if byte != 0 else 0
+pop rcx
+slide_xor:
+dq 0
+xor rax, rcx # actually a CNOT, see above
+
+# index into jump table
+shl rax, 3
+pop rsi
+dp slide_do_jmptbl
+add rax, rsi
+mov rax, [rax]
+pop rsi
+dp slide_do_jmp
+mov [rsi], rax
+pop rsp
+slide_do_jmp:
+dq 0
+
+slide_do_jmptbl:
+dp continue_loop
+dp do_slide
+
+do_slide:
+# load rdi = ip
+pop rdi
+dp ip-0x18
+mov rdi, [rdi + 0x18] ; mov rax, rdi
+
+slide_loop:
+# load char & check if it is [ or ]
+mov al, [rdi]
+pop rsi
+dq ord('[')
+sub rax, rsi
+test al, al ; setne al
+xchg eax, ecx # now cl=1 if char != '[' else 0
+mov al, [rdi]
+pop rsi
+dq ord(']')
+sub rax, rsi
+test al, al ; setne al
+mov rsi, rax ; mov rax, rsi
+add rax, rsi # now al=2 if char != ']' else 0
+add rax, rcx # now cl=1 if char == ']', 2 if char == '[', 3 otherwise
+movzx eax, al
+
+# index into coefficient table (see below)
+shl rax, 3
+pop rsi
+dp slide_coeffs-8
+add rax, rsi
+mov rax, [rax]
+xchg eax, ecx
+
+# add coeff. to depth counter
+pop r8
+dp slide_cntr+1
+add [r8 - 1], rcx
+
+# check if depth counter is zero
+pop rax
+slide_cntr:
+dq 0
+test eax, eax ; setne al # the counter is 32-bit
+movzx eax, al
+
+# index into jump table
+shl rax, 3
+pop rsi
+dp slide_loop_jmptbl
+add rax, rsi
+mov rax, [rax]
+pop rsi
+dp slide_loop_jmp
+mov [rsi], rax
+pop rsp
+slide_loop_jmp:
+dq 0
+
+slide_coeffs:
+dq -1
+dq 1
+dq 0
+
+slide_loop_jmptbl:
+dp slide_end
+dp slide_cont
+
+# increment/decrement rdi (ip) (see step=[01] in slide_(left|right) above)
+slide_cont:
+pop rsi
+slide_step:
+dq 0
+sub rdi, rsi ; mov rdx, rdi
+pop rsp
+dp slide_loop
+
+slide_end:
+# set 
+mov rax, rdi
+pop rsi
+dp ip
+mov [rsi], rax
+
+continue_loop:
+pop rdi
+dp ip+0x80
+inc qword [rdi - 0x80]
+pop rsp
+dp loop
+
+exit:
+pop rdi
+rdi_bak:
+dq 0
+$pivot_addr
+
+$$pivot(ropchain);
+$$  return read_mem(outputbuf, 1024);
+$$}

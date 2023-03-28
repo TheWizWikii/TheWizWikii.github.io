@@ -1,0 +1,156 @@
+body {
+	background:url(bg.jpg);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	font-family: "Open Sans", sans-serif;
+}
+.logo {
+	background:url(logo.png) no-repeat;
+	width:500px;
+	height:49px;
+	margin:25px auto;	
+}
+.maincon {
+	width:70%;
+	margin:0 auto;
+	border:1px dotted #fff;
+}
+.maincon p {
+	text-align:center;
+}
+.tab {
+	overflow:hidden;
+	background:#2a2a2a;
+	text-align:center;
+	font-size:0;
+}
+.tab button {
+	background:inherit;
+	border:none;
+	outline:none;
+	cursor:pointer;
+	padding:14px 16px;
+	transition:0.3s;
+	font-size:15px;
+	text-transform:uppercase;
+	font-weight:800;
+	color:#fff;
+}
+.tab button:hover {
+	background:#004098;
+}
+.tab button.active {
+	background:#004098;
+	border-right:1px dotted #fff;
+}
+.tabcontent {
+	display:none;
+	border-top:none;
+	background:#004098;
+	text-align:center;
+	-webkit-animation:fadeEffect 1s;
+	animation:fadeEffect 1s;
+	padding-top:10px;
+	text-transform:capitalize;
+}
+@-webkit-keyframes fadeEffect {
+	from {opacity: 0;}
+	to {opacity: 1;}
+}
+
+@keyframes fadeEffect {
+	from {opacity: 0;}
+	to {opacity: 1;}
+}
+a {
+	padding:15px;
+	display:inline-block;
+	background:#fff;
+	color:#2a2a2a;
+	text-decoration:none;
+	margin:0px 14px 10px 0;
+	border-radius:20px;
+	transition: all 0.4s;
+}
+a:hover, a:hover {
+	background:#2a2a2a;
+	color:#fff;
+}
+.rel {
+	background:#ebebeb;
+	color:#2a2a2a;
+	text-transform:none;
+}
+.rel h2 {
+	padding-top:5px;
+}
+.rel ul {
+	text-align:left;
+}
+.rel ul li {
+	margin:-2px;
+}
+.rel a {
+	padding:4px 10px;;
+}
+.ftrinfo {
+	background:#fff;
+	text-align:center;
+	color:#2a2a2a;
+}
+.ftrinfo a {
+	background:#004098;
+	color:#fff;
+}
+.ftrinfo a:hover {
+	background:#2a2a2a;
+}
+p.bl {
+	color:#004098;
+	font-weight:600;
+	animation: blinker 3s linear infinite;
+}
+
+.waviy {
+	position: relative;
+	margin:10px 0;
+}
+.waviy span {
+	position: relative;
+	display: inline-block;
+	font-size: 20px;
+	animation: flip 6.5s infinite;
+	animation-delay: calc(.3s * var(--i))
+}
+@keyframes flip {
+	0%,80% {
+		transform: rotateY(360deg) 
+	}
+}
+
+#progresscon {
+	width:70%;
+	margin:0 auto;
+	background:#2a2a2a;
+	color:#fff;
+	border-radius:10px;
+	display:none;
+	text-align:center;
+}
+#progressbar {
+	width:0%;
+	height:40px;
+	background:#004098;
+	transition: all .5s linear;
+	border-radius:10px;
+}
+#progressbarpc {
+	position:absolute;
+    display:block;
+    width:50%;
+	margin:-10px;
+}
+.center {
+  width: 250px;
+  height: 250px;
+}
