@@ -19,6 +19,10 @@ Lo unico que hay que hacer es ir a esta dirección desde el navegador de interne
 
 - https://thewizwikii.github.io/PS4/9.00/
 
+### PS4 Jailbreak Menu
+
+- https://thewizwikii.github.io/PS4/9.00/menu
+
 Link para flashear placas ESP32 S2 Mini
 
 - https://thewizwikii.github.io/PS4/webflash/index.html
