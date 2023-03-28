@@ -20,6 +20,7 @@ payloads/app-2-usb-900.js
 payloads/disable-updates-900.js
 payloads/enable-updates-900.js
 payloads/goldhen-2.3.js
+payloads/goldhen-2.4b5.js
 payloads/jbcldr-900.js
 payloads/kernel-dumper-900.js
 payloads/kernel-module-dumper-900.js
