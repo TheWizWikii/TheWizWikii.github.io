@@ -6,6 +6,8 @@ cache.manifest
 assets/favicon.ico
 assets/style.css
 assets/logo.png
+assets/bg.jpg
+assets/thewizwiki.png
 common/relocator.js
 common/syscalls.js
 common/syscalls2.js
