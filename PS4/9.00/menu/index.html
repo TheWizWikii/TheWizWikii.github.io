@@ -16,7 +16,7 @@
 		window.applicationCache.onprogress = function(a)
 		{
 			document.getElementById("progresscon").style.display="block";
-			document.getElementById("progressbarpc").innerHTML="<h3>Caching Status: "+(Math.round(100*(a.loaded/a.total)))+"% Completed</h3>";
+			document.getElementById("progressbarpc").innerHTML="<h3>Instalando en Cache: "+(Math.round(100*(a.loaded/a.total)))+"% Completado</h3>";
 			document.getElementById("progressbar").style.width=(Math.round(100*(a.loaded/a.total)))+"%";
 		};
 		window.applicationCache.oncached = window.applicationCache.onupdateready = function()
