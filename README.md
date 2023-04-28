@@ -70,11 +70,10 @@ Esto habilita que puedas emparejar / conectar dispositivos por Bluetooth y USB c
 - **#Al-Azif** (DNS)
 - **#PS3XploitTeam** (esc0rtd3w - Habib - bguerville)
 - **#lmn7** (PS3 Exploits Offline)
-- **#Joonie** (HFW 4.87.1 and contributions)
+- **#Joonie** (HFW 4.90 and contributions)
 - **#zecoxao** (HFW 4.88.1 and contributions)
 - **#Coro** (Bluetooth/USB Game Audio updates)
-- **#Litlebalup** (HFW 4.89)
-- **#lmn7** (HEN scripts and custom)
+- **#Litlebalup** (HFW 4.89 and Dualboot 4.90)
 - **#PSX-PLACE** (long contribution in PS3 Scene)
 - **#y a toda la comunidad de PS3 y PS4**
 
