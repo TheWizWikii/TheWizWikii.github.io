@@ -74,7 +74,7 @@ Esto habilita que puedas emparejar / conectar dispositivos por Bluetooth y USB c
 - **#zecoxao** (HFW 4.88.1 and contributions)
 - **#Coro** (Bluetooth/USB Game Audio updates)
 - **#Litlebalup** (HFW 4.89)
-- **#Luan Teles** (Unofficial HEN packages)
+- **#lmn7** (HEN scripts and custom)
 - **#PSX-PLACE** (long contribution in PS3 Scene)
 - **#y a toda la comunidad de PS3 y PS4**
 
