@@ -69,7 +69,7 @@ Esto habilita que puedas emparejar / conectar dispositivos por Bluetooth y USB c
 - **#Leeful** (cache host files I used (PS4))
 - **#Al-Azif** (DNS)
 - **#PS3XploitTeam** (esc0rtd3w - Habib - bguerville)
-- **#lmn7** (PS3 Exploits Offline)
+- **#lmn7** (PS3 Exploits Offline and scripts)
 - **#Joonie** (HFW 4.90 and contributions)
 - **#zecoxao** (HFW 4.88.1 and contributions)
 - **#Coro** (Bluetooth/USB Game Audio updates)
