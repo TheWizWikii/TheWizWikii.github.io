@@ -75,6 +75,7 @@ Esto habilita que puedas emparejar / conectar dispositivos por Bluetooth y USB c
 - **#Litlebalup** (HFW 4.89 and Dualboot 4.90)
 - **#Aldo** (Legend and long contribution in PS3 Scene)
 - **#PSX-PLACE** (long contribution in PS3 Scene)
+- **#Khaled Ahmed** (Auto host PS5 psfree files)
 - **#y a toda la comunidad de PS3 y PS4**
 
 ---
