@@ -13,6 +13,12 @@ Lo unico que hay que hacer es ir a esta dirección desde el navegador de interne
 
 ---
 
+### PS5 Jailbreak + PSFREE
+
+- https://thewizwikii.github.io/psfree
+
+---
+
 ### PS4 Jailbreak + Goldhen v3.2.2 ![Version](https://img.shields.io/badge/Version-9.00-brightgreen.svg)
 
 Lo unico que hay que hacer es ir a esta dirección desde el navegador de internet de la cosnola.
