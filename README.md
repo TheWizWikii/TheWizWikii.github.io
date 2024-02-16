@@ -11,8 +11,6 @@ Lo unico que hay que hacer es ir a esta dirección desde el navegador de interne
 
 - https://thewizwikii.github.io/PS5/4.03/
 
----
-
 ### PS5 Jailbreak + PSFREE
 
 - https://thewizwikii.github.io/psfree
