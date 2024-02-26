@@ -6,7 +6,7 @@
 Un Host alternativo para poder instalar, probar y ejecutar exploits en el navegador de internet de PS3, PS4 y PS5.
 
 
-### PS5 Jailbreak + PSFREE (3.XX - 4.XX)
+### PS5 Jailbreak + PSFREE etaHEN 1.7B (3.XX - 4.XX)
 
 - https://thewizwikii.github.io/psfree
 
