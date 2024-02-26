@@ -1,0 +1,208 @@
+<html manifest="cache.appcache">
+
+<head>
+    <title>PS5 Kernel Exploit (3.xx-4.xx)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="main.css">
+
+    <script defer src="int64.js"></script>
+    <script defer src="rop.js"></script>
+    <script defer src="exploit.js"></script>
+    <script defer src="payload_map.js"></script>
+    <script defer src="custom_host_stuff.js"></script>
+    <script defer src="appcache_handler.js"></script>
+    <script defer src="utils.js"></script>
+    <script defer src="constants.js"></script>
+    <script defer src="int64x.js"></script>
+    <script defer src="mem.js"></script>
+    <script defer src="memtools.js"></script>
+    <script defer src="rw.js"></script>
+    <script defer src="webkit_psfree.js"></script>
+    <script defer src="webkit_fontface.js"></script>
+    <script>
+        addEventListener('unhandledrejection', (event) => {
+            const reason = event.reason;
+            // We log the line and column numbers as well since some exceptions (like
+            // SyntaxError) do not show it in the stack trace.
+            alert(
+                `${reason}\n`
+                + `${reason.sourceURL}:${reason.line}:${reason.column}\n`
+                + `${reason.stack}`
+            );
+            throw reason;
+        });
+        window.addEventListener('load', function () {
+            onload_setup();
+        }, false);
+    </script>
+</head>
+
+
+<body>
+    <svg style="display: none" version="2.0">
+        <defs>
+            <symbol id="delete-icon" viewBox="0 -960 960 960">
+                <path
+                    d="m376-300 104-104 104 104 56-56-104-104 104-104-56-56-104 104-104-104-56 56 104 104-104 104 56 56Zm-96 180q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520Zm-400 0v520-520Z" />
+            </symbol>
+            <symbol id="forward-arrow-icon" viewBox="0 -960 960 960">
+                <path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z" />
+            </symbol>
+
+        </defs>
+    </svg>
+
+    <div id="toast-container"></div>
+
+
+    <div id="redirector-view"
+        style="min-width: 100%; max-width: 100%; position: absolute; top: 0; left: -100%; min-height: 100%; max-height: 100%;">
+        <div style="overflow-y: scroll; width: 100%;max-height: 100vh;min-height: 100vh;" id="redirector-view-inner">
+            <h3 style="text-align: center;">Redirector</h3>
+            <div style="padding: 25px;padding-top: 0; display: flex;">
+                <input id="redirector-input" type="text" value="http://"
+                    style="width: 100%; border-radius: 10px; padding: 15px; background-color: #223; color: #fff; border-color: #334; font-size: 20px;" />
+                <a class="btn icon-btn" style="width: 100px;" tabindex="0" onclick="redirectorGo()">
+                    <svg width="32px" height="32px" fill="#ddd">
+                        <use href="#forward-arrow-icon" />
+                    </svg>
+                </a>
+            </div>
+
+            <div style="display: flex; flex-direction: row; max-width: 100%; padding-left: 50px; padding-right: 50px;">
+                <div style="width: 60%; margin-right: 35px; " id="redirector-pinned"></div>
+                <div style="width: 1px; background-color: #557; margin-top: 10px;"></div>
+                <div style="width: 40%; margin-left: 35px; " id="redirector-history"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="center-view" style="position: absolute; top: 0; left: 0; width: 100%; min-height: 100%;">
+
+        <div style="margin-top: 15px; position: absolute; width: 100%;">
+            <h1 style="text-align: center;">PS5 Auto Jailbreak/etaHEN 3.xx-4.xx (psFree Edition)</h1>
+            <h5 style="text-align: center;">etaHEN 1.7B</h5>
+            <br /><br />
+            <h6 style="text-align: center;">Forked/Based on idlesauce / Automation by @KsAmJ</h6>
+
+            <div id="PScontainer" style="height: 30%;"></div>
+
+            <p id="current-fw" class="text-secondary"
+                style="text-align: center; margin-bottom: 8px; padding-bottom: 0;">
+            </p>
+
+            <p id="listening-ip" class="text-secondary" style="text-align: center; margin-top: 0; padding-top: 0;">
+                <br />
+            </p>
+        </div>
+        <div style="position: absolute; margin: 35px; top: 0; left: 10px;" class="opacity-transition" id="l2-redirect">
+            <div>
+                <span style="vertical-align: middle;display: inline-block;                ">
+                    <svg viewbox="0 0 79 61" xmlns="http://www.w3.org/2000/svg" style="width: 32px; height:32px;">
+                        <rect x="0" y="0" width="79" height="61" rx="13" ry="13" fill="#bdc0c2" />
+                        <text x="50%" y="50%" dy="17.5px" text-anchor="middle" fill="#4e4e4e" font-size="50"
+                            font-weight="bold">L2</text>
+                    </svg>
+                </span>
+                <span
+                    style="font-size: 18px; vertical-align: middle;display: inline-block; margin-left: 8px; font-weight: bold; color: #aaa;">Redirect</span>
+            </div>
+        </div>
+        <a tabindex="0" class="btn" style="max-width: 50%;opacity: 0;" id="run-jb"
+            onclick="runJailbreak()">Jailbreak</a>
+        <div id="before-jb-view">
+
+            <div id="run-jb-parent" class="opacity-transition"
+                style="display: flex; justify-content: center; align-items: center; position: absolute; top: 0;left: 0; width: 100%; height: 100%;">
+                <!-- <h1 style="font-weight: bold;">AUTO etaHEN</h1> -->
+
+
+            </div>
+
+            <div id="jb-progress" class="opacity-transition"
+                style="display: flex; flex-direction: column; justify-content: center; align-items: center; position: absolute; top: 0;left: 0; width: 100%; height: 100%; opacity: 0; pointer-events: none;">
+                <div class="lds-ellipsis" style="margin-top: 40px;">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <p id="jb-progress-status-text" style="text-align: center; width: 100%; margin-top: 40px;">
+                    Getting
+                    ready... <br /><span class="secondary-text">(may look frozen)</span></p>
+                <textarea id="console" class="log" style="display: none;"></textarea>
+            </div>
+
+            <div id="post-jb-view" class="opacity-transition"
+                style="width: 100%;position: relative; max-height: 10px; overflow-y: hidden; margin-top: 200px;">
+                <!-- it seems like sometimes display none to anything else and transforms like causing crashes after the jailbreak. idk. -->
+                <div id="payloads-list" class="grid-container">
+                </div>
+            </div>
+
+            <center style="position: fixed;bottom: 0;width: 100%;margin-bottom: 10px;font-size: 13px;"
+                class="info opacity-transition" id="credits">
+
+                <b id="version"></b>
+                <h3 style="margin-top: 0;padding-top: 0;">
+
+                </h3>
+            </center>
+        </div>
+    </div>
+    <div style="display: none;">
+        <div id="menu-overlay"
+            style="position: fixed; top: -100%; left: 0; width: 100%; min-height: 100%; height: 100%; background-color: #111111d0; opacity:0;"
+            class="opacity-transition"></div>
+        <div id="menu-bar-wrapper"
+            style="position: absolute; top: 0; right: -500px; width: 320px; min-height: 100%; height: 100%; padding: 16px; box-sizing: border-box; transition: right 0.35s ease-in-out;">
+            <div id="menu-bar"
+                style="position: relative;top:0;left: 0; width:100%;height:100%; background-color: #161622; border-radius: 16px; padding: 15px; box-sizing: border-box;">
+                <p style="margin: 10px; font-weight: bold;">Webkit exploit type:</p>
+                <div style="margin: 10px;">
+                    <input type="radio" id="wk-exploit-psfree" name="wk-exploit" value="psfree"
+                        onchange="wk_expoit_type_changed(event)">
+                    <label for="psfree">PSFree</label><br>
+                    <input type="radio" id="wk-exploit-fontface" name="wk-exploit" value="fontface"
+                        onchange="wk_expoit_type_changed(event)">
+                    <label for="fontface">FontFace</label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const images = ["cross.png", "circle.png", "triangle.png", "square.png"]
+
+        let firstImage = document.createElement("img"),
+            secondImage = document.createElement("img"),
+            thirdImage = document.createElement("img"),
+            fourthImage = document.createElement("img");
+
+        let orderedImages = images.sort(() => Math.random() - 0.5);
+
+        firstImage.src = orderedImages[0];
+        secondImage.src = orderedImages[1];
+        thirdImage.src = orderedImages[2];
+        fourthImage.src = orderedImages[3];
+
+        let container = document.getElementById("PScontainer");
+
+        container.appendChild(firstImage);
+        container.appendChild(secondImage);
+        container.appendChild(thirdImage);
+        container.appendChild(fourthImage);
+
+        document.addEventListener('DOMContentLoaded', function () {
+            setTimeout(function () {
+                let btnRunJB = document.getElementById("run-jb");
+                btnRunJB.style.opacity = "0";
+                runJailbreak()
+            }, 1000);
+
+
+        }, false);
+
+    </script>
+</body>
+
+</html>
