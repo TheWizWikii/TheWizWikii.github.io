@@ -36,10 +36,13 @@ Esta versión de HEN és compatible con todoas las consolas PS3 (Todos los model
 
 
 ### PS3 HEN ![Version](https://img.shields.io/badge/Version-4.89-red.svg)
-- Hen Menu en Español http://thewizwikii.github.io/489/menu
+- Hen Menu http://thewizwikii.github.io/489/menu
 
 ### PS3 HEN ![Version](https://img.shields.io/badge/Version-4.90-brightgreen.svg)
-- Hen Menu en Español http://thewizwikii.github.io/490/menu
+- Hen Menu http://thewizwikii.github.io/490/menu
+
+### PS3 HEN ![Version](https://img.shields.io/badge/Version-4.91-brightgreen.svg)
+- Hen Menu http://thewizwikii.github.io/491/menu
 
 Buscas una guia de configuración definitiva para tu PS3 todo 
 
@@ -77,6 +80,7 @@ Esto habilita que puedas emparejar / conectar dispositivos por Bluetooth y USB c
 - **#PSX-PLACE** (long contribution in PS3 Scene)
 - **#idlesauce**
 - **#Khaled Ahmed** (Auto host PS5 psfree files)
+- **#VideogamesSCZ** (Por su contribucion en Auto HEN 4.91)
 - **#y a toda la comunidad de PS3 y PS4**
 
 ---
