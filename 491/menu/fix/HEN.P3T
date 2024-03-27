@@ -1,0 +1,557 @@
+.placeholder.
+<XMBML version="1.0">
+	<View id="root">
+		<Attributes>
+		<!-- Focus on boot -->
+			<Table key="hen_xmb">
+				<Pair key="focus_priority"><String>-80</String></Pair>
+			</Table>
+		<!-- Focus on HEN Enabled -->
+			<!--<Table key="hen_disabled_xmb">
+				<Pair key="focus_priority"><String>-80</String></Pair>
+			</Table>-->
+		<!-- Focus if HEN icon hidden -->
+			<Table key="seg_package_files">
+				<Pair key="focus_priority"><String>-80</String></Pair>
+			</Table>
+		</Attributes>
+		<Items>
+			<Query
+				class="type:x-xmb/folder-pixmap"
+				key="seg_fixed_items"
+				src="#seg_fixed_items"
+				/>
+			<Query
+				class="type:x-xmb/folder-pixmap"
+				key="seg_sdps2"
+				src="sel://localhost/ps2emusave?category_game.xml#seg_sdps2"
+				/>
+			<Query
+				class="type:x-xmb/folder-pixmap"
+				key="seg_fixed_items2"
+				src="#seg_fixed_items2"
+				/>
+			<!-- HEN Enabler Default HDD -->
+			<Query
+				class="type:x-xmb/folder-pixmap"
+				key="hen_xmb"
+				attr="hen_xmb"
+				src="xmb://localhost/dev_hdd0/hen/xml/hen_enable.xml#hen_xmb"
+				/>
+			<!-- HEN Enabler Default Flash -->
+			<!--<Query
+				class="type:x-xmb/folder-pixmap"
+				key="hen_xmb"
+				attr="hen_xmb"
+				src="xmb://localhost/dev_flash//hen/xml/hen_enable.xml#hen_xmb"
+				/>-->
+			<!-- app_home Toggle: OFF -->
+			<!--<Query
+				class="type:x-xmb/folder-pixmap"
+				key="seg_gamedebug"
+				src="#seg_gamedebug"
+				/>-->
+			<!-- Package Manager Default -->
+			<!-- This file is missing on purpose, to be hidden until HEN is enabled -->
+			<Query
+				class="type:x-xmb/folder-pixmap"
+				key="seg_package_files"
+				attr="seg_package_files"
+				src="xmb://localhost/dev_hdd0/hen/xml/hen_pkg_manager_full.xml#seg_package_files"
+				/>
+			<!-- Package Manager (Standalone English Only. Hardcoded) -->
+			<!--<Query
+				class="type:x-xmb/folder-pixmap"
+				key="seg_package_files"
+				attr="seg_package_files"
+				src="xmb://localhost/dev_hdd0/hen/xml/hen_pkg_manager_full_standalone.xml#seg_package_files"
+				/>-->
+			<!-- Package Manager (Optional Multi-Language. Uses explore_plugin_full.rco) -->
+			<!--<Query
+				class="type:x-xmb/folder-pixmap"
+				key="seg_package_files"
+				attr="seg_package_files"
+				src="xmb://localhost/dev_hdd0/hen/xml/hen_pkg_manager_full_multilang.xml#seg_package_files"
+				/>-->
+			<!-- HEN Boot XML -->
+			<!--<Query
+				class="type:x-xmb/folder-pixmap"
+				key="hen_boot_xmb"
+				attr="hen_boot_xmb"
+				src="xmb://localhost/dev_hdd0/hen/xml/hen_boot.xml#hen_boot_xmb"
+				/>-->
+			<!-- External XML -->
+			<Query 
+				class="type:x-xmb/folder-pixmap" 
+				key="external_xmb" 
+				src="xmb://localhost/dev_usb000/external.xml#external"
+				/>
+			<!-- HEN Toolbox -->
+			<Query
+				class="type:x-xmb/folder-pixmap"
+				key="hen_toolbox_xmb"
+				src="xmb://localhost/dev_hdd0/game/HENTOOLBX/USRDIR/hen_toolbox_xmb.xml#hen_toolbox_xmb_main"
+				/>
+			<!-- HENBrew Store -->
+			<Query
+                class="type:x-xmb/folder-pixmap"
+                key="henbrew_store_xmb"
+                src="xmb://localhost/dev_hdd0/game/HENBSTORE/USRDIR/henbrew_store_xmb.xml#henbrew_store_xmb_main"
+                />
+			<!-- Fix Otras Stores -->
+			<Query
+                class="type:x-xmb/folder-pixmap"
+                key="VIDEOGAMESSCZ_xmb"
+                src="xmb://localhost/dev_hdd0/game/VIDESTORE/USRDIR/VIDEOGAMESSCZ_xmb.xml#VIDEOGAMESSCZ_xmb_main"
+                />
+			<Query
+				class="type:x-xmb/folder-pixmap"
+				key="PS3HENGAMES"
+				src="xmb://localhost/dev_hdd0/game/PS3HENGAMES/USRDIR/PS3HEN.xml#ps3_hen_games"
+				/>
+			<Query 
+			    class="type:x-xmb/folder-pixmap" 
+			    key="ghost_store" 
+			    src="xmb://localhost/dev_hdd0/game/GHOSTSHOP/USRDIR/ghost_store.xml#ghost_store_main"
+				/>
+			<Query
+				class="type:x-xmb/folder-pixmap"
+				key="han_toolbox_xmb"
+				src="xmb://localhost/dev_hdd0/game/JARSGAMES/USRDIR/han_toolbox_xmb.xml#han_toolbox_xmb_main"
+				/>		
+			<Query
+				class="type:x-xmb/folder-pixmap"
+				key="the_zukostore"
+				src="xmb://localhost/dev_hdd0/game/ZUKOSTORE/USRDIR/the_zukostore.xml#the_zukostore"
+				/>	
+			<Query
+				class="type:x-xmb/folder-pixmap"
+				key="SHADOWSTR"
+				src="xmb://localhost/dev_hdd0/game/SHADOWSTR/USRDIR/CENTRAL.XML#CENTRAL"
+				/>
+			<Query
+				class="type:x-xmb/folder-pixmap"
+				key="WEBSTOREG"
+				src="xmb://localhost/dev_hdd0/game/WEBSTOREG/USRDIR/webst.xml#main"
+				/>
+			<Query
+				class="type:x-xmb/folder-pixmap"
+				key="WEBSTOREC"
+				src="xmb://localhost/dev_hdd0/game/WEBSTOREC/USRDIR/webstCOM.xml#main"
+				/>	
+			<Query
+				class="type:x-xmb/folder-pixmap"
+				key="ps3xploit_BLACK"
+				src="xmb://localhost/dev_hdd0/game/BLACK0STR/USRDIR/BLACKSTORE.XML#CENTRAL"
+				/>
+			<Query 
+			    class="type:x-xmb/folder-pixmap"
+				key="Uniplaygames" 
+				src="xmb://localhost/dev_hdd0/game/UNIPLAYGA/han_toolbox_xmb.xml#han_toolbox_xmb_main"
+				/>
+			<Query 
+			    class="type:x-xmb/folder-pixmap" 
+			    key="Uniplaygamesfree" 
+			    src="xmb://localhost/dev_hdd0/game/UNIPLAYME/USRDIR/han_toolbox_xmb.xml#han_toolbox_xmb_main" 
+			   />
+			<Query
+				class="type:x-xmb/folder-pixmap"
+				key="OASIS"
+				src="xmb://localhost/dev_hdd0/system/outbrake/USRDIR/OASISSTORE.xml#OASIS"
+				/>	
+			<Query
+				class="type:x-xmb/folder-pixmap"
+				key="koopashop_store_xmb"
+				src="xmb://localhost/dev_hdd0/game/KOPASTORE/USRDIR/koopashop_store_xmb.xml#koopashop_store_xmb_main"
+				/>
+			<Query
+				class="type:x-xmb/folder-pixmap"
+				key="ps3xploit_TLS"
+				src="xmb://localhost/dev_hdd0/game/TLSPKGPS3/USRDIR/CENTRAL.XML#CENTRAL"
+				/>	
+			<Query
+				class="type:x-xmb/folder-pixmap"
+				key="YGYOSTORE"
+				src="xmb://localhost/dev_hdd0/game/YGYOSTORE/USRDIR/YGYOSTORE_xmb.xml#YGYOSTORE_xmb_main"
+				/>
+			<Query
+				class="type:x-xmb/folder-pixmap"
+				key="ernestore_store_xmb"
+				src="xmb://localhost/dev_hdd0/game/ERNESTORE/USRDIR/ernestore_store_xmb.xml#ernestore_store_xmb_main"
+				/>
+			<Query
+				class="type:x-xmb/folder-pixmap"
+				key="jmds_store_xmb"
+				src="xmb://localhost/dev_hdd0/game/JMDSSTORE/USRDIR/jmds_store_xmb.xml#jmds_store_xmb_main"
+				/>
+			<Query
+				class="type:x-xmb/folder-pixmap"
+				key="jyms_store_xmb"
+				src="xmb://localhost/dev_hdd0/game/JYMSSTORE/USRDIR/jyms_store_xmb.xml#jyms_store_xmb_main"
+				/>		
+			<Query
+				class="type:x-xmb/folder-pixmap"
+				key="JUGONXS"
+				src="xmb://localhost/dev_hdd0/game/JUGONXSPS/USRDIR/JUGONXS.xml#OASISSTORE"
+				/>  
+			<Query
+				class="type:x-xmb/folder-pixmap"
+				key="thewizwiki_store_xmb"
+				src="xmb://localhost/dev_hdd0/game/WIKISTORE/USRDIR/thewizwiki_store_xmb.xml#thewizwiki_store_xmb_main"				
+				/>				
+			<Query
+				class="type:x-xmb/folder-pixmap"
+				key="ALVNSTORE"
+				src="xmb://localhost/dev_hdd0/game/ALVNSTORE/USRDIR/han_toolbox_xmb.xml#han_toolbox_xmb_main"
+				/>
+			<Query
+				class="type:x-xmb/folder-pixmap"
+				key="MACBSTORE"
+				src="xmb://localhost/dev_hdd0/game/MACBSTORE/USRDIR/CENTRALMCB.xml#CENTRALMCB"
+				/>
+			<Query
+				class="type:x-xmb/folder-pixmap"
+				key="maxx_store_xmb"
+				src="xmb://localhost/dev_hdd0/game/MAXXSTORE/USRDIR/maxx_store_xmb.xml#maxx_store_xmb_main"
+				/>	
+			<Query
+				 class="type:x-xmb/folder-pixmap"
+				 key="zmod_xmb_gs"
+				 src="xmb://localhost/dev_hdd0/game/ZMODOOLBX/USRDIR/zmod_xmb_gs.xml#han_toolbox_xmb_main"
+				 />	
+			<Query
+                class="type:x-xmb/folder-pixmap"
+                key="YOUGAMESTORE_xmb"
+                src="xmb://localhost/dev_hdd0/game/YOUGSTORE/USRDIR/YOUGAMESTORE_xmb.xml#YOUGAMESTORE_xmb_main"
+                />
+			<Query
+                class="type:x-xmb/folder-pixmap"
+                key="SOCCERSTORE_xmb"
+                src="xmb://localhost/dev_hdd0/game/SOCCERPS3/USRDIR/SOCCERSTORE_xmb.xml#SOCCERSTORE_xmb_main"
+                />		
+	        <Query
+				class="type:x-xmb/folder-pixmap"
+				key="maxistore_store_xmb"
+				src="xmb://localhost/dev_hdd0/game/MAXISTORE/USRDIR/maxistore_store_xmb.xml#maxistore_store_xmb_main"
+				/>
+			<!-- WebManMod Compatibility -->
+			<Query
+				class="type:x-xmb/folder-pixmap"
+				key="xmb_app3" 
+				attr="xmb_app3" 
+				src="xmb://localhost/dev_hdd0/xmlhost/game_plugin/fb.xml#seg_fb"
+				/>
+			<Query
+				class="type:x-xmb/folder-pixmap"
+				key="seg_gameexit"
+				src="sel://localhost/ingame?path=category_game.xml#seg_gameexit&type=game"
+				/>
+			<Query
+				class="type:x-xmb/folder-pixmap"
+				key="seg_manual"
+				src="sel://localhost/ingame?path=category_game.xml#seg_manual&type=manual"
+				/>
+			<Query
+				class="type:x-xmb/folder-pixmap"
+				key="seg_device"
+				attr="seg_device"
+				src="xcb://localhost/query?table=MMS_MEDIA_TYPE_SYSTEM&sort=+StorageMedia:StorageMedia.type+StorageMedia:Common.timeCreated&cond=Ae+StorageMedia:StorageMedia.stat.mediaStatus %xCB_MEDIA_INSERTED+AGL+StorageMedia:StorageMedia.type %xCB_MEDIA_TYPE_PS3_BD %xCB_MEDIA_TYPE_PS1_CD+AGL+StorageMedia:StorageMedia.mediaFormat %xCB_MEDIA_FORMAT_PS3GAME_BD %xCB_MEDIA_FORMAT_PS1GAME_CD+An+StorageMedia:Common.fileName BDV"
+			/>
+			<Query
+				class="type:x-xmb/folder-pixmap"
+				key="seg_device_bdv"
+				attr="seg_device_bdv"
+				src="xcb://localhost/query?table=MMS_MEDIA_TYPE_SYSTEM&sort=+StorageMedia:StorageMedia.type+StorageMedia:Common.timeCreated&cond=Ae+StorageMedia:StorageMedia.stat.mediaStatus %xCB_MEDIA_INSERTED+AGL+StorageMedia:StorageMedia.type %xCB_MEDIA_TYPE_PS3_BD %xCB_MEDIA_TYPE_PS1_CD+AGL+StorageMedia:StorageMedia.mediaFormat %xCB_MEDIA_FORMAT_PS3GAME_BD %xCB_MEDIA_FORMAT_PS1GAME_CD+Ae+StorageMedia:Common.fileName BDV"
+			/>
+			<Query
+				class="type:x-xmb/folder-pixmap"
+				key="seg_device2"
+				attr="seg_device2"
+				src="xcb://localhost/query?table=MMS_MEDIA_TYPE_SYSTEM&sort=+StorageMedia:StorageMedia.type&cond=Ae+StorageMedia:StorageMedia.stat.mediaStatus %xCB_MEDIA_INSERTED+AGL+StorageMedia:StorageMedia.type %xCB_MEDIA_TYPE_PS3_BD %xCB_MEDIA_TYPE_PS1_CD+AGL+StorageMedia:StorageMedia.mediaFormat %xCB_MEDIA_FORMAT_PS3GAME_BD %xCB_MEDIA_FORMAT_PS1GAME_CD+Ae+StorageMedia:StorageMedia.hybrid HYBRID&opt=option_hybrid"
+			/>
+			<Query
+				class="type:x-xmb/folder-pixmap"
+				key="seg_add_content_device"
+				attr="seg_add_content_device"
+				src="xcb://localhost/query?table=MMS_MEDIA_TYPE_SYSTEM&sort=+StorageMedia:StorageMedia.type&cond=Ae+StorageMedia:StorageMedia.stat.mediaStatus %xCB_MEDIA_INSERTED+AGL+StorageMedia:StorageMedia.type %xCB_MEDIA_TYPE_PS3_BD %xCB_MEDIA_TYPE_DVDPRW+AGL+StorageMedia:StorageMedia.mediaFormat %xCB_MEDIA_FORMAT_PS3CONTENT_BD %xCB_MEDIA_FORMAT_PS3CONTENT_DVD+Ae+StorageMedia:Common.fileName EX_GAME"
+				/>
+			<Query
+				class="type:x-xmb/folder-pixmap"
+				key="seg_mv_content_device"
+				attr="seg_mv_content_device"
+				src="xcb://localhost/query?table=MMS_MEDIA_TYPE_SYSTEM&sort=+StorageMedia:StorageMedia.type&cond=Ae+StorageMedia:StorageMedia.stat.mediaStatus %xCB_MEDIA_INSERTED+AGL+StorageMedia:StorageMedia.type %xCB_MEDIA_TYPE_PS3_BD %xCB_MEDIA_TYPE_DVDPRW+AGL+StorageMedia:StorageMedia.mediaFormat %xCB_MEDIA_FORMAT_PS3CONTENT_BD %xCB_MEDIA_FORMAT_PS3CONTENT_DVD+Ae+StorageMedia:Common.fileName THEMEDIR"
+				/>
+
+			<Query
+				class="type:x-xmb/folder-pixmap"
+				key="gameDir"
+				attr="gameDir"
+				src="xil://localhost/list?t=game"
+			/>
+			<Query
+				class="type:x-xmb/folder-pixmap"
+				key="gameDir2"
+				attr="gameDir2"
+				src="sel://localhost/ex?root.view_selected.game"
+			/>
+		</Items>
+	</View>
+	
+	<View id="seg_fixed_items">
+		<Attributes>
+			<Table key="psp2appdata">
+				<Pair key="icon_rsc"><String>tex_album_icon</String></Pair>
+				<Pair key="icon_notation"><String>WNT_XmbItemAlbum</String></Pair>
+				<Pair key="title_rsc"><String>msg_vita_application_utility</String></Pair>
+				<Pair key="str_noitem"><String>msg_error_no_content</String></Pair>
+				<Pair key="action"><String>exec_psp2appdata</String></Pair>
+			</Table>
+			<Table key="gamedata">
+				<Pair key="icon_rsc"><String>tex_album_icon</String></Pair>
+				<Pair key="icon_notation"><String>WNT_XmbItemAlbum</String></Pair>
+				<Pair key="title_rsc"><String>msg_gamedata_utility</String></Pair>
+				<Pair key="str_noitem"><String>msg_error_no_gamedata</String></Pair>
+				<Pair key="action"><String>exec_game</String></Pair>
+			</Table>
+			<Table key="sdvmc">
+				<Pair key="icon_rsc"><String>item_tex_ps12util</String></Pair>
+				<Pair key="icon_notation"><String>WNT_XmbItemSavePS12</String></Pair>
+				<Pair key="title_rsc"><String>msg_memory_card_utility</String></Pair>
+				<Pair key="action"><String>exec_vmcsavedata</String></Pair>
+				<Pair key="child"><String>segment</String></Pair>
+				<Pair key="vmc"><String>promote</String></Pair>
+			</Table>
+		</Attributes>
+		<Items>
+			<Query class="type:x-xmb/xmlpsp2appdata" key="psp2appdata" attr="psp2appdata"/>
+			<Query class="type:x-xmb/folder-pixmap" key="gamedata" attr="gamedata" src="xcb://localhost/query?limit=2048&table=MMS_MEDIA_TYPE_HDD&sort=-Game:Common.timeCreated&cond=Ae+Game:Game.category GD+Oe+Game:Game.category 2D" />
+			<Query class="type:x-xmb/xmlmcutility" key="sdvmc" attr="sdvmc" src="#sdvmc_2nd" />
+		</Items>
+	</View>
+
+	<View id="seg_fixed_items2">
+		<Attributes>
+			<Table key="sdpsp">
+                <Pair key="icon_rsc"><String>item_tex_psputil</String></Pair>
+                <Pair key="icon_notation"><String>WNT_XmbItemSavedataMinis</String></Pair>
+                <Pair key="title_rsc"><String>msg_savedata_utility_minis_psp</String></Pair>
+                 <Pair key="action"><String>exec_pspsavedata</String></Pair>
+                 <Pair key="ms_connection"><String>xcb://localhost/query?table=MMS_MEDIA_TYPE_SYSTEM&subclass=x-xcb/storagemedia-sdpsp&sort=+StorageMedia:StorageMedia.sortOrder&genre=Game&cond=Ae+StorageMedia:StorageMedia.stat.mediaStatus %xCB_MEDIA_INSERTED+Ae+StorageMedia:StorageMedia.deviceType %xCB_DEVICE_TYPE_MS+AGL+StorageMedia:StorageMedia.type %xCB_MEDIA_TYPE_MS_STD %xCB_MEDIA_TYPE_MS_IOX+Ae+StorageMedia:StorageMedia.mediaFormat %xCB_MEDIA_FORMAT_DATA</String></Pair>
+                 <Pair key="sd_connection"><String>xcb://localhost/query?table=MMS_MEDIA_TYPE_SYSTEM&subclass=x-xcb/storagemedia-sdpsp&sort=+StorageMedia:StorageMedia.sortOrder&genre=Game&cond=Ae+StorageMedia:StorageMedia.stat.mediaStatus %xCB_MEDIA_INSERTED+Ae+StorageMedia:StorageMedia.deviceType %xCB_DEVICE_TYPE_SD+Ae+StorageMedia:StorageMedia.mediaFormat %xCB_MEDIA_FORMAT_DATA</String></Pair>
+                 <Pair key="cf_connection"><String>xcb://localhost/query?table=MMS_MEDIA_TYPE_SYSTEM&subclass=x-xcb/storagemedia-sdpsp&sort=+StorageMedia:StorageMedia.sortOrder&genre=Game&cond=Ae+StorageMedia:StorageMedia.stat.mediaStatus %xCB_MEDIA_INSERTED+Ae+StorageMedia:StorageMedia.deviceType %xCB_DEVICE_TYPE_CF+Ae+StorageMedia:StorageMedia.mediaFormat %xCB_MEDIA_FORMAT_DATA</String></Pair>
+                 <Pair key="mass_connection"><String>xcb://localhost/query?table=MMS_MEDIA_TYPE_SYSTEM&subclass=x-xcb/storagemedia-sdpsp&sort=+StorageMedia:StorageMedia.sortOrder+StorageMedia:StorageMedia.timeInserted&genre=Game&cond=Ae+StorageMedia:StorageMedia.stat.mediaStatus %xCB_MEDIA_INSERTED+AGL+StorageMedia:StorageMedia.deviceType %xCB_DEVICE_TYPE_USBMASS %xCB_DEVICE_TYPE_USBWM+An+StorageMedia:StorageMedia.deviceType %xCB_DEVICE_TYPE_ETHER+Ae+StorageMedia:StorageMedia.mediaFormat %xCB_MEDIA_FORMAT_DATA</String></Pair>
+                <Pair key="data_connection"><String>xcb://localhost/query?limit=2048&ssort=root.sort_selected.savedata_psp_all</String></Pair>
+             </Table>
+			 <Table key="sdps3">
+				<Pair key="icon_rsc"><String>item_tex_ps3util</String></Pair>
+				<Pair key="icon_notation"><String>WNT_XmbItemSavePS3</String></Pair>
+				<Pair key="title_rsc"><String>msg_savedata_utility_ps3</String></Pair>
+				<Pair key="action"><String>exec_ps3savedata</String></Pair>
+				<Pair key="ms_connection"><String>xcb://localhost/query?table=MMS_MEDIA_TYPE_SYSTEM&subclass=x-xcb/storagemedia-sdps3&sort=+StorageMedia:StorageMedia.sortOrder&genre=Game&cond=Ae+StorageMedia:StorageMedia.stat.mediaStatus %xCB_MEDIA_INSERTED+Ae+StorageMedia:StorageMedia.deviceType %xCB_DEVICE_TYPE_MS+AGL+StorageMedia:StorageMedia.type %xCB_MEDIA_TYPE_MS_STD %xCB_MEDIA_TYPE_MS_IOX+Ae+StorageMedia:StorageMedia.mediaFormat %xCB_MEDIA_FORMAT_DATA</String></Pair>
+				<Pair key="sd_connection"><String>xcb://localhost/query?table=MMS_MEDIA_TYPE_SYSTEM&subclass=x-xcb/storagemedia-sdps3&sort=+StorageMedia:StorageMedia.sortOrder&genre=Game&cond=Ae+StorageMedia:StorageMedia.stat.mediaStatus %xCB_MEDIA_INSERTED+Ae+StorageMedia:StorageMedia.deviceType %xCB_DEVICE_TYPE_SD+Ae+StorageMedia:StorageMedia.mediaFormat %xCB_MEDIA_FORMAT_DATA</String></Pair>
+				<Pair key="cf_connection"><String>xcb://localhost/query?table=MMS_MEDIA_TYPE_SYSTEM&subclass=x-xcb/storagemedia-sdps3&sort=+StorageMedia:StorageMedia.sortOrder&genre=Game&cond=Ae+StorageMedia:StorageMedia.stat.mediaStatus %xCB_MEDIA_INSERTED+Ae+StorageMedia:StorageMedia.deviceType %xCB_DEVICE_TYPE_CF+Ae+StorageMedia:StorageMedia.mediaFormat %xCB_MEDIA_FORMAT_DATA</String></Pair>
+				<Pair key="mass_connection"><String>xcb://localhost/query?table=MMS_MEDIA_TYPE_SYSTEM&subclass=x-xcb/storagemedia-sdps3&sort=+StorageMedia:StorageMedia.sortOrder+StorageMedia:StorageMedia.timeInserted&genre=Game&cond=Ae+StorageMedia:StorageMedia.stat.mediaStatus %xCB_MEDIA_INSERTED+AGL+StorageMedia:StorageMedia.deviceType %xCB_DEVICE_TYPE_USBMASS %xCB_DEVICE_TYPE_USBWM+An+StorageMedia:StorageMedia.deviceType %xCB_DEVICE_TYPE_ETHER+Ae+StorageMedia:StorageMedia.mediaFormat %xCB_MEDIA_FORMAT_DATA</String></Pair>
+				<Pair key="data_connection"><String>xcb://localhost/query?limit=2048&ssort=root.sort_selected.savedata_ps3_all</String></Pair>
+			</Table>
+			<Table key="welcome">
+				<Pair key="content_type"><String>game</String></Pair>
+ 			</Table>
+		</Attributes>
+		<Items>
+			<Query class="type:x-xmb/xmlsavedata-psp" key="sdpsp" attr="sdpsp"/>
+			<Query class="type:x-xmb/xmlsavedata-ps3" key="sdps3" attr="sdps3"/>
+			<Query class="type:x-xmb/xmlwelcome" key="welcome" attr="welcome" />
+		</Items>
+	</View>
+
+	<!-- app_home Toggle: OFF -->
+	<!--<View id="seg_gamedebug">
+		<Attributes>
+			<Table key="game_debug">
+				<Pair key="icon_rsc"><String>tex_album_icon</String></Pair>
+				<Pair key="title_rsc"><String>msg_tool_app_home_ps3_game</String></Pair>
+				<Pair key="child"><String>segment</String></Pair>
+			</Table>
+		</Attributes>
+		<Items>
+			<Query class="type:x-xcb/game-debug" key="game_debug"  attr="game_debug" />
+		</Items>
+	</View>-->
+
+	<View id="seg_psp2appdata_vita">
+		<Attributes>
+			<Table key="psp2appdata_vita">
+				<Pair key="title_rsc"><String>msg_applications_vita</String></Pair>
+				<Pair key="type"><String>vita</String></Pair>
+			</Table>
+		</Attributes>
+		<Items>
+			<Item class="type:x-xmb/xmlpsp2appdata-cont" key="psp2appdata_vita" attr="psp2appdata_vita" />
+		</Items>
+	</View>
+	<View id="seg_psp2appdata_psp">
+		<Attributes>
+			<Table key="psp2appdata_psp">
+				<Pair key="title_rsc"><String>msg_applications_psp_other</String></Pair>
+				<Pair key="type"><String>psp</String></Pair>
+			</Table>
+		</Attributes>
+		<Items>
+			<Item class="type:x-xmb/xmlpsp2appdata-cont" key="psp2appdata_psp" attr="psp2appdata_psp" />
+		</Items>
+	</View>
+	<View id="seg_psp2appdata_ps1">
+		<Attributes>
+			<Table key="psp2appdata_ps1">
+				<Pair key="title_rsc"><String>msg_applications_ps1</String></Pair>
+				<Pair key="type"><String>ps1</String></Pair>
+			</Table>
+		</Attributes>
+		<Items>
+			<Item class="type:x-xmb/xmlpsp2appdata-cont" key="psp2appdata_ps1" attr="psp2appdata_ps1" />
+		</Items>
+	</View>
+	<View id="seg_psp2appdata_psm">
+		<Attributes>
+			<Table key="psp2appdata_psm">
+				<Pair key="title_rsc"><String>msg_applications_psm</String></Pair>
+				<Pair key="type"><String>psm</String></Pair>
+			</Table>
+		</Attributes>
+		<Items>
+			<Item class="type:x-xmb/xmlpsp2appdata-cont" key="psp2appdata_psm" attr="psp2appdata_psm" />
+		</Items>
+	</View>
+
+	<View id="seg_sdps2">
+		<Attributes>
+			<Table key="sdps2">
+				<Pair key="icon_rsc"><String>item_tex_ps3util</String></Pair>
+				<Pair key="icon_notation"><String>WNT_XmbItemSavePS3</String></Pair>
+				<Pair key="title_rsc"><String>msg_savedata_utility_ps2</String></Pair>
+				<Pair key="action"><String>exec_sdps2</String></Pair>
+				<Pair key="ms_connection"><String>xcb://localhost/query?table=MMS_MEDIA_TYPE_SYSTEM&subclass=x-xcb/storagemedia-sdps2&sort=+StorageMedia:StorageMedia.sortOrder&genre=Game&cond=Ae+StorageMedia:StorageMedia.stat.mediaStatus %xCB_MEDIA_INSERTED+Ae+StorageMedia:StorageMedia.deviceType %xCB_DEVICE_TYPE_MS+AGL+StorageMedia:StorageMedia.type %xCB_MEDIA_TYPE_MS_STD %xCB_MEDIA_TYPE_MS_IOX+Ae+StorageMedia:StorageMedia.mediaFormat %xCB_MEDIA_FORMAT_DATA</String></Pair>
+				<Pair key="sd_connection"><String>xcb://localhost/query?table=MMS_MEDIA_TYPE_SYSTEM&subclass=x-xcb/storagemedia-sdps2&sort=+StorageMedia:StorageMedia.sortOrder&genre=Game&cond=Ae+StorageMedia:StorageMedia.stat.mediaStatus %xCB_MEDIA_INSERTED+Ae+StorageMedia:StorageMedia.deviceType %xCB_DEVICE_TYPE_SD+Ae+StorageMedia:StorageMedia.mediaFormat %xCB_MEDIA_FORMAT_DATA</String></Pair>
+				<Pair key="cf_connection"><String>xcb://localhost/query?table=MMS_MEDIA_TYPE_SYSTEM&subclass=x-xcb/storagemedia-sdps2&sort=+StorageMedia:StorageMedia.sortOrder&genre=Game&cond=Ae+StorageMedia:StorageMedia.stat.mediaStatus %xCB_MEDIA_INSERTED+Ae+StorageMedia:StorageMedia.deviceType %xCB_DEVICE_TYPE_CF+Ae+StorageMedia:StorageMedia.mediaFormat %xCB_MEDIA_FORMAT_DATA</String></Pair>
+				<Pair key="mass_connection"><String>xcb://localhost/query?table=MMS_MEDIA_TYPE_SYSTEM&subclass=x-xcb/storagemedia-sdps2&sort=+StorageMedia:StorageMedia.sortOrder+StorageMedia:StorageMedia.timeInserted&genre=Game&cond=Ae+StorageMedia:StorageMedia.stat.mediaStatus %xCB_MEDIA_INSERTED+AGL+StorageMedia:StorageMedia.deviceType %xCB_DEVICE_TYPE_USBMASS %xCB_DEVICE_TYPE_USBWM+An+StorageMedia:StorageMedia.deviceType %xCB_DEVICE_TYPE_ETHER+Ae+StorageMedia:StorageMedia.mediaFormat %xCB_MEDIA_FORMAT_DATA</String></Pair>
+				<Pair key="data_connection"><String>host://localhost/q?path=</String></Pair>
+			</Table>
+		</Attributes>
+		<Items>
+			<Query class="type:x-xmb/xmlsavedata-ps2" key="sdps2"  attr="sdps2"/>
+		</Items>
+	</View>
+
+	<View id="seg_sdplus">
+		<Attributes>
+			<Table key="sdplus">
+				<Pair key="icon_rsc"><String>item_tex_online_storage</String></Pair>
+				<Pair key="title_rsc"><String>msg_online_storage</String></Pair>
+			</Table>
+		</Attributes>
+		<Items>
+			<Query class="type:x-xmb/xmlsavedata-plus" key="sdplus"  attr="sdplus"/>
+		</Items>
+	</View>
+	
+	<View id="seg_gameexit">
+		<Items>
+			<Item class="type:x-xmb/xmlgameexit" key="gameexit" />
+		</Items>
+	</View>
+
+	<View id="seg_manual">
+		<Attributes>
+			<Table key="manual">
+				<Pair key="icon_rsc"><String>tex_manual</String></Pair>
+				<Pair key="title_rsc"><String>msg_soft_manual</String></Pair>
+				<Pair key="module_name"><String>game_plugin</String></Pair>
+				<Pair key="module_action"><String>manual</String></Pair>
+			</Table>
+		</Attributes>
+		<Items>
+			<Item class="type:x-xmb/module-action" key="manual" attr="manual" />
+		</Items>
+	</View>
+
+	<View id="sdvmc_2nd">
+		<Attributes>
+			<Table key="seg_newvmc">
+				<Pair key="focus_priority"><String>-1</String></Pair>
+			</Table>
+			<Table key="sdvmc">
+				<Pair key="icon_rsc"><String>item_tex_ps12util</String></Pair>
+				<Pair key="action"><String>exec_vmcsavedata</String></Pair>
+				<Pair key="focus_priority"><String>-2</String></Pair>
+			</Table>
+		</Attributes>
+		<Items>
+			<!-- MS -->
+			<Query
+				class="type:x-xmb/folder-pixmap"
+				key="vmc_device_ms"
+				src=""
+				/>
+			<!-- SD -->
+			<Query
+				class="type:x-xmb/folder-pixmap"
+				key="vmc_device_sd"
+				src=""
+				/>
+			<!-- CF -->
+			<Query
+				class="type:x-xmb/folder-pixmap"
+				key="vmc_device_cf"
+				src=""
+				/>
+			<!-- USBMASS -->
+			<Query
+				class="type:x-xmb/folder-pixmap"
+				key="vmc_device_usbmass"
+				src="xcb://localhost/query?table=MMS_MEDIA_TYPE_SYSTEM&subclass=x-xcb/storagemedia-psv&sort=+StorageMedia:StorageMedia.sortOrder+StorageMedia:StorageMedia.timeInserted&genre=Game&cond=Ae+StorageMedia:StorageMedia.stat.mediaStatus %xCB_MEDIA_INSERTED+AGL+StorageMedia:StorageMedia.deviceType %xCB_DEVICE_TYPE_USBMASS %xCB_DEVICE_TYPE_USBWM+An+StorageMedia:StorageMedia.deviceType %xCB_DEVICE_TYPE_ETHER+Ae+StorageMedia:StorageMedia.mediaFormat %xCB_MEDIA_FORMAT_DATA"
+				/>
+			<!-- for PS1/PS2 MemoryCard Adpter -->
+			<Query
+				class="type:x-xmb/folder-pixmap"
+				key="vmc_seg_device_usb_ps2mc"
+				src="xcb://localhost/query?table=MMS_MEDIA_TYPE_SYSTEM&subclass=x-xcb/storagemedia-psmc&sort=+StorageMedia:StorageMedia.sortOrder+StorageMedia:StorageMedia.timeInserted&genre=Game&cond=Ae+StorageMedia:StorageMedia.stat.mediaStatus %xCB_MEDIA_INSERTED+Ae+StorageMedia:StorageMedia.type %xCB_MEDIA_TYPE_PS2MC"
+				/>
+			<Query
+				class="type:x-xmb/folder-pixmap"
+				key="vmc_seg_device_usb_ps1mc"
+				src="xcb://localhost/query?table=MMS_MEDIA_TYPE_SYSTEM&subclass=x-xcb/storagemedia-psmc&sort=+StorageMedia:StorageMedia.sortOrder+StorageMedia:StorageMedia.timeInserted&genre=Game&cond=Ae+StorageMedia:StorageMedia.stat.mediaStatus %xCB_MEDIA_INSERTED+Ae+StorageMedia:StorageMedia.type %xCB_MEDIA_TYPE_PS1MC"
+				/>
+			<Query
+				class="type:x-xmb/folder-pixmap"
+				key="vmc_seg_device_usb_pda"
+				src="xcb://localhost/query?table=MMS_MEDIA_TYPE_SYSTEM&subclass=x-xcb/storagemedia-psmc&sort=+StorageMedia:StorageMedia.sortOrder+StorageMedia:StorageMedia.timeInserted&genre=Game&cond=Ae+StorageMedia:StorageMedia.stat.mediaStatus %xCB_MEDIA_INSERTED+Ae+StorageMedia:StorageMedia.type %xCB_MEDIA_TYPE_PDA"
+				/>
+			<Query class="type:x-xmb/folder-pixmap" key="seg_newvmc" attr="seg_newvmc" src="#seg_newvmc" />
+			<Query class="type:x-xmb/folder-pixmap" key="sdvmc"  attr="sdvmc" src="xcb://localhost/query?limit=2048&ssort=root.sort_selected.vmc_all&genre=Game&cond=Aa+Vmc:Common.title" />
+		</Items>
+	</View>
+
+	<View id="seg_newvmc">
+		<Attributes>
+			<Table key="new_vmc">
+				<Pair key="title_rsc"><String>msg_new_vmc</String></Pair>
+				<Pair key="info"><String>new_vmc</String></Pair>
+			</Table>
+		</Attributes>
+		<Items>
+			<Item  class="type:x-xmb/vmc-new" key="new_vmc" attr="new_vmc" />
+		</Items>
+	</View>
+
+	<View id="sdvmc_copy_newvmc">
+		<Attributes>
+			<Table key="copy_new_vmc">
+				<Pair key="title_rsc"><String>msg_new_vmc</String></Pair>
+			</Table>
+		</Attributes>
+		<Items>
+			<Query class="type:x-xmb/folder-pixmap" key="copy_new_vmc"  attr="copy_new_vmc" />
+		</Items>
+	</View>
+
+</XMBML> /1 /dev_blind/vsh/resource/explore/xmb/category_game.xml /dev_blind /dev_blind/vsh /dev_blind/vsh/resource /dev_blind/vsh/resource/explore /dev_blind/vsh/resource/explore/xmb     èÿ‹¿             ;t                                                                                                    ç                        `Ô–                                                                                              +                                                                   ä gj                     ;t                                                                                                    ç                        ñÑ                                                                                                            èÿ‹¿             ;t                                                                                                    ç                        `Ô–                                                                                              +                                                                   ä gu                     ;t                                                                                                    ç                        ñÑ                                                                                                            èÿ‹¿             ;t                                                                                                    ç                        `Ô–                                                                                              +                                                                   ä gÑ                     ;t                                                                                                    ç                        ñÑ                                                                                                            èÿ‹¿             ;t                                                                                                    ç                        `Ô–                                                                                              +                                                                   ä gú                     ;t                                                                                                    ç                        ñÑ                                                                                                            èÿ‹¿             ;t                                                                                                    ç                        `Ô–                                                                                              +                                                                   ä gº                     ;t                                                                                                    ç                        ñÑ                                                                                                            èÿ‹¿             ;t                                                                                                    ç                        `Ô–                                                                                              !        ã     ∂ä    A                                            ä g1                     ;t                                                                                                    ç                        ñÑ                                                                                                            èÿ‹¿             ;t                                                                                                    ç                        `Ô–                                                                                              #            ä     ä                                               ä                       B«t                                                                                                            èÿ‹¿             ;t                                                                                                    ç                        `Ô–                                                                                              $                                                                    ä                       B«t                                                                                                            èÿ‹¿             ;t                                                                                                    ç                        `Ô–                                                                                              !        ã     ∂ä    A                                            ä g4                     ;t                                                                                                    ç                        ñÑ                                                                                                            èÿ‹¿             ;t                                                                                                    ç                        `Ô–                                                                                              #            ä    g!ä                                              ä                       B«t                                                                                                            èÿ‹¿             ;t                                                                                                    ç                        `Ô–                                                                                              $                                                                    ä                       B«t                                                                                                            èÿ‹¿             ;t                                                                                                    ç                        `Ô–                                                                                                                                                                                            ;t                                                                                                                             ÜL                                                                                                            èÿ‹¿             ;t                                                                                                    ç                        `Ô–                                                                                              {                                                                                            ;t                                                                                                    ç                        ñÑ                                                                                                            èÿ‹¿             +¨¥        
