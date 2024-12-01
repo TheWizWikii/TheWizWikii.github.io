@@ -1,8 +1,8 @@
 const payload_map = [
     {
-        displayTitle: 'etaHEN-1.7B',
-        description: 'etaHEN-1.7B',
-        fileName: 'etaHEN-1.7B.bin',
+        displayTitle: 'etaHEN-1.8B',
+        description: 'etaHEN-1.8B',
+        fileName: 'etaHEN-1.8B.bin',
         author: '-',
         source: '-', 
         version: '-' 
