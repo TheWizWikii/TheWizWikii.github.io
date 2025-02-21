@@ -1,0 +1,85 @@
+{
+  "DATA": {
+	"https://github.com/TheWizWikii/PS4-Stuff-Repository/releases/download/1/PS4_Netflix_v1.53.pkg": {
+      "title_id": "CUSA00127",
+      "region": "EUR",
+      "name": "Netflix",
+      "version": "1.53",
+      "release": "17-02-2025",
+      "size": 63963136,
+      "min_fw": "9.00+",
+      "cover_url": "https://i.imgur.com/vQSutLE.png"
+	},
+    "https://github.com/TheWizWikii/PS4-Stuff-Repository/releases/download/1/Amazon_Prime.pkg": {
+      "title_id": "CUSA00126",
+      "region": "USA",
+      "name": "Amazon Prime",
+      "version": "1.00",
+      "release": "17-02-2025",
+      "size": 65142784,
+      "min_fw": "5.05",
+      "cover_url": "https://i.imgur.com/6A5hUR7.png"
+	 },
+	"https://github.com/TheWizWikii/PS4-Stuff-Repository/releases/download/1/PS4_Apple_TV_v1.11.pkg": {
+      "title_id": "CUSA24386",
+      "region": "USA",
+      "name": "Apple TV",
+      "version": "1.11",
+      "release": "17-02-2025",
+      "size": 132120576,
+      "min_fw": "5.05+",
+      "cover_url": "https://i.imgur.com/o1SvLLk.png"
+	},
+	"https://github.com/TheWizWikii/PS4-Stuff-Repository/releases/download/1/PS4_Consolepedia3D_v1.32.pkg": {
+      "title_id": "VTHX21368",
+      "region": "USA",
+      "name": "Consolepedia 3D",
+      "version": "1.32",
+      "release": "17-02-2025",
+      "size": 253755392,
+      "min_fw": "5.05+",
+      "cover_url": "https://i.imgur.com/oE9cExJ.png"
+	},
+	"https://github.com/TheWizWikii/PS4-Stuff-Repository/releases/download/1/PS4_PlutoTV_v3.43.pkg": {
+      "title_id": "CUSA04688",
+      "region": "USA",
+      "name": "Pluto TV",
+      "version": "3.43",
+      "release": "17-02-2025",
+      "size": 53084160,
+      "min_fw": "6.72+",
+      "cover_url": "https://i.imgur.com/JKvmKa4.png"
+	},
+	"https://github.com/TheWizWikii/PS4-Stuff-Repository/releases/download/1/Twich.pkg": {
+      "title_id": "CUSA03285",
+      "region": "USA",
+      "name": "Twitch",
+      "version": "1.00",
+      "release": "17-02-2025",
+      "size": 97583104,
+      "min_fw": "5.05",
+      "cover_url": "https://i.imgur.com/8ugrPHr.png"
+	},
+	"https://github.com/TheWizWikii/PS4-Stuff-Repository/releases/download/1/PS4_Player_V1.07.pkg": {
+      "title_id": "LAPY20002",
+      "region": "USA",
+      "name": "PS4 Player",
+      "version": "1.07",
+      "release": "17-02-2025",
+      "size": 52428800,
+      "min_fw": "5.05",
+      "cover_url": "https://i.imgur.com/myBM3lL.png"
+	},
+	"https://github.com/TheWizWikii/PS4-Stuff-Repository/releases/download/1/UP4381-CUSA01015_00-YOUTUBESCEA00000-A0100-V0232-CyB1K.pkg": {
+      "title_id": "CUSA01015",
+      "region": "USA",
+      "name": "YouTube",
+      "version": "2.32",
+      "release": "17-02-2025",
+      "size": 151650304,
+      "min_fw": "5.05",
+      "cover_url": "https://i.imgur.com/h2XvrcZ.jpeg"
+	 
+    }
+  }
+}
