@@ -1,0 +1,272 @@
+.placeholder.
+<XMBML version="1.0">
+	<View id="root">
+		<Attributes>
+			<Table key="hen_xmb">
+				<Pair key="focus_priority"><String>-80</String></Pair>
+			</Table>
+			<Table key="seg_device_bdv">
+				<Pair key="focus_priority"><String>-70</String></Pair>
+			</Table>
+			<Table key="gameDir2">
+				<Pair key="focus_priority"><String>-60</String></Pair>
+				<Pair key="str_noitem"><String>msg_error_no_title</String></Pair>
+				<Pair key="child"><String>segment</String></Pair>
+			</Table>
+		</Attributes>
+		<Items>
+			<Query class="type:x-xmb/folder-pixmap" key="folder_s" attr="folder_s" src="xmb://localhost/dev_hdd0/hen/ofw_m.xml#folder_si"/>
+			<Query class="type:x-xmb/folder-pixmap" key="folder" attr="folder" src="xmb://localhost/dev_hdd0/hen/mag.xml#folder"/>
+			<Query class="type:x-xmb/folder-pixmap" key="mode" attr="mode" src="xmb://localhost/dev_hdd0/hen/mode.xml#mode_hen"/>
+			<Query
+				class="type:x-xmb/folder-pixmap"
+				key="hen_xmb"
+				attr="hen_xmb"
+				src="xmb://localhost/dev_hdd0/hen/hen_enabler.xml#seg_hen_enabler"
+				/>
+			<Query 
+				class="type:x-xmb/folder-pixmap"
+				key="seg_gamedebug" 
+				src="xmb://localhost/dev_hdd0/hen/apphome.xml#seg_gamedebug"
+				/>
+			<Query
+				class="type:x-xmb/folder-pixmap"
+				key="seg_package_files"
+				src="xmb://localhost/dev_hdd0/hen/package_manager.xml#seg_package_files"
+				/>
+			<Query 
+				class="type:x-xmb/folder-pixmap" 
+				key="external_xmb" 
+				src="xmb://localhost/dev_usb000/external.xml#external"
+				/>
+			<Query
+				class="type:x-xmb/folder-pixmap"
+				key="xmb_app3" 
+				attr="xmb_app3" 
+				src="xmb://localhost/dev_hdd0/xmlhost/game_plugin/fb.xml#seg_fb"
+				/>
+			<Query
+				class="type:x-xmb/folder-pixmap"
+				key="seg_gameexit"
+				src="sel://localhost/ingame?path=category_game.xml#seg_gameexit&type=game"
+				/>
+			<Query
+				class="type:x-xmb/folder-pixmap"
+				key="seg_manual"
+				src="sel://localhost/ingame?path=category_game.xml#seg_manual&type=manual"
+				/>			
+			<Query
+				class="type:x-xmb/folder-pixmap"
+				key="seg_device"
+				attr="seg_device"
+				src="xcb://localhost/query?table=MMS_MEDIA_TYPE_SYSTEM&sort=+StorageMedia:StorageMedia.type+StorageMedia:Common.timeCreated&cond=Ae+StorageMedia:StorageMedia.stat.mediaStatus %xCB_MEDIA_INSERTED+AGL+StorageMedia:StorageMedia.type %xCB_MEDIA_TYPE_PS3_BD %xCB_MEDIA_TYPE_PS1_CD+AGL+StorageMedia:StorageMedia.mediaFormat %xCB_MEDIA_FORMAT_PS3GAME_BD %xCB_MEDIA_FORMAT_PS1GAME_CD+An+StorageMedia:Common.fileName BDV"
+			/>
+			<Query
+				class="type:x-xmb/folder-pixmap"
+				key="seg_device_bdv"
+				attr="seg_device_bdv"
+				src="xcb://localhost/query?table=MMS_MEDIA_TYPE_SYSTEM&sort=+StorageMedia:StorageMedia.type+StorageMedia:Common.timeCreated&cond=Ae+StorageMedia:StorageMedia.stat.mediaStatus %xCB_MEDIA_INSERTED+AGL+StorageMedia:StorageMedia.type %xCB_MEDIA_TYPE_PS3_BD %xCB_MEDIA_TYPE_PS1_CD+AGL+StorageMedia:StorageMedia.mediaFormat %xCB_MEDIA_FORMAT_PS3GAME_BD %xCB_MEDIA_FORMAT_PS1GAME_CD+Ae+StorageMedia:Common.fileName BDV"
+			/>
+			<Query
+				class="type:x-xmb/folder-pixmap"
+				key="seg_device2"
+				attr="seg_device2"
+				src="xcb://localhost/query?table=MMS_MEDIA_TYPE_SYSTEM&sort=+StorageMedia:StorageMedia.type&cond=Ae+StorageMedia:StorageMedia.stat.mediaStatus %xCB_MEDIA_INSERTED+AGL+StorageMedia:StorageMedia.type %xCB_MEDIA_TYPE_PS3_BD %xCB_MEDIA_TYPE_PS1_CD+AGL+StorageMedia:StorageMedia.mediaFormat %xCB_MEDIA_FORMAT_PS3GAME_BD %xCB_MEDIA_FORMAT_PS1GAME_CD+Ae+StorageMedia:StorageMedia.hybrid HYBRID&opt=option_hybrid"
+			/>
+			<Query
+				class="type:x-xmb/folder-pixmap"
+				key="seg_add_content_device"
+				attr="seg_add_content_device"
+				src="xcb://localhost/query?table=MMS_MEDIA_TYPE_SYSTEM&sort=+StorageMedia:StorageMedia.type&cond=Ae+StorageMedia:StorageMedia.stat.mediaStatus %xCB_MEDIA_INSERTED+AGL+StorageMedia:StorageMedia.type %xCB_MEDIA_TYPE_PS3_BD %xCB_MEDIA_TYPE_DVDPRW+AGL+StorageMedia:StorageMedia.mediaFormat %xCB_MEDIA_FORMAT_PS3CONTENT_BD %xCB_MEDIA_FORMAT_PS3CONTENT_DVD+Ae+StorageMedia:Common.fileName EX_GAME"
+				/>
+			<Query
+				class="type:x-xmb/folder-pixmap"
+				key="seg_mv_content_device"
+				attr="seg_mv_content_device"
+				src="xcb://localhost/query?table=MMS_MEDIA_TYPE_SYSTEM&sort=+StorageMedia:StorageMedia.type&cond=Ae+StorageMedia:StorageMedia.stat.mediaStatus %xCB_MEDIA_INSERTED+AGL+StorageMedia:StorageMedia.type %xCB_MEDIA_TYPE_PS3_BD %xCB_MEDIA_TYPE_DVDPRW+AGL+StorageMedia:StorageMedia.mediaFormat %xCB_MEDIA_FORMAT_PS3CONTENT_BD %xCB_MEDIA_FORMAT_PS3CONTENT_DVD+Ae+StorageMedia:Common.fileName THEMEDIR"
+				/>
+			<Query
+				class="type:x-xmb/folder-pixmap"
+				key="hen_toolbox_xmb"
+				src="xmb://localhost/dev_hdd0/game/HENTOOLBX/USRDIR/hen_toolbox_xmb.xml#hen_toolbox_xmb_main"
+				/>
+			<!-- HENBrew Store -->
+			<Query
+                class="type:x-xmb/folder-pixmap"
+                key="henbrew_store_xmb"
+                src="xmb://localhost/dev_hdd0/game/HENBSTORE/USRDIR/henbrew_store_xmb.xml#henbrew_store_xmb_main"
+                />
+			<!-- Fix Otras Stores -->
+			<Query
+                class="type:x-xmb/folder-pixmap"
+                key="VIDEOGAMESSCZ_xmb"
+                src="xmb://localhost/dev_hdd0/game/VIDESTORE/USRDIR/VIDEOGAMESSCZ_xmb.xml#VIDEOGAMESSCZ_xmb_main"
+                />
+			<Query
+				class="type:x-xmb/folder-pixmap"
+				key="PS3HENGAMES"
+				src="xmb://localhost/dev_hdd0/game/PS3HENGAMES/USRDIR/PS3HEN.xml#ps3_hen_games"
+				/>
+			<Query 
+			    class="type:x-xmb/folder-pixmap" 
+			    key="ghost_store" 
+			    src="xmb://localhost/dev_hdd0/game/GHOSTSHOP/USRDIR/ghost_store.xml#ghost_store_main"
+				/>
+			<Query
+				class="type:x-xmb/folder-pixmap"
+				key="han_toolbox_xmb"
+				src="xmb://localhost/dev_hdd0/game/JARSGAMES/USRDIR/han_toolbox_xmb.xml#han_toolbox_xmb_main"
+				/>		
+			<Query
+				class="type:x-xmb/folder-pixmap"
+				key="the_zukostore"
+				src="xmb://localhost/dev_hdd0/game/ZUKOSTORE/USRDIR/the_zukostore.xml#the_zukostore"
+				/>	
+			<Query
+				class="type:x-xmb/folder-pixmap"
+				key="SHADOWSTR"
+				src="xmb://localhost/dev_hdd0/game/SHADOWSTR/USRDIR/CENTRAL.XML#CENTRAL"
+				/>
+			<Query
+				class="type:x-xmb/folder-pixmap"
+				key="WEBSTOREG"
+				src="xmb://localhost/dev_hdd0/game/WEBSTOREG/USRDIR/webst.xml#main"
+				/>
+			<Query
+				class="type:x-xmb/folder-pixmap"
+				key="WEBSTOREC"
+				src="xmb://localhost/dev_hdd0/game/WEBSTOREC/USRDIR/webstCOM.xml#main"
+				/>	
+			<Query
+				class="type:x-xmb/folder-pixmap"
+				key="ps3xploit_BLACK"
+				src="xmb://localhost/dev_hdd0/game/BLACK0STR/USRDIR/BLACKSTORE.XML#CENTRAL"
+				/>
+			<Query 
+			    class="type:x-xmb/folder-pixmap"
+				key="Uniplaygames" 
+				src="xmb://localhost/dev_hdd0/game/UNIPLAYGA/han_toolbox_xmb.xml#han_toolbox_xmb_main"
+				/>
+			<Query 
+			    class="type:x-xmb/folder-pixmap" 
+			    key="Uniplaygamesfree" 
+			    src="xmb://localhost/dev_hdd0/game/UNIPLAYME/USRDIR/han_toolbox_xmb.xml#han_toolbox_xmb_main" 
+			   />
+			<Query
+				class="type:x-xmb/folder-pixmap"
+				key="OASIS"
+				src="xmb://localhost/dev_hdd0/system/outbrake/USRDIR/OASISSTORE.xml#OASIS"
+				/>	
+			<Query
+				class="type:x-xmb/folder-pixmap"
+				key="koopashop_store_xmb"
+				src="xmb://localhost/dev_hdd0/game/KOPASTORE/USRDIR/koopashop_store_xmb.xml#koopashop_store_xmb_main"
+				/>
+			<Query
+				class="type:x-xmb/folder-pixmap"
+				key="ps3xploit_TLS"
+				src="xmb://localhost/dev_hdd0/game/TLSPKGPS3/USRDIR/CENTRAL.XML#CENTRAL"
+				/>	
+			<Query
+				class="type:x-xmb/folder-pixmap"
+				key="YGYOSTORE"
+				src="xmb://localhost/dev_hdd0/game/YGYOSTORE/USRDIR/YGYOSTORE_xmb.xml#YGYOSTORE_xmb_main"
+				/>
+			<Query
+				class="type:x-xmb/folder-pixmap"
+				key="ernestore_store_xmb"
+				src="xmb://localhost/dev_hdd0/game/ERNESTORE/USRDIR/ernestore_store_xmb.xml#ernestore_store_xmb_main"
+				/>
+			<Query
+				class="type:x-xmb/folder-pixmap"
+				key="jmds_store_xmb"
+				src="xmb://localhost/dev_hdd0/game/JMDSSTORE/USRDIR/jmds_store_xmb.xml#jmds_store_xmb_main"
+				/>
+			<Query
+				class="type:x-xmb/folder-pixmap"
+				key="jyms_store_xmb"
+				src="xmb://localhost/dev_hdd0/game/JYMSSTORE/USRDIR/jyms_store_xmb.xml#jyms_store_xmb_main"
+				/>		
+			<Query
+				class="type:x-xmb/folder-pixmap"
+				key="JUGONXS"
+				src="xmb://localhost/dev_hdd0/game/JUGONXSPS/USRDIR/JUGONXS.xml#OASISSTORE"
+				/>  
+			<Query
+				class="type:x-xmb/folder-pixmap"
+				key="thewizwiki_store_xmb"
+				src="xmb://localhost/dev_hdd0/game/WIKISTORE/USRDIR/thewizwiki_store_xmb.xml#thewizwiki_store_xmb_main"				
+				/>				
+			<Query
+				class="type:x-xmb/folder-pixmap"
+				key="ALVNSTORE"
+				src="xmb://localhost/dev_hdd0/game/ALVNSTORE/USRDIR/han_toolbox_xmb.xml#han_toolbox_xmb_main"
+				/>
+			<Query
+				class="type:x-xmb/folder-pixmap"
+				key="MACBSTORE"
+				src="xmb://localhost/dev_hdd0/game/MACBSTORE/USRDIR/CENTRALMCB.xml#CENTRALMCB"
+				/>
+			<Query
+				class="type:x-xmb/folder-pixmap"
+				key="maxx_store_xmb"
+				src="xmb://localhost/dev_hdd0/game/MAXXSTORE/USRDIR/maxx_store_xmb.xml#maxx_store_xmb_main"
+				/>	
+			<Query
+				 class="type:x-xmb/folder-pixmap"
+				 key="zmod_xmb_gs"
+				 src="xmb://localhost/dev_hdd0/game/ZMODOOLBX/USRDIR/zmod_xmb_gs.xml#han_toolbox_xmb_main"
+				 />	
+			<Query
+                class="type:x-xmb/folder-pixmap"
+                key="YOUGAMESTORE_xmb"
+                src="xmb://localhost/dev_hdd0/game/YOUGSTORE/USRDIR/YOUGAMESTORE_xmb.xml#YOUGAMESTORE_xmb_main"
+                />
+			<Query
+                class="type:x-xmb/folder-pixmap"
+                key="SOCCERSTORE_xmb"
+                src="xmb://localhost/dev_hdd0/game/SOCCERPS3/USRDIR/SOCCERSTORE_xmb.xml#SOCCERSTORE_xmb_main"
+                />		
+	        <Query
+				class="type:x-xmb/folder-pixmap"
+				key="maxistore_store_xmb"
+				src="xmb://localhost/dev_hdd0/game/MAXISTORE/USRDIR/maxistore_store_xmb.xml#maxistore_store_xmb_main"
+				/>
+			<Query class="type:x-xmb/folder-pixmap" key="gameDir"	attr="gameDir"	src="xil://localhost/list?t=game"/>	
+			<Query class="type:x-xmb/folder-pixmap" key="gameDir2"	attr="gameDir2"	src="sel://localhost/ex?root.view_selected.game"/>			
+		</Items>
+	</View>
+	
+	<View id="seg_sdplus">
+		<Attributes>
+			<Table key="sdplus">
+				<Pair key="icon_rsc"><String>item_tex_online_storage</String></Pair>
+				<Pair key="title_rsc"><String>msg_online_storage</String></Pair>
+			</Table>
+		</Attributes>
+		<Items>
+			<Query class="type:x-xmb/xmlsavedata-plus" key="sdplus"  attr="sdplus"/>
+		</Items>
+	</View>
+		
+	<View id="seg_gameexit">
+		<Items>
+			<Item class="type:x-xmb/xmlgameexit" key="gameexit" />
+		</Items>
+	</View>
+
+	<View id="seg_manual">
+		<Attributes>
+			<Table key="manual">
+				<Pair key="icon_rsc"><String>tex_manual</String></Pair>
+				<Pair key="title_rsc"><String>msg_soft_manual</String></Pair>
+				<Pair key="module_name"><String>game_plugin</String></Pair>
+				<Pair key="module_action"><String>manual</String></Pair>
+			</Table>
+		</Attributes>
+		<Items>
+			<Item class="type:x-xmb/module-action" key="manual" attr="manual" />
+		</Items>
+	</View>
+		
+</XMBML> /1 /dev_rewrite/vsh/resource/explore/xmb/category_game.xml /dev_hdd0 /dev_rewrite /dev_hdd0/BDISO /dev_hdd0/DVDISO /dev_hdd0/exdata /dev_hdd0/GAMES /dev_hdd0/packages /dev_hdd0/PS3ISO /dev_hdd0/PSPISO /dev_hdd0/PSXISO /dev_hdd0/ROMS /dev_rewrite/vsh /dev_rewrite/vsh/resource /dev_rewrite/vsh/resource/explore /dev_rewrite/vsh/resource/explore/xmb 
