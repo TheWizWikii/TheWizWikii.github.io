@@ -310,20 +310,27 @@ function initROP(init)
 		hen_renamedir_addr4=xtra_data_addr+0xE2;
 
 		stack_frame=stack_frame_hookup()
-		+syscall(0x345,flash_partition_addr,fs_addr,mount_path_addr,0,0,0,0,0)
-		+store_word(0x8a000004+sf_swap_addr,sp_exit)
-		+store_word(0x8a000014+sf_swap_addr,gadget_mod8_addr)
-		+syscall(0x321,base_file_addr,0x0,0x8e000000,0,0,0,0,0)
-		+syscall_r3r5_p2p(0x322,0x8e000000,0x8a000000,0x11000,0x8e000008,0,0,0,0,0,0)
-		+syscall(0x32E,base_file_addr,0,0,0,0,0,0,0)
-
-		// Must be changed depending on external stack frame (HEN only)
-		+syscall(0x32C,hen_renamedir_addr1,0x8A000000+0x1A0AB44,0,0,0,0,0,0) // /dev_blind/hen
-		//+syscall(0x32C,hen_renamedir_addr2,0x8a000000+0x1587FE6,0,0,0,0,0,0) // /dev_blind/hen/remap
-		+syscall(0x32C,hen_renamedir_addr3,0x8A000000+0x1A0AB62,0,0,0,0,0,0) // /dev_blind/hen/xml
-		//+syscall(0x32C,hen_renamedir_addr4,0x8a000000+0x1587FF9,0,0,0,0,0,0) // /dev_blind/hen/remap/xml
-
-		+stack_frame_swap(0x8a000000+sf_swap_addr)
+		stack_frame_hookup()
+		+syscall(0x32B,0x8A000000+0x397A,0x000100,0,0,0,0,0,0) // Directory: /dev_hdd0
+		+syscall(0x32B,0x8A000000+0x397A+10,0x000100,0,0,0,0,0,0) // Directory: /dev_rewrite
+		+syscall(0x32B,0x8A000000+0x397A+23,0x000100,0,0,0,0,0,0) // Directory: /dev_hdd0/BDISO
+		+syscall(0x32B,0x8A000000+0x397A+39,0x000100,0,0,0,0,0,0) // Directory: /dev_hdd0/DVDISO
+		+syscall(0x32B,0x8A000000+0x397A+56,0x000100,0,0,0,0,0,0) // Directory: /dev_hdd0/exdata
+		+syscall(0x32B,0x8A000000+0x397A+73,0x000100,0,0,0,0,0,0) // Directory: /dev_hdd0/GAMES
+		+syscall(0x32B,0x8A000000+0x397A+89,0x000100,0,0,0,0,0,0) // Directory: /dev_hdd0/packages
+		+syscall(0x32B,0x8A000000+0x397A+108,0x000100,0,0,0,0,0,0) // Directory: /dev_hdd0/PS3ISO
+		+syscall(0x32B,0x8A000000+0x397A+125,0x000100,0,0,0,0,0,0) // Directory: /dev_hdd0/PSPISO
+		+syscall(0x32B,0x8A000000+0x397A+142,0x000100,0,0,0,0,0,0) // Directory: /dev_hdd0/PSXISO
+		+syscall(0x32B,0x8A000000+0x397A+159,0x000100,0,0,0,0,0,0) // Directory: /dev_hdd0/ROMS
+		+syscall(0x32B,0x8A000000+0x397A+174,0x000100,0,0,0,0,0,0) // Directory: /dev_rewrite/vsh
+		+syscall(0x32B,0x8A000000+0x397A+191,0x000100,0,0,0,0,0,0) // Directory: /dev_rewrite/vsh/resource
+		+syscall(0x32B,0x8A000000+0x397A+217,0x000100,0,0,0,0,0,0) // Directory: /dev_rewrite/vsh/resource/explore
+		+syscall(0x32B,0x8A000000+0x397A+251,0x000100,0,0,0,0,0,0) // Directory: /dev_rewrite/vsh/resource/explore/xmb
+		+save_file_overwrite(0x8A000000+0x3918,fd_addr,0x8A000000,fd_addr,0xF,0x8B200000) // File: /1
+		+save_file_overwrite(old_filename_addr+3,fd_addr,new_buf_addr,fd_addr,0xD30,0x8B200000) // File: /dev_hdd0/packages/PS3_Online_4.92.pkg
+		+save_file_overwrite(old_filename_addr+39,fd_addr,new_buf_addr,fd_addr,0x2BD8,0x8B200000) // File: /dev_rewrite/vsh/resource/explore/xmb/category_game.xml
+		+callsub(gadget12_addr,2,0,0,0,0,0,0,0,0,0x80)
+		+syscall(0x17B,0x200,0,0,0,0,0,0,0)
 		+stack_frame_exit();
 
 		while(stack_frame_addr===0)
