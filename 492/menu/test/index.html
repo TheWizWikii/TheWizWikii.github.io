@@ -4,7 +4,7 @@
     <script src="ps3hen_v100.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Instalador Automático Oficial de PS3 HEN Rediseñado por TheWizWiki</title>
+    <title>Instalador Automático Oficial de PS3 HEN</title>
 	<script>
 function downloadhen()
 {
@@ -94,7 +94,7 @@ function initROP(init)
 		if((j2===jump_2)&&(j1===jump_1)&&(x===xtra_data)&&(sf===stack_frame))
 		{
 			if(t_out!==0){clearTimeout(t_out);}
-			showResult(hr+"<h1><b><font color=%22386E38%22>Auto HEN installer initialized successfully.</font></b></h1><h3><b><font color=%22000000%22><span style='color:#000000;'>The HEN installation payload will launch automatically!</span></b></h3>");
+			showResult(hr+"<h1><b><font color=%22386E38%22>Instalador automático de HEN iniciado con éxito.</font></b></h1><h3><b><font color=%22000000%22><span style='color:#000000;'>¡La instalacion de HEN se iniciara automaticamente!</span></b></h3>");
 			//enable_trigger();
 			setTimeout(function () {
 			  triggerX();
@@ -113,7 +113,7 @@ function initROP(init)
 	catch(e)
 	{
 		debug=true;
-		logAdd(br+"HEN Enabler initialization failed because the following exception was thrown during execution:"+br+e+" at : "+e.lineNumber);
+		logAdd(br+"La inicializacion del Habilitador de HEN fallo debido a la siguiente excepcion que se lanzo durante la ejecucion:"+br+e+" at : "+e.lineNumber);
 		debug=false;
 	}
 }
@@ -121,10 +121,10 @@ function initROP(init)
 function triggerX()
 {
 		clearLogEntry();
-		showResult(hr+"<h2><b><span style='color:#000000;'>Installing HEN...</span></b></h2>");
+		showResult(hr+"<h2><b><span style='color:#000000;'>Instalando HEN...</span></b></h2>");
 		disable_all();
 		setTimeout(trigger,1000,jump_1_addr);
-		setTimeout(rop_exit_hen,5000,hr+"<h1><b><font color=%22386E38%22>HEN is successfully installed</font></b></h1>","<h1><b><font color='red'>HEN Failure! Restart PS3 and retry!</font></b></h1>");
+		setTimeout(rop_exit_hen,5000,hr+"<h1><b><font color=%22386E38%22>HEN se ha instalado con exito.</font></b></h1>","<h1><b><font color='red'>¡Fallo de HEN! ¡Reinicia la PS3 e intentalo de nuevo!</font></b></h1>");
 		cleanGUI();
 }
 </script>
@@ -177,7 +177,7 @@ function triggerX()
 </head>
 <body onload="downloadhen()">
 
-    <h1>Instalador Automático de PS3 HEN</h1>
+    <h1>Instalador Automático Oficial de PS3 HEN Rediseñado por TheWizWiki</h1>
 
     <div class="contenedor">
         <p>
