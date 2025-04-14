@@ -1,0 +1,200 @@
+/**
+ * Universal fly-out menu for WebFactory plugins
+ * (c) WebFactory Ltd, 2023
+ */
+
+#wf-flyout {
+  position: fixed;
+  z-index: 100049;
+  transition: all 0.3s ease-in-out;
+  right: 40px;
+  bottom: 40px;
+  opacity: 1;
+}
+
+#wff-overlay {
+  background: #000;
+  opacity: 0.4;
+  filter: alpha(opacity=40);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: none;
+  z-index: 100049;
+}
+
+#wf-flyout a:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+#wf-flyout #wff-button {
+  display: block;
+}
+
+#wf-flyout #wff-image-wrapper {
+  border: 3px solid #000000;
+  border-radius: 50%;
+  padding: 0;
+  display: block;
+  overflow: hidden;
+  background: #ffffff;
+  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
+}
+
+#wf-flyout #wff-button img {
+  width: 55px;
+  height: 55px;
+  display: block;
+  overflow: hidden;
+  padding: 2px;
+  background: #ffffff;
+  box-sizing: border-box;
+}
+
+#wf-flyout #wff-button:hover #wff-image-wrapper {
+  box-shadow: 0 3px 30px rgba(0, 0, 0, 0.25);
+}
+
+#wf-flyout:not(.opened) #wff-button:hover .wff-label {
+  opacity: 1;
+  margin-right: 0;
+}
+
+#wf-flyout .wff-label {
+  position: absolute;
+  display: block;
+  top: 50%;
+  right: calc(100% + 25px);
+  transform: translateY(-50%) scale(1);
+  -moz-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  color: #fff;
+  background: #444 0 0 no-repeat padding-box;
+  font-size: 14px;
+  white-space: nowrap;
+  padding: 5px 10px;
+  height: auto !important;
+  line-height: initial;
+  transition: all 0.2s ease-out;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  opacity: 0;
+  margin-right: -50px;
+}
+
+#wf-flyout .wff-icon {
+  width: 40px;
+  height: 40px;
+  vertical-align: middle;
+  line-height: 60px;
+  text-align: center;
+}
+
+#wf-flyout .wff-icon img {
+  max-width: 80%;
+  filter: brightness(100);
+}
+
+#wf-flyout .wff-label.visible {
+  opacity: 1;
+}
+
+#wf-flyout .wff-menu-item {
+  position: absolute;
+  left: 10px;
+  width: 40px;
+  height: 40px;
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0);
+  border-radius: 50%;
+  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
+  background: #0071a1;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  transition-timing-function: ease-in-out;
+}
+
+#wf-flyout .wff-menu-item.accent {
+  background: #ca4a1f;
+}
+
+#wf-flyout.opened .wff-menu-item {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+}
+
+#wf-flyout .wff-menu-item:hover {
+  box-shadow: 0 3px 30px rgba(0, 0, 0, 0.25);
+}
+
+#wf-flyout .wff-menu-item:hover .wff-label {
+  right: calc(100% + 55px);
+}
+
+#wf-flyout .wff-menu-item .wff-label {
+  right: calc(100% + 70px);
+}
+
+#wf-flyout .wff-menu-item .dashicons {
+  line-height: 41px;
+  font-size: 23px;
+  color: #fff;
+  padding: 0px 3px 0px 0;
+}
+
+.wff-menu-item-1 {
+  bottom: 75px;
+  transition: transform 0.2s 30ms, background-color 0.2s;
+}
+
+.wff-menu-item-2 {
+  bottom: 130px;
+  transition: transform 0.2s 70ms, background-color 0.2s;
+}
+
+.wff-menu-item-3 {
+  bottom: 185px;
+  transition: transform 0.2s 110ms, background-color 0.2s;
+}
+
+.wff-menu-item-4 {
+  bottom: 240px;
+  transition: transform 0.2s 150ms, background-color 0.2s;
+}
+
+.wff-menu-item-5 {
+  bottom: 295px;
+  transition: transform 0.2s 190ms, background-color 0.2s;
+}
+
+.wff-menu-item-6 {
+  bottom: 350px;
+  transition: transform 0.2s 230ms, background-color 0.2s;
+}
+
+.wff-menu-item-7 {
+  bottom: 405px;
+  transition: transform 0.2s 270ms, background-color 0.2s;
+}
+
+.wff-menu-item-8 {
+  bottom: 460px;
+  transition: transform 0.2s 310ms, background-color 0.2s;
+}
+
+.wff-menu-item-9 {
+  bottom: 515px;
+  transition: transform 0.2s 350ms, background-color 0.2s;
+}
+
+.wff-menu-item-10 {
+  bottom: 570px;
+  transition: transform 0.2s 390ms, background-color 0.2s;
+}

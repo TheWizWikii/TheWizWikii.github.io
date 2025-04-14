@@ -1,0 +1,185 @@
+/*------------------------------------------------------------------------------
+  Table of content - Portability
+
+  1.0 Modal
+  2.0 Form
+	2.1 Import Form
+  3.0 Loader
+  4.0 Link
+------------------------------------------------------------------------------*/
+
+/*-----------------------------------------------------------------------------
+  1.0 - Modal
+------------------------------------------------------------------------------*/
+[data-et-core-portability-cancel] {
+	opacity: 0;
+	display: none;
+	position: absolute;
+	bottom: 0;
+}
+
+/*-----------------------------------------------------------------------------
+  2.0 - Form
+------------------------------------------------------------------------------*/
+[data-et-core-portability] form label {
+	margin: 1.5em 0 0;
+	display: block;
+}
+
+/* 2.1 - Import */
+.et-core-portability-import-form {
+	position: relative;
+}
+
+.et-core-portability-import-placeholder {
+	text-align: center;
+	height: 16px;
+	border: 2px dashed #e6ecf2;
+	border-radius: 3px;
+	color: #a3b0c2;
+	font-weight: 700;
+	text-transform: uppercase;
+	line-height: 16px;
+	float: left;
+	padding: 5px;
+	font-size: 12px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+body.rtl .et-core-portability-import-placeholder {
+	float: right;
+}
+
+.et-core-portability-import-form input[type="file"] {
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 30px;
+	opacity: 0;
+}
+
+body.rtl .et-core-portability-import-form input[type="file"] {
+	left: auto;
+	right: 0;
+}
+
+.et-core-portability-import-placeholder {
+	width: 166px;
+}
+
+.et-core-portability-import-form input[type="file"] {
+	width: 178px;
+}
+
+.et-core-portability-import-form .et-core-button {
+	float: left;
+}
+
+body.rtl .et-core-portability-import-form .et-core-button {
+	float: right;
+	margin-right: 10px;
+}
+
+/*-----------------------------------------------------------------------------
+  3.0 - Loader, Progress Bar and Messages
+------------------------------------------------------------------------------*/
+[data-et-core-portability] .et-core-modal-temp-content {
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+}
+
+[data-et-core-portability] .et-core-modal-temp-content > div {
+	width: 100%;
+}
+
+.ui-widget-content a {
+	color: #0073aa;
+}
+
+[data-et-core-portability] .et-core-loader,
+[data-et-core-portability] .et-core-progress {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/*-----------------------------------------------------------------------------
+  4.0 - Link
+------------------------------------------------------------------------------*/
+[data-et-core-modal*="data-et-core-portability"] {
+	text-decoration: none;
+	box-shadow: none !important;
+}
+
+[data-et-core-modal*="data-et-core-portability"] span {
+	display: none;
+}
+
+[data-et-core-modal*="data-et-core-portability"]:before {
+	font-family: 'ETmodules';
+	font-size: 16px;
+	content: '\e900';
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-weight: 400;
+}
+
+.et-core-customize-controls-close[data-et-core-modal*="data-et-core-portability"] {
+	display: none;
+	height: 41px;
+	padding: 0 2px 0 0;
+	background: #eee;
+	border-top: 4px solid #eee;
+	border-right: 1px solid #ddd;
+	color: #444;
+	text-align: left;
+	cursor: pointer;
+	transition: color .15s ease-in-out, border-color .15s ease-in-out, background .15s ease-in-out;
+	box-sizing: content-box;
+	line-height: 45px;
+	position: absolute;
+	top: 0;
+	left: 48px;
+	z-index: 9999;
+	width: 48px;
+}
+
+body.rtl .et-core-customize-controls-close[data-et-core-modal*="data-et-core-portability"] {
+	border-right: none;
+	border-left: 1px solid #ddd;
+	right: 48px;
+}
+
+#customize-header-actions .et-core-customize-controls-close[data-et-core-modal*="data-et-core-portability"] {
+	display: block;
+}
+
+.et-core-customize-controls-close[data-et-core-modal*="data-et-core-portability"]:hover,
+.et-core-customize-controls-close[data-et-core-modal*="data-et-core-portability"]:focus {
+	background: #fff;
+	color: #0073aa;
+	border-top-color: #0073aa;
+	outline: none;
+	box-shadow: none;
+	border-left: 1px solid #ccc;
+	margin-left: -1px;
+}
+
+.et-core-customize-controls-close[data-et-core-modal*="data-et-core-portability"]:before {
+	position: relative;
+	top: -3px;
+	font-size: 13px;
+	left: 15px;
+}
+
+@media screen and ( max-width: 640px ) {
+	/* Overwriting WordPress' default mobile preview button positioning due to portability position */
+	#customize-header-actions .customize-controls-preview-toggle {
+		left: 99px;
+	}
+}

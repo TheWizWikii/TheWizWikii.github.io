@@ -1,0 +1,53 @@
+/**
+ * ------EZ TOC Widget CSS Admin-------
+ * Ez Toc Widget Sticky css for admin panel to setup widget content
+ * @plugin easy-table-of-contents
+ * @since 2.0.41
+ *
+*/
+
+#ez-toc-widget-options-container{
+    display: none;
+}
+.ez-toc-widget-appearance-title, .ez-toc-widget-advanced-title {
+    margin-bottom: 12px;
+}
+.ez-toc-widget-appearance-title label, .ez-toc-widget-advanced-title label {
+    vertical-align: top;
+}
+input.ez_toc_widget_appearance_options:checked ~ #ez-toc-widget-options-container, input.ez_toc_widget_advanced_options:checked ~ #ez-toc-widget-options-container {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: left;
+    justify-content: flex-start;
+    align-items: baseline;
+}
+#ez-toc-widget-options-container .ez-toc-widget-form-group {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: nowrap;
+    flex-basis: 100%;
+    justify-content: flex-start;
+    margin-top: 15px;
+}
+.ez-toc-widget-form-group label {
+    flex-basis: 55%;
+}
+#ez-toc-widget-options-container .ez-toc-widget-form-data {
+    display: flex;
+    justify-content: center;
+}
+.ez-toc-widget-appearance-options-container .ez-toc-widget-form-group {
+    margin-bottom: 0;
+}
+#ez-toc-widget-options-container .ez-toc-widget-form-group input[type=text], #ez-toc-widget-options-container .ez-toc-widget-form-group input[type=number] {
+    width: 53px;
+    margin-left: 8px;
+}
+#ez-toc-widget-options-container .ez-toc-widget-form-group select {
+    width: 53px;
+    margin-left: 8px;
+}
+#ez-toc-widget-options-container .ez-toc-widget-form-group input[type=checkbox] {
+    margin-left: 8px;
+}

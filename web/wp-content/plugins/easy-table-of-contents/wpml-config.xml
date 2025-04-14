@@ -1,0 +1,7 @@
+<wpml-config>
+  <admin-texts>
+    <key name="ez-toc-settings">
+      <key name="heading_text"/>
+    </key>
+  </admin-texts>
+</wpml-config>

@@ -1,0 +1,6 @@
+.et_google_font_options { display: none; background: #eee; height: 280px; overflow: auto; }
+	.et_filter_text { position: relative; }
+		.et_filter_text:before { content: ''; width: 0; height: 0; border-color: #ccc transparent; border-style: solid; border-width: 6px 6px 0; position: absolute; top: 18px; right: 8px; z-index: 1; }
+	.et_google_font_options, .et_filter_text { background: #fff; border: 1px solid #dfdfdf; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; }
+	.et_filter_text, .et_google_font_options li { display: block; padding: 5px 10px; height: 30px; font-size: 20px; line-height: 30px; margin-bottom: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+	.et_google_font_active, .et_google_font_options li:hover { background-color: #effbff; }

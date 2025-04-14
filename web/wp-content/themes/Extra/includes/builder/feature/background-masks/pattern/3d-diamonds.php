@@ -1,0 +1,41 @@
+<?php
+/**
+ * Background Pattern Style - 3D Diamonds.
+ *
+ * @package Divi
+ * @sub-package Builder
+ * @since 4.15.0
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	die( 'Direct access forbidden.' );
+}
+
+/**
+ * Class ET_Builder_Pattern_3D_Diamonds
+ *
+ * @since 4.15.0
+ */
+class ET_Builder_Pattern_3D_Diamonds extends ET_Builder_Background_Pattern_Style_Base {
+	/**
+	 * Configuration.
+	 *
+	 * @return array
+	 */
+	public function settings() {
+		return array(
+			'label'      => esc_html__( '3D Diamonds', 'et-builder' ),
+			'svgContent' => array(
+				'default'          => '<path d="M20,48H48L0,96V68Zm0,0L0,28V48ZM48,20.15,28,0H0L48,48,96,0H68Zm48,48L76,48H48L96,96ZM96,48V28L76,48ZM28,96H68L48,76Z"/>',
+				'default-inverted' => '<path d="M76,48H48L96,0V28Zm0,0L96,68V48ZM48,75.85,68,96H96L48,48,0,96H28Zm-48-48L20,48H48L0,0ZM0,48V68L20,48ZM68,0H28L48,20Z"/>',
+				'rotated'          => '<path d="M48,76V48L96,96H68Zm0,0L28,96H48ZM20.15,48,0,68V96L48,48,0,0V28Zm48-48L48,20V48L96,0ZM48,0H28L48,20ZM96,68V28L76,48Z"/>',
+				'rotated-inverted' => '<path d="M48,20V48L0,0H28Zm0,0L68,0H48ZM75.85,48,96,28V0L48,48,96,96V68Zm-48,48L48,76V48L0,96ZM48,96H68L48,76ZM0,28V68L20,48Z"/>',
+				'thumbnail'        => '<path d="M13.33,15,0,30V21.25L5.56,15ZM0,15H5.56L0,8.75ZM26.67,0H18.89L13.33,6.3,7.78,0H0L13.33,15ZM13.33,23.75,7.78,30H18.89ZM32.22,15l-5.55,6.25v.05L21.11,15H13.33L26.67,30,40,15Zm0,0L26.67,8.75,21.11,15H32.22ZM53.33,0H45.56L40,6.3,34.44,0H26.67L40,15ZM40,23.75,34.44,30H45.56ZM58.89,15l-5.56,6.25v.05L47.78,15H40L53.33,30,66.67,15Zm0,0L53.33,8.75,47.78,15H58.89ZM80,0H72.22L66.67,6.3,61.11,0H53.33L66.67,15Zm0,30V21.3L74.44,15H66.67Zm0-15V8.75L74.44,15ZM66.67,23.75,61.11,30H72.22ZM5.56,45,0,51.25V60L13.33,45ZM0,45H5.56L0,38.75Zm13.33-8.7L7.78,30H0L13.33,45,26.67,30H18.89ZM7.78,60H18.89l-5.56-6.25ZM32.22,45l-5.55,6.25v0L21.11,45H13.33L26.67,60,40,45Zm0,0-5.55-6.25L21.11,45H32.22ZM53.33,30H45.56L40,36.3,34.44,30H26.67L40,45ZM34.44,60H45.56L40,53.75ZM58.89,45l-5.56,6.25v0L47.78,45H40L53.33,60,66.67,45Zm0,0-5.56-6.25L47.78,45H58.89Zm7.78-8.7L61.11,30H53.33L66.67,45,80,30H72.22ZM80,60V51.3L74.44,45H66.67Zm0-15V38.75L74.44,45ZM61.11,60H72.22l-5.55-6.25Z"/>',
+			),
+			'width'      => '96px',
+			'height'     => '96px',
+		);
+	}
+}
+
+return new ET_Builder_Pattern_3D_Diamonds();

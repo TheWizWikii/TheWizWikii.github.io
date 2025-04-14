@@ -1,0 +1,8 @@
+.woocommerce #content div.product div.summary.et_pb_wc_price,
+.woocommerce div.product div.summary.et_pb_wc_price,
+.woocommerce-page #content div.product div.summary.et_pb_wc_price,
+.woocommerce-page div.product div.summary.et_pb_wc_price {
+    float: none;
+    width: auto;
+    clear: unset;
+}

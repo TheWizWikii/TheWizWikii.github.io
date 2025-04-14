@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>backups</title>
+    <defs>
+        <linearGradient x1="17.129014%" y1="22.6087332%" x2="86.6199713%" y2="78.8899353%" id="linearGradient-1">
+            <stop stop-color="#FFCEEB" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="backups" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M11,3 L22,3 C23.6735902,3 25,4.504003 25,6.22222222 L25,17.8888889 C25,19.6071081 23.6432871,21 21.969697,21 L3.03030303,21 C1.35671288,21 0,19.6071081 0,17.8888889 L0,3.11111111 C0,1.39289189 1.35671288,0 3.03030303,0 L8,0 C9.67359015,0 11,1.28178078 11,3 Z" id="Path" fill="url(#linearGradient-1)" fill-rule="nonzero"></path>
+        <path d="M18,14 L29,14 C30.6735902,14 32,15.504003 32,17.2222222 L32,28.8888889 C32,30.6071081 30.6432871,32 28.969697,32 L10.030303,32 C8.35671288,32 7,30.6071081 7,28.8888889 L7,14.1111111 C7,12.3928919 8.35671288,11 10.030303,11 L15,11 C16.6735902,11 18,12.2817808 18,14 Z" id="Path" fill="#FF4A9E" fill-rule="nonzero"></path>
+    </g>
+</svg>

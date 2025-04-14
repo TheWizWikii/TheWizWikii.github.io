@@ -1,0 +1,1 @@
+.et_pb_button[data-icon]:not([data-icon=""]):after{content:attr(data-icon)}@media (max-width:980px){.et_pb_button[data-icon-tablet]:not([data-icon-tablet=""]):after{content:attr(data-icon-tablet)}}@media (max-width:767px){.et_pb_button[data-icon-phone]:not([data-icon-phone=""]):after{content:attr(data-icon-phone)}}

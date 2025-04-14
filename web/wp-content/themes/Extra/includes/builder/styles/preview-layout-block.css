@@ -1,0 +1,84 @@
+/**
+ * Third party themes might sets html / body to `100%` which might cause preview height issue
+ */
+html,
+body {
+	height: auto !important;
+}
+
+/**
+ * Force set overflow auto on html tag that needs it (in DBP context)
+ */
+.et-block-layout-force-overflow-auto {
+	overflow: auto !important;
+}
+
+/**
+ * Remove unwanted divi builder window padding top and bottom
+ */
+body.et-block-layout-preview #page-container {
+	padding-top: 0 !important;
+}
+
+body.et-block-layout-preview .et_pb_post.et-fb-iframe-ancestor {
+	margin-bottom: 0 !important;
+	padding-bottom: 0 !important;
+}
+
+/**
+ * Basic styling of layout block preview. All the anchestor shouldn't be visible
+ */
+.et-pb-layout-preview-ancestor,
+.et-pb-layout-preview-ancestor > #et-boc {
+	margin: 0 !important;
+	padding: 0!important;
+	display: block !important;
+	border: none !important;
+	box-shadow: none !important;
+	float: none !important;
+	background: transparent !important;
+}
+
+/**
+ * Reset visual builder ancestor styling to make sure correct positioning
+ */
+.et-fb-root-ancestor {
+	width: 100% !important;
+	min-width: 100% !important;
+	margin: 0 !important;
+}
+
+/**
+ * Layout positioning fix on Divi Builder Plugin context. A theme can have reset style which
+ * affecting the layout positioning
+ */
+.et_divi_builder .et-pb-layout-preview-ancestor > #et-boc {
+	max-width: none !important;
+	width: auto;
+}
+
+/**
+ * Force width correction in Divi Builder Plugin if theme has loop wrapper's width styling which
+ * makes layout preview template couldnt' reach full width without this reset
+ */
+.et_divi_builder .et-pb-layout-preview-width-correction {
+	max-width: none !important;
+	width: auto !important;
+}
+
+/**
+ * Pseudo element might be used for manipulating layout and UI related style. Thus, only reset the
+ * UI styling aspect that is more likely not needed in block layout preview
+ */
+.et-pb-layout-preview-ancestor:before,
+.et-pb-layout-preview-ancestor:after {
+	box-shadow: none !important;
+	background: transparent !important;
+}
+
+/*
+ *  Hide any DOM outputted via wp_footer(), possibly by plugins
+ */
+#block-layout-preview-footer {
+	display: none;
+}
