@@ -44,6 +44,9 @@ Esta versión de HEN és compatible con todoas las consolas PS3 (Todos los model
 ### PS3 HEN ![Version](https://img.shields.io/badge/Version-4.91-brightgreen.svg)
 - Hen Menu http://thewizwikii.github.io/491/menu
 
+### PS3 HEN ![Version](https://img.shields.io/badge/Version-4.92-brightgreen.svg)
+- Hen Menu http://thewizwikii.github.io/492/menu
+
 Buscas una guia de configuración definitiva para tu PS3 todo 
 
 https://youtu.be/2eZOVRY5ZMc
