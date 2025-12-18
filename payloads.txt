@@ -1,4 +1,7 @@
 etaHEN v2.4b|https://github.com/etaHEN/etaHEN/releases/download/2.4B/etaHEN-2.4B.bin|9021|PS5
-FTP SERVER|https://github.com/ps5-payload-dev/ftpsrv/releases/download/v0.14.3/ftpsrv-ps5.elf|9021|PS5
+FTP Server|https://github.com/ps5-payload-dev/ftpsrv/releases/download/v0.14.3/ftpsrv-ps5.elf|9021|PS5
+websrv|https://github.com/ps5-payload-dev/websrv/releases/download/v0.28.3/websrv-ps5.elf|9021|PS5
+ps5debug|https://github.com/GoldHEN/ps5debug/releases/download/1.0b5/ps5debug_v1.0b5.elf|9021|PS5
 FTP SERVER|https://github.com/ps5-payload-dev/ftpsrv/releases/download/v0.14.3/ftpsrv-ps4.elf|9090|PS4
+
 
