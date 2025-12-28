@@ -5,6 +5,8 @@ websrv|https://github.com/ps5-payload-dev/websrv/releases/download/v0.28.3/websr
 ps5debug|https://github.com/GoldHEN/ps5debug/releases/download/1.0b5/ps5debug_v1.0b5.elf|9021|PS5
 FTP Server|https://github.com/ps5-payload-dev/ftpsrv/releases/download/v0.14.3/ftpsrv-ps4.elf|9090|PS4
 airpsx v0.19|https://github.com/barisyild/airpsx/releases/download/0.19/airpsx.elf|9021|PS5
+GoldHEN v2.4b18.7|https://github.com/TheWizWikii/All-PS4-Payloads/releases/download/1.0/GoldHEN.v2.4b18.7.bin|9090|PS4
+
 
 
 
