@@ -1,3 +1,4 @@
-Atmosphere AIO|v21.0.1 (Full)|https://github.com/TheWizWikii/NS-CFW-Packs/releases/download/21.0.1/aio.zip|Incluye Atmosphere, Hekate, Homebrew, App Store y Tinfoil. Ideal para usuarios expertos.
-Atmosphere Minimal|v21.0.1 (Lite)|https://github.com/TheWizWikii/NS-CFW-Packs/releases/download/21.0.1/minimal.zip|Solo lo básico: Atmosphere y Hekate.
+Atmosphere AIO|v21.1.0 (Full)|https://github.com/TheWizWikii/NS-CFW-Packs/releases/download/21.0.1/aio.zip|Incluye Atmosphere, Hekate, Homebrew, App Store y Tinfoil. Ideal para usuarios expertos.
+Atmosphere Minimal|v21.1.0 (Lite)|https://github.com/TheWizWikii/NS-CFW-Packs/releases/download/21.0.1/minimal.zip|Solo lo básico: Atmosphere y Hekate.
+
 
