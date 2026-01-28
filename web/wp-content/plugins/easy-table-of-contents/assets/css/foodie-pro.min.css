@@ -1,4 +1,0 @@
-@media only screen and (max-width: 940px) {
-    .ez-toc-sticky #ez-toc-sticky-container .menu-toggle, #ez-toc-container .menu-toggle, #ez-toc-widget-container .menu-toggle{ display:none; } 
-    .ez-toc-sticky #ez-toc-sticky-container nav, #ez-toc-container nav, #ez-toc-widget-container nav { display:block; }
-}
