@@ -1,0 +1,2 @@
+GOLDHEN=https://github.com/TheWizWikii/All-PS4-Payloads/releases/download/1.0/goldhen_v2.4b18.9.bin
+HEN=https://github.com/TheWizWikii/All-PS4-Payloads/releases/download/1.0/hen.bin
