@@ -7,6 +7,7 @@ websrv v0.29|https://github.com/ps5-payload-dev/websrv/releases/download/v0.29/w
 notify|https://github.com/adel-ailane/ShadowMount/releases/download/v1.3-beta-NVME/notify.elf|9021|PS5
 ShadowMount v1.3B|https://github.com/adel-ailane/ShadowMount/releases/download/v1.3-beta-NVME/shadowmount.elf|9021|PS5
 ShadowMount v1.4B UFS2|https://github.com/adel-ailane/ShadowMount/releases/download/1.4-beta/shadowmount.elf|9021|PS5
+Garlicsaves v1.6|https://github.com/earthonion/garlic-savemgr/releases/download/v1.6/garlic-savemgr.elf|9021|PS5
 ps5debug v1.05b|https://github.com/GoldHEN/ps5debug/releases/download/1.0b5/ps5debug_v1.0b5.elf|9021|PS5
 BackPork v0.1|https://github.com/BestPig/BackPork/releases/download/0.1/ps5-backpork.elf|9021|PS5
 Full Y2JB Block|https://github.com/TheWizWikii/PS5-Y2JB-USBUtilityTool/releases/download/v1/full_y2jb_block0.elf|9021|PS5
