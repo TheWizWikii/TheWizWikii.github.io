@@ -1,0 +1,17 @@
+[SISTEMA]|HFW 4.93.1 Hybrid Firmware|https://github.com/TheWizWikii/PS3-Stuff-Repository/releases/download/4/HFW.4.93.zip
+[SISTEMA]|CFW Evilnat 4.93 CEX|https://github.com/TheWizWikii/PS3-Stuff-Repository/releases/download/4/CFW.4.93.Evilnat.Cobra.8.5.CEX.rar
+[SISTEMA]|CFW Evilnat 4.93 CEX [noBT]|https://github.com/TheWizWikii/PS3-Stuff-Repository/releases/download/4/CFW.4.93.Evilnat.Cobra.8.5.CEX.noBT.rar
+[SISTEMA]|CFW Evilnat 4.93 CEX [noBD]|https://github.com/TheWizWikii/PS3-Stuff-Repository/releases/download/4/CFW.4.93.Evilnat.Cobra.8.5.CEX.noBD.rar
+[SISTEMA]|CFW Evilnat 4.93 CEX [noBD+noBT]|https://github.com/TheWizWikii/PS3-Stuff-Repository/releases/download/4/CFW.4.93.Evilnat.Cobra.8.5.CEX.noBD+noBT.rar
+[SISTEMA]|CFW Evilnat 4.93 PEX|https://github.com/TheWizWikii/PS3-Stuff-Repository/releases/download/4/CFW.4.93.Evilnat.Cobra.8.5.PEX.rar
+[SISTEMA]|CFW Evilnat 4.93 PEX [noBT]|https://github.com/TheWizWikii/PS3-Stuff-Repository/releases/download/4/CFW.4.93.Evilnat.Cobra.8.5.PEX.noBT.rar
+[SISTEMA]|CFW Evilnat 4.93 PEX [noBD]|https://github.com/TheWizWikii/PS3-Stuff-Repository/releases/download/4/CFW.4.93.Evilnat.Cobra.8.5.PEX.noBD.rar
+[SISTEMA]|CFW Evilnat 4.93 PEX [noBD+noBT]|https://github.com/TheWizWikii/PS3-Stuff-Repository/releases/download/4/CFW.4.93.Evilnat.Cobra.8.5.PEX.noBD+noBT.rar
+[SISTEMA]|CFW Evilnat 4.93 D-PEX|https://github.com/TheWizWikii/PS3-Stuff-Repository/releases/download/4/CFW.4.93.Evilnat.Cobra.8.5.D-PEX.rar
+[SISTEMA]|CFW Evilnat 4.93 D-PEX [noBT]|https://github.com/TheWizWikii/PS3-Stuff-Repository/releases/download/4/CFW.4.93.Evilnat.Cobra.8.5.D-PEX.noBT.rar
+[SISTEMA]|CFW Evilnat 4.93 D-PEX [noBD]|https://github.com/TheWizWikii/PS3-Stuff-Repository/releases/download/4/CFW.4.93.Evilnat.Cobra.8.5.D-PEX.noBD.rar
+[SISTEMA]|CFW Evilnat 4.93 D-PEX [noBD+noBT]|https://github.com/TheWizWikii/PS3-Stuff-Repository/releases/download/4/CFW.4.93.Evilnat.Cobra.8.5.D-PEX.noBD+noBT.rar
+[APPS]|Irisman|https://github.com/aldostools/IRISMAN/releases/download/4.91/IRISMAN_4.91.pkg
+[APPS]|WebMAN Mod|https://github.com/aldostools/webMAN-MOD/releases/download/1.47.48/webMAN_MOD_1.47.48_Installer.pkg
+[APPS]|Apollo Save Tool|https://github.com/bucanero/apollo-ps3/releases/download/v2.3.0/apollo-ps3.pkg
+[EMUS]|RetroArch CE|https://github.com/aldostools/Resources/releases/download/RetroArch_CE/RetroArch_CE.pkg
