@@ -17,6 +17,7 @@ np-fake-signin V1.1|https://github.com/earthonion/np-fake-signin/releases/downlo
 np-fake-signin V1.1|https://github.com/earthonion/np-fake-signin/releases/download/1.1/np-fake-signin-ps4.elf|9021|PS4
 FTP Server v0.16|https://github.com/ps5-payload-dev/ftpsrv/releases/download/v0.16/ftpsrv-ps4.elf|9090|PS4
 FTP Server Drakmor|https://github.com/drakmor/ftpsrv/releases/download/1.15-ng-beta9/ftpsrv-ps4.elf|9090|PS4
+HEN|https://github.com/Scene-Collective/ps4-hen/releases/download/pre-release-main-179/hen.bin|9090|PS4
 airpsx v0.19|https://github.com/barisyild/airpsx/releases/download/0.19/airpsx.elf|9021|PS5
 nanoDNS v0.2|https://github.com/drakmor/nanoDNS/releases/download/0.2/nanodns.elf|9021|PS5
 GoldHEN v2.4b18.7|https://github.com/TheWizWikii/All-PS4-Payloads/releases/download/1.0/GoldHEN.v2.4b18.7.bin|9090|PS4
