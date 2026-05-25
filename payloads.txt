@@ -20,6 +20,7 @@ FTP Server Drakmor|https://github.com/drakmor/ftpsrv/releases/download/1.15-ng-b
 HEN|https://github.com/Scene-Collective/ps4-hen/releases/download/pre-release-main-179/hen.bin|9090|PS4
 airpsx v0.19|https://github.com/barisyild/airpsx/releases/download/0.19/airpsx.elf|9021|PS5
 nanoDNS v0.2|https://github.com/drakmor/nanoDNS/releases/download/0.2/nanodns.elf|9021|PS5
+Linux v2.1 (4.xx-6.02)|https://github.com/ps5-linux/ps5-linux-loader/releases/download/v2.1/ps5-linux-loader.elf|9021|PS5
 GoldHEN v2.4b18.7|https://github.com/TheWizWikii/All-PS4-Payloads/releases/download/1.0/GoldHEN.v2.4b18.7.bin|9090|PS4
 
 
