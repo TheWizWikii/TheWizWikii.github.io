@@ -8,8 +8,7 @@ FTP Server v0.18.2|https://github.com/ps5-payload-dev/ftpsrv/releases/download/v
 FTP Server Drakmor|https://github.com/drakmor/ftpsrv/releases/download/1.15-ng-beta9/ftpsrv-ps5.elf|9021|PS5
 websrv v0.30|https://github.com/ps5-payload-dev/websrv/releases/download/v0.30/websrv-ps5.elf|9021|PS5
 notify|https://github.com/adel-ailane/ShadowMount/releases/download/v1.3-beta-NVME/notify.elf|9021|PS5
-ShadowMount v1.6 (12.00)|https://github.com/TheWizWikii/PS5-Stuff/releases/download/tools/shadowmountplus12.00.elf|9021|PS5
-ShadowMount v1.6|https://github.com/TheWizWikii/PS5-Stuff/releases/download/tools/shadowmountplus.elf|9021|PS5
+ShadowMount v1.6|https://github.com/TheWizWikii/PS5-Stuff/releases/download/payloads/shadowmountplus.elf|9021|PS5
 Garlicsaves v1.7|https://github.com/earthonion/garlic-savemgr/releases/download/v1.7/garlic-savemgr.elf|9021|PS5
 ps5debug v1.05b|https://github.com/GoldHEN/ps5debug/releases/download/1.0b5/ps5debug_v1.0b5.elf|9021|PS5
 BackPork v0.1|https://github.com/BestPig/BackPork/releases/download/0.1/ps5-backpork.elf|9021|PS5
