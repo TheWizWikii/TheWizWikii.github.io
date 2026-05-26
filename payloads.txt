@@ -1,8 +1,8 @@
 etaHEN v2.4b|https://github.com/etaHEN/etaHEN/releases/download/2.4B/etaHEN-2.4B.bin|9021|PS5
 etaHEN v2.5b|https://github.com/etaHEN/etaHEN/releases/download/2.5B/etaHEN-2.5B.bin|9021|PS5
 HEN |https://github.com/cragson/ps5-hen/releases/download/dev-latest/ps5-hen.elf|9021|PS5
-kstuff v1.6.7 (3.00-10.01)|https://github.com/EchoStretch/kstuff/releases/download/v1.6.7/kstuff.elf|9021|PS5
-kstuff Lite v1.06 (3.00-12.70)|https://github.com/EchoStretch/kstuff-lite/releases/download/v1.06/kstuff.elf|9021|PS5
+kstuff v1.6.7 (3.XX-10.01)|https://github.com/EchoStretch/kstuff/releases/download/v1.6.7/kstuff.elf|9021|PS5
+kstuff Lite v1.06 (3.XX-12.70)|https://github.com/EchoStretch/kstuff-lite/releases/download/v1.06/kstuff.elf|9021|PS5
 YTJB-P2JB v2.6 (4.XX-12.70)|https://github.com/TheWizWikii/PS5-Stuff/releases/download/payloads/p2jb.js|50000|PS5
 Lapse (4.XX-10.01)|https://github.com/TheWizWikii/PS5-Stuff/releases/download/payloads/lapse.js|50000|PS5
 FTP Server v0.20|https://github.com/ps5-payload-dev/ftpsrv/releases/download/v0.20/ftpsrv-ps5.elf|9021|PS5
@@ -21,7 +21,7 @@ FTP Server Drakmor|https://github.com/drakmor/ftpsrv/releases/download/1.15-ng-b
 HEN|https://github.com/Scene-Collective/ps4-hen/releases/download/pre-release-main-179/hen.bin|9090|PS4
 airpsx v0.19|https://github.com/barisyild/airpsx/releases/download/0.19/airpsx.elf|9021|PS5
 nanoDNS v0.2|https://github.com/drakmor/nanoDNS/releases/download/0.2/nanodns.elf|9021|PS5
-Linux v2.1 (4.xx-6.02)|https://github.com/ps5-linux/ps5-linux-loader/releases/download/v2.1/ps5-linux-loader.elf|9021|PS5
+Linux v2.1 (4.XX-6.02)|https://github.com/ps5-linux/ps5-linux-loader/releases/download/v2.1/ps5-linux-loader.elf|9021|PS5
 GoldHEN v2.4b18.7|https://github.com/TheWizWikii/All-PS4-Payloads/releases/download/1.0/GoldHEN.v2.4b18.7.bin|9090|PS4
 
 
