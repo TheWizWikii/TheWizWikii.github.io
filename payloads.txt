@@ -3,7 +3,7 @@ etaHEN v2.5b|https://github.com/etaHEN/etaHEN/releases/download/2.5B/etaHEN-2.5B
 HEN |https://github.com/cragson/ps5-hen/releases/download/dev-latest/ps5-hen.elf|9021|PS5
 kstuff v1.6.7 (3.00-10.01)|https://github.com/EchoStretch/kstuff/releases/download/v1.6.7/kstuff.elf|9021|PS5
 kstuff Lite v1.06 (3.00-12.70)|https://github.com/EchoStretch/kstuff-lite/releases/download/v1.06/kstuff.elf|9021|PS5
-YTJB-P2JB v2.3 (9.00-12.70)|https://github.com/TheWizWikii/PS5-Stuff/releases/download/payloads/p2jb.js|50000|PS5
+YTJB-P2JB v2.6 (9.00-12.70)|https://github.com/TheWizWikii/PS5-Stuff/releases/download/payloads/p2jb.js|50000|PS5
 FTP Server v0.20|https://github.com/ps5-payload-dev/ftpsrv/releases/download/v0.20/ftpsrv-ps5.elf|9021|PS5
 FTP Server Drakmor v1.16|https://github.com/drakmor/ftpsrv/releases/download/1.16-ng-test1/ftpsrv-ps5.elf|9021|PS5
 websrv v0.32|https://github.com/ps5-payload-dev/websrv/releases/download/v0.32/websrv-ps5.elf|9021|PS5
