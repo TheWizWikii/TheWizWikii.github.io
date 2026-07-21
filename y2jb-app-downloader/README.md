@@ -31,6 +31,7 @@ Esta herramienta te permite obtener los archivos **PKG base** oficiales y sus ar
 
 ## 📖 Modo de Uso
 
+Accede a: https://thewizwikii.github.io/y2jb-app-downloader/
 1. **Selecciona tu Firmware:** Revisa la versión de firmware instalada en tu PS5 y ubica la tarjeta correspondiente en la web.
 2. **Descarga los Archivos:**
    * Descarga el **Paquete Base (PKG)**.
