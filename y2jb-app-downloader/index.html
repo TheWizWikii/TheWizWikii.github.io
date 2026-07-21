@@ -259,7 +259,7 @@
       margin-top: 12px;
       font-size: 0.85rem;
       color: var(--text-muted);
-      font-mono: monospace;
+      font-family: monospace;
     }
 
     .remove-btn {
@@ -394,7 +394,6 @@
     </footer>
   </div>
 
-  <!-- LÓGICA DE UNIÓN DE ARCHIVOS PKG Y SERVICE WORKER -->
   <script>
     let fileList = [];
     const dropOverlay = document.getElementById('dropOverlay');
@@ -558,6 +557,37 @@
       if (el) el.style.width = percent + '%';
     }
 
+    async function requestSaveFile(defaultName = 'merged.pkg') {
+      if (window.showSaveFilePicker) {
+        try {
+          const handle = await window.showSaveFilePicker({
+            suggestedName: defaultName,
+            types: [{ description: 'PKG files', accept: { 'application/octet-stream': ['.pkg'] } }]
+          });
+          const writable = await handle.createWritable();
+          return { writable, close: () => writable.close() };
+        } catch (err) {
+          throw err;
+        }
+      }
+      const chunks = [];
+      return {
+        writable: {
+          async write(chunk) { chunks.push(chunk); },
+          async close() { }
+        },
+        async getBlobAndDownload(filename = defaultName) {
+          const blob = new Blob(chunks, { type: 'application/octet-stream' });
+          const a = document.createElement('a');
+          a.href = URL.createObjectURL(blob);
+          a.download = filename;
+          document.body.appendChild(a);
+          a.click();
+          a.remove();
+        }
+      };
+    }
+
     async function startMergeProcess(list) {
       if (!list || !list.length) return;
 
@@ -568,16 +598,14 @@
 
       let writerObj;
       try {
-        if (window.showSaveFilePicker) {
-          const handle = await window.showSaveFilePicker({
-            suggestedName: defaultName,
-            types: [{ description: 'PKG Files', accept: { 'application/octet-stream': ['.pkg'] } }]
-          });
-          const writable = await handle.createWritable();
-          writerObj = { writable, close: () => writable.close() };
-        }
+        writerObj = await requestSaveFile(defaultName);
       } catch (err) {
-        setStatus('Guardado cancelado.');
+        setStatus('Guardado cancelado por el usuario.');
+        return;
+      }
+
+      if (!writerObj || !writerObj.writable) {
+        setStatus('No se pudo inicializar el guardado.');
         return;
       }
 
@@ -605,7 +633,12 @@
         }
       }
 
-      await writerObj.close();
+      if (writerObj.getBlobAndDownload) {
+        await writerObj.getBlobAndDownload(defaultName);
+      } else if (writerObj.close) {
+        await writerObj.close();
+      }
+
       setStatus('¡Proceso completado con éxito!');
     }
 
@@ -617,7 +650,9 @@
       try {
         await startMergeProcess(fileList);
       } catch (err) {
-        alert('Error durante la unión: ' + err.message);
+        console.error(err);
+        alert('Error durante la unión: ' + (err && err.message));
+        setStatus('Unión fallida');
       }
     });
 
