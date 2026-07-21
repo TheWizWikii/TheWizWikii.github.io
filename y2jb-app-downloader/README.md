@@ -59,6 +59,7 @@ Esta herramienta te permite obtener los archivos **PKG base** oficiales y sus ar
 
 * **Desarrollo de la herramienta web:** [TheWizWiki](https://github.com/thewizwikii)
 * **Exploit Y2JB:** gezine
+* * **y2dw idea:** nastys
 * **Servidores y parches:** Playstation Network / Prospero Patches
 
 ---
