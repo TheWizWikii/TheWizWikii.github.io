@@ -4,79 +4,119 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="../dsceditor/styles.css" rel="stylesheet">
-  <title>y2dw - YouTube App Downloads</title>
-  <meta name="theme-color" content="#9a8cee" />
+  <link rel="manifest" href="./manifest.json">
+  <link rel="icon" type="image/png" sizes="32x32" href="icons/pkgmerge-32.png">
+  <title>Y2JB App Downloader & PKG Joiner Pro — TheWizWiki</title>
+  <meta name="theme-color" content="#0f172a" />
   <style>
     :root {
-      --bg-color: #0f172a;
-      --card-bg: #1e293b;
-      --accent-color: #9a8cee;
+      --bg-color: #0b0f19;
+      --card-bg: #151d30;
+      --card-border: #232f48;
+      --accent-color: #6366f1;
+      --accent-hover: #4f46e5;
       --text-main: #f8fafc;
       --text-muted: #94a3b8;
-      --border-color: #334155;
+      --red-btn: #ef4444;
+      --red-hover: #dc2626;
+      --green-btn: #10b981;
+      --green-hover: #059669;
+      --blue-btn: #3b82f6;
+      --blue-hover: #2563eb;
+      --radius: 12px;
+      --shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       background-color: var(--bg-color);
       color: var(--text-main);
-      margin: 0;
-      padding: 20px;
+      padding: 30px 15px;
       display: flex;
-      justify-content: center;
+      flex-direction: column;
       align-items: center;
       min-height: 100vh;
     }
 
-    .container {
+    .main-wrapper {
       width: 100%;
-      max-width: 680px;
-      background: var(--card-bg);
-      padding: 30px;
-      border-radius: 16px;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-      border: 1px solid var(--border-color);
-      position: relative;
-      box-sizing: border-box;
+      max-width: 800px;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
     }
 
-    h1 {
-      font-size: 1.5rem;
-      margin-top: 0;
-      margin-bottom: 20px;
+    /* HEADER */
+    header {
       text-align: center;
-      color: var(--accent-color);
-      font-weight: 600;
+      margin-bottom: 10px;
     }
 
-    .version-card {
-      background: rgba(15, 23, 42, 0.6);
-      border: 1px solid var(--border-color);
-      border-radius: 12px;
-      padding: 20px;
-      margin-bottom: 20px;
+    header h1 {
+      font-size: 2rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #818cf8, #c084fc);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      letter-spacing: -0.5px;
+      margin-bottom: 6px;
     }
 
-    .firmware-title {
-      font-size: 0.95rem;
-      font-weight: 600;
-      color: var(--accent-color);
-      margin-bottom: 8px;
-    }
-
-    .app-info {
-      font-size: 1.1rem;
-      font-weight: 700;
-      margin-bottom: 15px;
-    }
-
-    .step-title {
-      font-size: 0.85rem;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
+    header p {
       color: var(--text-muted);
-      margin-top: 15px;
+      font-size: 0.95rem;
+    }
+
+    /* CARDS DE DESCARGA */
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius);
+      padding: 24px;
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .card:hover {
+      border-color: #3b82f650;
+      transform: translateY(-2px);
+    }
+
+    .fw-badge {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      padding: 4px 10px;
+      background: rgba(99, 102, 241, 0.15);
+      color: #818cf8;
+      border-radius: 20px;
+      margin-bottom: 10px;
+      border: 1px solid rgba(99, 102, 241, 0.3);
+    }
+
+    .app-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    .section-subtitle {
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      letter-spacing: 0.5px;
+      margin-top: 14px;
       margin-bottom: 8px;
     }
 
@@ -86,126 +126,529 @@
       flex-wrap: wrap;
     }
 
-    a {
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #ffffff;
       text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     }
 
-    .tool-section {
-      text-align: center;
-      margin-top: 30px;
-      padding-top: 20px;
-      border-top: 1px dashed var(--border-color);
+    .btn-red { background: var(--red-btn); }
+    .btn-red:hover { background: var(--red-hover); }
+
+    .btn-green { background: var(--green-btn); }
+    .btn-green:hover { background: var(--green-hover); }
+
+    .btn-blue { background: var(--blue-btn); }
+    .btn-blue:hover { background: var(--blue-hover); }
+
+    .btn-accent { background: var(--accent-color); }
+    .btn-accent:hover { background: var(--accent-hover); }
+
+    .btn:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
     }
 
-    .watermark {
-      text-align: center;
-      margin-top: 25px;
-      font-size: 0.75rem;
+    /* SECCIÓN UNIDOR PKG (HERRAMIENTA INTEGRADA) */
+    .joiner-section {
+      background: var(--card-bg);
+      border: 1px dashed var(--accent-color);
+      border-radius: var(--radius);
+      padding: 24px;
+      position: relative;
+    }
+
+    .drop-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(99, 102, 241, 0.2);
+      backdrop-filter: blur(4px);
+      border-radius: var(--radius);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-weight: 600;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s ease;
+      z-index: 10;
+    }
+
+    .drop-overlay.visible {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+      font-size: 0.9rem;
+    }
+
+    th, td {
+      padding: 10px 12px;
+      text-align: left;
+      border-bottom: 1px solid var(--card-border);
+    }
+
+    th {
       color: var(--text-muted);
-      opacity: 0.6;
-      letter-spacing: 1px;
+      font-weight: 600;
+    }
+
+    .progress-bar-bg {
+      width: 100%;
+      height: 6px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 3px;
+      overflow: hidden;
+    }
+
+    .progress-bar-fill {
+      height: 100%;
+      width: 0%;
+      background: var(--accent-color);
+      transition: width 0.2s ease;
+    }
+
+    .bottom-controls {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
+
+    .main-progress {
+      flex: 1;
+      min-width: 200px;
+      height: 10px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 5px;
+      overflow: hidden;
+    }
+
+    .main-progress-fill {
+      height: 100%;
+      width: 0%;
+      background: var(--green-btn);
+      transition: width 0.2s ease;
+    }
+
+    .console-options {
+      display: flex;
+      gap: 12px;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .status-bar {
+      margin-top: 12px;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      font-mono: monospace;
+    }
+
+    .remove-btn {
+      color: var(--red-btn);
+      cursor: pointer;
+      font-weight: bold;
+      text-align: center;
+      width: 20px;
+    }
+
+    /* FOOTER & WATERMARK */
+    footer {
+      text-align: center;
+      margin-top: 20px;
+      padding-top: 20px;
+      border-top: 1px solid var(--card-border);
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    footer strong {
+      color: var(--text-main);
+      letter-spacing: 0.5px;
     }
   </style>
 </head>
 
 <body>
 
-  <div class="container">
-    <h1>Descarga de YouTube App (PPSA01650)</h1>
+  <div class="main-wrapper">
+    <header>
+      <h1>Y2JB App Downloader Pro</h1>
+      <p>Selecciona tu versión según tu Firmware, descarga las piezas y únelas en un solo paquete.</p>
+    </header>
 
-    <!-- OPCIÓN 1: Firmware 4.03 a 12.40 -->
-    <div class="version-card">
-      <div class="firmware-title">Para Firmware 4.03 hasta 12.40</div>
-      <div class="app-info">Versión 01.000.003 PKG</div>
+    <!-- FIRMWARE 4.03 - 12.40 -->
+    <div class="card">
+      <span class="fw-badge">Firmware 4.03 a 12.40</span>
+      <div class="app-info">YouTube App (PPSA01650) — Versión 01.000.003</div>
 
-      <div class="step-title">1. Paquete Base (PKG):</div>
+      <div class="section-subtitle">1. Paquete Base (PKG)</div>
       <div class="btn-group">
-        <a href="AÑADIR_ENLACE_PKG_v1.000.003">
-          <btn class="modalbtn modalbtn_red">Descargar PKG v1.000.003</btn>
-        </a>
+        <a href="AÑADIR_ENLACE_PKG_v1.000.003" class="btn btn-red">Descargar PKG v1.000.003</a>
       </div>
 
-      <div class="step-title">2. Archivo SC por Región:</div>
+      <div class="section-subtitle">2. Archivos Metadata (SC) por Región</div>
       <div class="btn-group">
-        <a href="AÑADIR_ENLACE_SC_EEUU">
-          <btn class="modalbtn modalbtn_green">EE.UU. (USA)</btn>
-        </a>
-        <a href="AÑADIR_ENLACE_SC_EUROPA">
-          <btn class="modalbtn modalbtn_blue">Europa</btn>
-        </a>
-        <a href="AÑADIR_ENLACE_SC_JAPON">
-          <btn class="modalbtn modalbtn_red">Japón</btn>
-        </a>
+        <a href="AÑADIR_ENLACE_SC_USA" class="btn btn-green">EE.UU. (USA)</a>
+        <a href="AÑADIR_ENLACE_SC_EUR" class="btn btn-blue">Europa</a>
+        <a href="AÑADIR_ENLACE_SC_JAP" class="btn btn-red">Japón</a>
       </div>
     </div>
 
-    <!-- OPCIÓN 2: Firmware 12.60 en adelante -->
-    <div class="version-card">
-      <div class="firmware-title">Para Firmware 12.60 y superior</div>
-      <div class="app-info">Versión 01.000.030 PKG</div>
+    <!-- FIRMWARE 12.60+ -->
+    <div class="card">
+      <span class="fw-badge">Firmware 12.60 y superior</span>
+      <div class="app-info">YouTube App (PPSA01650) — Versión 01.000.030</div>
 
-      <div class="step-title">1. Paquete Base (PKG):</div>
+      <div class="section-subtitle">1. Paquete Base (PKG)</div>
       <div class="btn-group">
-        <a href="AÑADIR_ENLACE_PKG_v1.000.030">
-          <btn class="modalbtn modalbtn_red">Descargar PKG v1.000.030</btn>
-        </a>
+        <a href="AÑADIR_ENLACE_PKG_v1.000.030" class="btn btn-red">Descargar PKG v1.000.030</a>
       </div>
 
-      <div class="step-title">2. Archivo SC por Región:</div>
+      <div class="section-subtitle">2. Archivos Metadata (SC) por Región</div>
       <div class="btn-group">
-        <a href="AÑADIR_ENLACE_SC_EEUU">
-          <btn class="modalbtn modalbtn_green">EE.UU. (USA)</btn>
-        </a>
-        <a href="AÑADIR_ENLACE_SC_EUROPA">
-          <btn class="modalbtn modalbtn_blue">Europa</btn>
-        </a>
-        <a href="AÑADIR_ENLACE_SC_JAPON">
-          <btn class="modalbtn modalbtn_red">Japón</btn>
-        </a>
+        <a href="AÑADIR_ENLACE_SC_USA" class="btn btn-green">EE.UU. (USA)</a>
+        <a href="AÑADIR_ENLACE_SC_EUR" class="btn btn-blue">Europa</a>
+        <a href="AÑADIR_ENLACE_SC_JAP" class="btn btn-red">Japón</a>
       </div>
     </div>
 
-    <!-- OPCIÓN 3: Firmware 13.40 en adelante -->
-    <div class="version-card">
-      <div class="firmware-title">Para Firmware 13.40 y superior</div>
-      <div class="app-info">Versión 01.009.253 PKG</div>
+    <!-- FIRMWARE 13.40+ -->
+    <div class="card">
+      <span class="fw-badge">Firmware 13.40 y superior</span>
+      <div class="app-info">YouTube App (PPSA01650) — Versión 01.009.253</div>
 
-      <div class="step-title">1. Paquete Base (PKG):</div>
+      <div class="section-subtitle">1. Paquete Base (PKG)</div>
       <div class="btn-group">
-        <a href="AÑADIR_ENLACE_PKG_v1.009.253">
-          <btn class="modalbtn modalbtn_red">Descargar PKG v1.009.253</btn>
-        </a>
+        <a href="AÑADIR_ENLACE_PKG_v1.009.253" class="btn btn-red">Descargar PKG v1.009.253</a>
       </div>
 
-      <div class="step-title">2. Archivo SC por Región:</div>
+      <div class="section-subtitle">2. Archivos Metadata (SC) por Región</div>
       <div class="btn-group">
-        <a href="AÑADIR_ENLACE_SC_EEUU">
-          <btn class="modalbtn modalbtn_green">EE.UU. (USA)</btn>
-        </a>
-        <a href="AÑADIR_ENLACE_SC_EUROPA">
-          <btn class="modalbtn modalbtn_blue">Europa</btn>
-        </a>
-        <a href="AÑADIR_ENLACE_SC_JAPON">
-          <btn class="modalbtn modalbtn_red">Japón</btn>
-        </a>
+        <a href="AÑADIR_ENLACE_SC_USA" class="btn btn-green">EE.UU. (USA)</a>
+        <a href="AÑADIR_ENLACE_SC_EUR" class="btn btn-blue">Europa</a>
+        <a href="AÑADIR_ENLACE_SC_JAP" class="btn btn-red">Japón</a>
       </div>
     </div>
 
-    <!-- HERRAMIENTA UNIR PKG -->
-    <div class="tool-section">
-      <div class="step-title" style="margin-top: 0;">3. Une los archivos descargados:</div>
-      <a href="../pkgmerge/">
-        <btn class="modalbtn modalbtn_blue">Unidor de PKG (PKG Joiner)</btn>
-      </a>
+    <!-- UNIDOR DE PKGs INTEGRADO (HERRAMIENTA) -->
+    <div class="joiner-section" id="joinerContainer">
+      <div class="drop-overlay" id="dropOverlay">Arrastra los archivos .pkg aquí para unirlos</div>
+      
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+        <h2 style="font-size: 1.1rem; font-weight: 700;">3. Herramienta Unidora Integrada (PKG Joiner)</h2>
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 30px;"></th>
+            <th>Nombre del Archivo</th>
+            <th style="width: 40%;">Progreso</th>
+          </tr>
+        </thead>
+        <tbody id="fileTableBody">
+          <!-- Archivos cargados dinámicamente -->
+        </tbody>
+      </table>
+
+      <div class="bottom-controls">
+        <div class="main-progress">
+          <div class="main-progress-fill" id="mainProgressBar"></div>
+        </div>
+
+        <div class="console-options">
+          <label><input type="radio" id="radioPS4" name="console" disabled> PS4</label>
+          <label><input type="radio" id="radioPS5" name="console" disabled> PS5</label>
+        </div>
+
+        <input type="file" id="fileInput" multiple accept=".pkg" hidden>
+        <button class="btn btn-accent" id="selectButton">Añadir Archivos...</button>
+        <button class="btn btn-green" id="startButton">Unir PKGs</button>
+      </div>
+
+      <div class="status-bar" id="statusBar">Listo para recibir archivos.</div>
     </div>
 
-    <!-- MARCA DE AGUA -->
-    <div class="watermark">
-      CREADO POR <strong>TheWizWiki</strong>
-    </div>
-
+    <!-- FOOTER CON MARCA DE AGUA -->
+    <footer>
+      Desarrollado y optimizado por <strong>TheWizWiki</strong>
+    </footer>
   </div>
 
+  <!-- LÓGICA DE UNIÓN DE ARCHIVOS PKG Y SERVICE WORKER -->
+  <script>
+    let fileList = [];
+    const dropOverlay = document.getElementById('dropOverlay');
+    let dragCounter = 0;
+
+    document.addEventListener('dragenter', e => {
+      dragCounter++;
+      dropOverlay.classList.add('visible');
+    });
+    document.addEventListener('dragleave', e => {
+      dragCounter--;
+      if (dragCounter === 0) dropOverlay.classList.remove('visible');
+    });
+    document.addEventListener('dragover', e => e.preventDefault());
+
+    function normalizeFile(file) {
+      return {
+        id: file.webkitRelativePath || file.name,
+        name: file.name,
+        size: file.size,
+        progress: 0,
+        fileObject: file
+      };
+    }
+
+    function removeFile(id) {
+      fileList = fileList.filter(f => f.id !== id);
+      renderTable();
+    }
+
+    function renderTable() {
+      const tbody = document.getElementById('fileTableBody');
+      tbody.innerHTML = '';
+      if (!window.progressBars) window.progressBars = {};
+
+      fileList.forEach(file => {
+        const tr = document.createElement('tr');
+
+        const removeTd = document.createElement('td');
+        removeTd.className = 'remove-btn';
+        removeTd.textContent = '×';
+        removeTd.addEventListener('click', () => removeFile(file.id));
+
+        const nameTd = document.createElement('td');
+        nameTd.textContent = file.name;
+
+        const progressTd = document.createElement('td');
+        const bar = document.createElement('div');
+        bar.className = 'progress-bar-bg';
+
+        const inner = document.createElement('div');
+        inner.className = 'progress-bar-fill';
+        inner.style.width = (file.progress || 0) + '%';
+        bar.appendChild(inner);
+        progressTd.appendChild(bar);
+
+        tr.append(removeTd, nameTd, progressTd);
+        tbody.appendChild(tr);
+
+        window.progressBars[file.id] = inner;
+      });
+
+      updateConsoleRadios();
+    }
+
+    const radioPS4 = document.getElementById('radioPS4');
+    const radioPS5 = document.getElementById('radioPS5');
+
+    function updateConsoleRadios() {
+      if (fileList.length === 0) {
+        radioPS4.checked = false;
+        radioPS5.checked = false;
+        radioPS4.disabled = true;
+        radioPS5.disabled = true;
+        return;
+      }
+
+      const hasScPkg = fileList.some(f => /_sc\.pkg$/i.test(f.name));
+      radioPS4.disabled = false;
+      radioPS5.disabled = false;
+      radioPS4.checked = !hasScPkg;
+      radioPS5.checked = hasScPkg;
+    }
+
+    const pkgPattern = /^(?!\._).*\.pkg$/i;
+
+    function isValidFile(file) {
+      return pkgPattern.test(file.name);
+    }
+
+    document.addEventListener('drop', async e => {
+      e.preventDefault();
+      dragCounter = 0;
+      dropOverlay.classList.remove('visible');
+
+      const droppedFiles = Array.from(e.dataTransfer.files || []);
+      const newFiles = [];
+
+      for (const file of droppedFiles) {
+        if (!isValidFile(file)) continue;
+        const type = await checkPkgHeader(file);
+        if (!type) continue;
+        const norm = normalizeFile(file);
+        norm._pkgType = type;
+        newFiles.push(norm);
+      }
+
+      const seenIds = new Set(fileList.map(f => f.id));
+      for (const f of newFiles) {
+        if (!seenIds.has(f.id)) {
+          insertSortedFile(f);
+          seenIds.add(f.id);
+        }
+      }
+
+      renderTable();
+    });
+
+    async function checkPkgHeader(file) {
+      const blob = file.slice(0, 4);
+      const buffer = await blob.arrayBuffer();
+      const bytes = new Uint8Array(buffer);
+      const hex = Array.from(bytes).map(b => b.toString(16).padStart(2, '0')).join('').toUpperCase();
+      if (hex === '7F434E54') return 'scpkg';
+      return 'pkg';
+    }
+
+    const fileInput = document.getElementById('fileInput');
+    const selectButton = document.getElementById('selectButton');
+
+    selectButton.addEventListener('click', () => fileInput.click());
+
+    fileInput.addEventListener('change', async (e) => {
+      const files = Array.from(e.target.files);
+      for (const file of files) {
+        if (isValidFile(file)) {
+          const norm = normalizeFile(file);
+          insertSortedFile(norm);
+        }
+      }
+      renderTable();
+      fileInput.value = '';
+    });
+
+    function setStatus(text) {
+      document.getElementById('statusBar').textContent = text;
+    }
+
+    function updateMainProgress(bytesWritten, totalBytes) {
+      const fill = document.getElementById('mainProgressBar');
+      if (!totalBytes) {
+        fill.style.width = '0%';
+        return;
+      }
+      const p = Math.min(100, Math.round((bytesWritten / totalBytes) * 100));
+      fill.style.width = p + '%';
+    }
+
+    function updateFileProgress(id, percent) {
+      const el = window.progressBars[id];
+      if (el) el.style.width = percent + '%';
+    }
+
+    async function startMergeProcess(list) {
+      if (!list || !list.length) return;
+
+      let defaultName = 'YouTube-MERGED.pkg';
+      const totalBytes = list.reduce((s, f) => s + (f.size || 0), 0);
+      let bytesWritten = 0;
+      setStatus('Preparando proceso de unión...');
+
+      let writerObj;
+      try {
+        if (window.showSaveFilePicker) {
+          const handle = await window.showSaveFilePicker({
+            suggestedName: defaultName,
+            types: [{ description: 'PKG Files', accept: { 'application/octet-stream': ['.pkg'] } }]
+          });
+          const writable = await handle.createWritable();
+          writerObj = { writable, close: () => writable.close() };
+        }
+      } catch (err) {
+        setStatus('Guardado cancelado.');
+        return;
+      }
+
+      const writable = writerObj.writable;
+
+      for (let i = 0; i < list.length; i++) {
+        const file = list[i].fileObject;
+        const fileId = list[i].id;
+        const fileSize = file.size || 0;
+        setStatus(`Uniendo ${list[i].name} (${i + 1}/${list.length})`);
+
+        const reader = file.stream().getReader();
+        let fileBytesWritten = 0;
+
+        while (true) {
+          const { value, done } = await reader.read();
+          if (done) break;
+
+          await writable.write(value);
+          fileBytesWritten += value.byteLength;
+          bytesWritten += value.byteLength;
+
+          updateFileProgress(fileId, Math.round((fileBytesWritten / fileSize) * 100));
+          updateMainProgress(bytesWritten, totalBytes);
+        }
+      }
+
+      await writerObj.close();
+      setStatus('¡Proceso completado con éxito!');
+    }
+
+    document.getElementById('startButton').addEventListener('click', async () => {
+      if (!fileList || fileList.length < 2) {
+        alert('Necesitas al menos dos archivos PKG para unirlos.');
+        return;
+      }
+      try {
+        await startMergeProcess(fileList);
+      } catch (err) {
+        alert('Error durante la unión: ' + err.message);
+      }
+    });
+
+    function sortPkgFiles(a, b) {
+      const nameA = a.name.toLowerCase();
+      const nameB = b.name.toLowerCase();
+      const isScA = nameA.endsWith('_sc.pkg');
+      const isScB = nameB.endsWith('_sc.pkg');
+      if (isScA && !isScB) return 1;
+      if (!isScA && isScB) return -1;
+      return nameA.localeCompare(nameB);
+    }
+
+    function insertSortedFile(file) {
+      let index = fileList.findIndex(f => sortPkgFiles(file, f) < 0);
+      if (index === -1) {
+        fileList.push(file);
+      } else {
+        fileList.splice(index, 0, file);
+      }
+    }
+  </script>
+
+  <!-- REGISTRO DEL SERVICE WORKER DE LA PWA -->
+  <script type="module">
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register("./serviceworker.js").then(() => {
+        console.log("Service Worker Pro registrado.");
+      }).catch(err => console.log("SW Error: ", err));
+    }
+  </script>
 </body>
 
 </html>
