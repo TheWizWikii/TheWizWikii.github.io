@@ -84,6 +84,7 @@ Esto habilita que puedas emparejar / conectar dispositivos por Bluetooth y USB c
 - **#idlesauce**
 - **#Khaled Ahmed** (Auto host PS5 psfree files)
 - **#VideogamesSCZ** (Por su contribucion en Auto HEN 4.91)
+- **#nastys** (por su y2dw idea)
 - **#y a toda la comunidad de PS3 y PS4**
 
 ---
