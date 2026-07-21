@@ -60,7 +60,7 @@ Accede a: https://thewizwikii.github.io/y2jb-app-downloader/
 
 * **Desarrollo de la herramienta web:** [TheWizWiki](https://github.com/thewizwikii)
 * **Exploit Y2JB:** gezine
-* * **y2dw idea:** nastys
+* **y2dw idea:** nastys
 * **Servidores y parches:** Playstation Network / Prospero Patches
 
 ---
