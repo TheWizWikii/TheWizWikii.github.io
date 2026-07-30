@@ -14,7 +14,7 @@ Un Host alternativo para poder instalar, probar y ejecutar exploits en el navega
 
 ### PS4 Jailbreak + Goldhen v3.2.2 ![Version](https://img.shields.io/badge/Version-9.00-brightgreen.svg)
 
-Lo unico que hay que hacer es ir a esta dirección desde el navegador de internet de la cosnola.
+Lo unico que hay que hacer es ir a esta dirección desde el navegador de internet de la consola.
 
 - https://thewizwikii.github.io/PS4/9.00/
 
